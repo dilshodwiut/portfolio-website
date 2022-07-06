@@ -121,5 +121,5 @@ export default function HandDrawnPaths(props: PathProps) {
     };
   }, [color, x]);
 
-  return svgs[route as Routes] || null;
+  return <>{svgs[route as Routes] || null}</>;
 }
