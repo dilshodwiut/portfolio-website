@@ -1,0 +1,13 @@
+.button {
+  color: var(--white);
+  border: 2px solid var(--red);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0.5rem;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  width: 11rem;
+}
