@@ -1,34 +1,24 @@
-import classes from "./Button.module.scss";
+import * as React from "react";
+// import { colors } from "src/theme/palette";
 import { useSpring, animated, config } from "@react-spring/web";
-import { colors } from "src/theme/palette";
-
-enum ButtonType {
-  Button = "button",
-  Submit = "submit",
-  Reset = "reset",
-}
-
-enum ButtonSize {
-  Small = "small",
-  Medium = "medium",
-  Large = "large",
-}
+import clsx from "clsx";
+import classes from "./Button.module.scss";
 
 interface ButtonProps {
-  type?: ButtonType;
+  type?: "button" | "submit" | "reset";
   children: React.ReactNode;
   className?: string;
-  onClick: (event: React.MouseEvent) => void;
-  size?: ButtonSize;
+  onClick: (event: React.MouseEvent<HTMLElement>) => void;
+  // size?: "small" | "medium" | "large";
   isDisabled?: boolean;
-  isLoading?: boolean;
-  isOutlined?: boolean;
-  isRounded?: boolean;
+  // isLoading?: boolean;
+  // isOutlined?: boolean;
+  // isRounded?: boolean;
   disableStyles?: boolean;
-  onMouseEnter?: (event: React.MouseEvent) => void;
-  onMouseLeave?: (event: React.MouseEvent) => void;
-  onMouseDown?: (event: React.MouseEvent) => void;
-  onMouseUp?: (event: React.MouseEvent) => void;
+  onMouseEnter?: (event: React.MouseEvent<HTMLElement>) => void;
+  onMouseLeave?: (event: React.MouseEvent<HTMLElement>) => void;
+  onMouseDown?: (event: React.MouseEvent<HTMLElement>) => void;
+  onMouseUp?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
 export default function Button(props: ButtonProps) {
@@ -48,6 +38,7 @@ export default function Button(props: ButtonProps) {
     onMouseLeave,
     onMouseDown,
     onMouseUp,
+    className,
   } = props;
 
   return (
@@ -79,10 +70,21 @@ export default function Button(props: ButtonProps) {
       style={{ backgroundColor: bgColor, transform }}
       type={type}
       disabled={isDisabled}
-      className={disableStyles ? "" : classes.button}
-      onClick={() => {}} // onClick={onClick}
+      className={clsx(disableStyles ? "" : classes.button, className)}
+      onClick={onClick}
     >
       {children}
     </animated.button>
   );
 }
+
+Button.defaultProps = {
+  type: "button",
+  isDisabled: false,
+  disableStyles: false,
+  className: "",
+  onMouseEnter: () => {},
+  onMouseLeave: () => {},
+  onMouseDown: () => {},
+  onMouseUp: () => {},
+};

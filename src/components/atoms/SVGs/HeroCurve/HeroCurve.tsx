@@ -1,3 +1,4 @@
+import * as React from "react";
 import classes from "./HeroCurve.module.scss";
 
 export default function HeroCurve() {

@@ -1,14 +1,14 @@
-import Ul from "@/components/atoms/Ul/Ul";
+import * as React from "react";
 import { IconDownload } from "@tabler/icons";
-import Button from "@/components/atoms/Button/Button";
+import { useSpring, animated, config } from "@react-spring/web";
 import downloadFile from "src/functions/downloadFile";
-import { useSpring, animated, config, easings } from "@react-spring/web";
-import { useState } from "react";
+import Ul from "@/components/atoms/Ul/Ul";
+import Button from "@/components/atoms/Button/Button";
 
 export default function NavbarActions() {
-  const [animationStarted, setAnimationStarted] = useState(false);
+  const [animationStarted, setAnimationStarted] = React.useState(false);
 
-  const [{ transform }, set] = useSpring(() => ({
+  const [{ transform }] = useSpring(() => ({
     transform: "translateY(0px)",
     from: {
       transform: "translateY(-3px)",
@@ -28,38 +28,35 @@ export default function NavbarActions() {
   return (
     <Ul>
       <Button
-        onClick={(e) => downloadFile(e, "Dilshod Ramatilloev.pdf")}
-        onMouseEnter={(e) => {
+        onClick={(event: React.MouseEvent) =>
+          downloadFile(event, "Dilshod Ramatilloev.pdf")
+        }
+        onMouseEnter={() => {
           setAnimationStarted(true);
         }}
-        onMouseLeave={(e) => {
-          setAnimationStarted(false);
-          // set({ transform: "translateY(0px)" });
-        }}
-        onMouseDown={(e) => {
+        onMouseLeave={() => {
           setAnimationStarted(false);
         }}
-        onMouseUp={(e) => {
+        onMouseDown={() => {
+          setAnimationStarted(false);
+        }}
+        onMouseUp={() => {
           setAnimationStarted(true);
         }}
       >
         Download CV{" "}
-        {
-          <animated.div
-            style={
-              animationStarted
-                ? { transform }
-                : { transform: "translateY(0px)" }
-            }
-          >
-            <IconDownload
-              size={20}
-              color={"#fff"}
-              stroke={3}
-              strokeLinejoin="miter"
-            />
-          </animated.div>
-        }
+        <animated.div
+          style={
+            animationStarted ? { transform } : { transform: "translateY(0px)" }
+          }
+        >
+          <IconDownload
+            size={20}
+            color="#fff"
+            stroke={3}
+            strokeLinejoin="miter"
+          />
+        </animated.div>
       </Button>
     </Ul>
   );
