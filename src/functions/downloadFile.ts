@@ -16,6 +16,7 @@ export default function downloadFile(
     a.click();
     document.body.removeChild(a);
   } catch {
+    // eslint-disable-next-line no-console
     console.error("Error downloading file");
   }
 }

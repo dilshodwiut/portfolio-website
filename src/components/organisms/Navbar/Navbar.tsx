@@ -7,9 +7,9 @@ import classes from "./Navbar.module.scss";
 
 export default function Navbar() {
   return (
-    <Wrapper>
+    <Wrapper className="my-lg">
       <nav className={classes.navbar}>
-        <BrandLogo href="/" />
+        <BrandLogo href="/" className="mr-sm" />
         <NavbarLinks />
         <NavbarActions />
       </nav>

@@ -17,8 +17,8 @@ function useIntersectionObserver(
 
   const frozen = entry?.isIntersecting && freezeOnceVisible;
 
-  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
-    setEntry(entry);
+  const updateEntry = ([ioEntry]: IntersectionObserverEntry[]): void => {
+    setEntry(ioEntry);
   };
 
   useEffect(() => {
@@ -32,6 +32,7 @@ function useIntersectionObserver(
 
     observer.observe(node);
 
+    // eslint-disable-next-line consistent-return
     return () => observer.disconnect();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

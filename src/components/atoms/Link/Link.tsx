@@ -9,16 +9,14 @@ interface LinkProps {
   icon?: React.ReactNode;
   target?: "_self" | "_blank";
   onClick?: () => void;
-  isCTA?: boolean;
   downloadable?: boolean;
   type?: "default" | "nav";
 }
 
-export default function Link(props: LinkProps) {
+export default function CustomLink(props: LinkProps) {
   const router = useRouter();
 
-  const { href, target, isCTA, downloadable, type, children, icon, onClick } =
-    props;
+  const { href, target, downloadable, type, children, icon, onClick } = props;
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
@@ -27,7 +25,6 @@ export default function Link(props: LinkProps) {
         href={href}
         target={target}
         rel="noopener noreferrer"
-        className={isCTA ? classes.cta : ""}
         download={downloadable}
       >
         {children}
@@ -41,11 +38,10 @@ export default function Link(props: LinkProps) {
   );
 }
 
-Link.defaultProps = {
+CustomLink.defaultProps = {
   icon: null,
   target: "_self",
   onClick: () => {},
-  isCTA: false,
   downloadable: false,
   type: "default",
 };

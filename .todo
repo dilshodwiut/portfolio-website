@@ -1,0 +1,7 @@
+explore eslint-plugin-next && eslint-config-next on https://nextjs.org/docs/basic-features/eslint
+update packages to the latest patch versions
+create better link component
+spread footer into atomic pattern
+enhance nav bar
+make it responsive
+fix footer heart animation __done__

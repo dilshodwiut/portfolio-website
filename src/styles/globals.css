@@ -1,3 +1,5 @@
+@import "class-utils.css";
+
 :root {
   --bg-black: #1e1e1e;
   --bg-white: #fff;
@@ -34,6 +36,23 @@ body {
   flex-direction: column;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -68,21 +87,4 @@ code {
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body::-webkit-scrollbar {
-  width: 12px;
-  height: 10px;
-}
-body {
-  scrollbar-width: thin;
-  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-}
-body::-webkit-scrollbar-track {
-  background: var(--scrollbarBG);
-}
-body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
-  border-radius: 6px;
-  border: 3px solid var(--scrollbarBG);
 }

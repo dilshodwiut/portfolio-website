@@ -1,13 +1,13 @@
 import * as React from "react";
 import { useSpring, animated, config } from "@react-spring/web";
 
-export default function Heart() {
+export default function Heart({ isVisible }: { isVisible: boolean }) {
   const { transform } = useSpring({
     from: {
       transform: "scale(1)",
     },
     to: {
-      transform: "scale(1.2)",
+      transform: isVisible ? "scale(1.2)" : "scale(1)",
     },
     config: { ...config.wobbly, duration: 500 },
     loop: { reverse: true },

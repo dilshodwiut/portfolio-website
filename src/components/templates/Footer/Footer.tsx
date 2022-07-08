@@ -11,26 +11,25 @@ export default function Footer() {
   const isVisible = !!entry?.isIntersecting;
 
   const { transform, opacity } = useSpring({
-    from: { transform: "translateX(-100%)", opacity: 0 },
+    from: { transform: "translateX(100%)", opacity: 0 },
     to: {
-      transform: isVisible ? "translateX(0%)" : "translateX(-100%)",
+      transform: isVisible ? "translateX(0%)" : "translateX(100%)",
       opacity: isVisible ? 1 : 0,
+    },
+    loop: {
+      reverse: false,
     },
     config: { ...config.wobbly, duration: 500 },
   });
 
   return (
-    <animated.footer
-      ref={ref}
-      className={classes.footer}
-      style={{ transform, opacity }}
-    >
-      <div>
-        Made with <Heart /> by{" "}
+    <footer ref={ref} className={classes.footer}>
+      <animated.div style={{ transform, opacity }}>
+        Made with <Heart isVisible={isVisible} /> by{" "}
         <Link href="https://github.com/dilshodwiut" target="_blank">
           Dilshod
         </Link>
-      </div>
-    </animated.footer>
+      </animated.div>
+    </footer>
   );
 }

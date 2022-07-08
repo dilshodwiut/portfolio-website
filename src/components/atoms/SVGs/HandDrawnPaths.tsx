@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useSpring, animated, config } from "@react-spring/web";
-import { colors } from "src/theme/palette";
+import colors from "src/theme/palette";
 
 // eslint-disable-next-line no-shadow
 enum Routes {

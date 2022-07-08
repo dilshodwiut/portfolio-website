@@ -15,5 +15,8 @@ module.exports = {
       },
     },
   },
+  eslint: {
+    dirs: ["src"],
+  },
   nextConfig,
 };
