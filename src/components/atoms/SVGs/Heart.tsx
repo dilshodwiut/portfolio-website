@@ -1,3 +1,4 @@
+import * as React from "react";
 import { useSpring, animated, config } from "@react-spring/web";
 
 export default function Heart() {

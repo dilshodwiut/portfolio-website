@@ -1,5 +1,6 @@
-import classes from "./Link.module.scss";
+import * as React from "react";
 import { useRouter } from "next/router";
+import classes from "./Link.module.scss";
 import HandDrawnPaths from "../SVGs/HandDrawnPaths";
 
 interface LinkProps {
@@ -16,10 +17,12 @@ interface LinkProps {
 export default function Link(props: LinkProps) {
   const router = useRouter();
 
-  const { href, target, isCTA, downloadable, type } = props;
+  const { href, target, isCTA, downloadable, type, children, icon, onClick } =
+    props;
 
   return (
-    <li className={classes.link}>
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+    <span className={classes.link} onClick={onClick}>
       <a
         href={href}
         target={target}
@@ -27,13 +30,22 @@ export default function Link(props: LinkProps) {
         className={isCTA ? classes.cta : ""}
         download={downloadable}
       >
-        {props.children}
-        {props.icon}
+        {children}
+        {icon}
       </a>
 
-      {type === "nav" && "/" + props.children.toLowerCase() === router.route ? (
+      {type === "nav" && `/${children.toLocaleLowerCase()}` === router.route ? (
         <HandDrawnPaths route={router.route} />
       ) : null}
-    </li>
+    </span>
   );
 }
+
+Link.defaultProps = {
+  icon: null,
+  target: "_self",
+  onClick: () => {},
+  isCTA: false,
+  downloadable: false,
+  type: "default",
+};

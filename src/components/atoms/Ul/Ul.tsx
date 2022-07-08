@@ -1,3 +1,5 @@
+import * as React from "react";
+import clsx from "clsx";
 import classes from "./Ul.module.scss";
 
 interface UlProps {
@@ -6,5 +8,11 @@ interface UlProps {
 }
 
 export default function Ul(props: UlProps) {
-  return <ul className={classes.ul}>{props.children}</ul>;
+  const { className, children } = props;
+
+  return <ul className={clsx(classes.ul, className)}>{children}</ul>;
 }
+
+Ul.defaultProps = {
+  className: "",
+};

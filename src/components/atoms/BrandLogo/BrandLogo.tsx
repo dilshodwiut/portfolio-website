@@ -1,3 +1,5 @@
+import clsx from "clsx";
+import * as React from "react";
 import classes from "./BrandLogo.module.scss";
 
 interface BrandLogoProps {
@@ -5,10 +7,14 @@ interface BrandLogoProps {
   href: string;
 }
 
-export default function BrandLogo({ href }: BrandLogoProps) {
+export default function BrandLogo({ href, className }: BrandLogoProps) {
   return (
-    <div className={classes.brandLogo}>
+    <span className={clsx(classes.brandLogo, className)}>
       <a href={href}>DILSHOD</a>
-    </div>
+    </span>
   );
 }
+
+BrandLogo.defaultProps = {
+  className: "",
+};

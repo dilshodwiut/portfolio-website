@@ -3,17 +3,17 @@
   font-size: var(--font-size-lg);
 
   background: linear-gradient(
-    to top,
-    #31b44c 0%,
-    #31b44c 35%,
-    #db2029 35%,
+    to bottom,
+    #179ebe 0%,
+    #179ebe 40%,
     #db2029 40%,
-    #fff 40%,
-    #fff 60%,
+    #db2029 45%,
+    #fff 45%,
+    #fff 55%,
+    #db2029 55%,
     #db2029 60%,
-    #db2029 65%,
-    #179ebe 65%,
-    #179ebe 100%
+    #31b44c 60%,
+    #31b44c 100%
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

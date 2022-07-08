@@ -1,7 +1,8 @@
+import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Navbar from "@/components/organisms/Navbar/Navbar";
 import { colors } from "src/theme/palette";
+import Navbar from "@/components/organisms/Navbar/Navbar";
 import Footer from "@/components/templates/Footer/Footer";
 
 const Portfolio: NextPage = () => {

@@ -23,8 +23,6 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font: 16px "Montserrat", sans-serif;
   background-color: var(--bg-black);
   color: var(--text-white);
@@ -58,6 +56,17 @@ code {
 }
 
 * {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.725em);
+  -webkit-font-smooth: antialiased;
+  font-smooth: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 

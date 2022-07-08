@@ -1,26 +1,5 @@
 .link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0.5rem 1rem;
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  position: relative;
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  svg {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.cta {
-  border: 1px solid var(--red);
-  border-radius: 5px;
-  padding: 0.5rem 2rem;
 }

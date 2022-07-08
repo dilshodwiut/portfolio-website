@@ -1,7 +1,8 @@
-import Footer from "@/components/templates/Footer/Footer";
-import Hero from "@/components/templates/Hero/Hero";
+import * as React from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Footer from "@/components/templates/Footer/Footer";
+import Hero from "@/components/templates/Hero/Hero";
 
 const Home: NextPage = () => {
   return (
