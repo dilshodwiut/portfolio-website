@@ -1,4 +1,4 @@
-import styles from "./Ul.module.scss";
+import classes from "./Ul.module.scss";
 
 interface UlProps {
   className?: string;
@@ -6,5 +6,5 @@ interface UlProps {
 }
 
 export default function Ul(props: UlProps) {
-  return <ul className={styles.ul}>{props.children}</ul>;
+  return <ul className={classes.ul}>{props.children}</ul>;
 }

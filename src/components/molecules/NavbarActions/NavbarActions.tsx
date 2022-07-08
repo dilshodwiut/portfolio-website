@@ -1,7 +1,7 @@
 import Ul from "@/components/atoms/Ul/Ul";
 import { IconDownload } from "@tabler/icons";
 import Button from "@/components/atoms/Button/Button";
-import downloadFile from "@/utils/downloadFile";
+import downloadFile from "src/functions/downloadFile";
 import { useSpring, animated, config, easings } from "@react-spring/web";
 import { useState } from "react";
 

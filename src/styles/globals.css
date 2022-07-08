@@ -13,26 +13,27 @@
   --font-weight-bold: 700;
   --font-weight-semi-black: 800;
   --font-weight-black: 900;
-  --font-size-small: 0.5rem;
-  --font-size-medium: 1rem;
-  --font-size-large: 2rem;
+  --font-size-sm: 0.5rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 2rem;
   --font-size-xl: 3rem;
+  --scrollbarBG: #000;
+  --thumbBG: #90a4ae;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font: 16px "Montserrat", sans-serif;
   background-color: var(--bg-black);
   color: var(--text-white);
   cursor: url("/layan-cursors/default.svg"), auto;
-  font-size: 16px;
-}
+  overflow-x: hidden;
 
-a:hover,
-button:hover {
-  cursor: url("/layan-cursors/pointer.svg"), auto;
+  /* for sticky footer */
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -47,10 +48,32 @@ button {
   font-family: "Montserrat", sans-serif;
 }
 
+a:hover,
+button:hover {
+  cursor: url("/layan-cursors/pointer.svg"), auto;
+}
+
 code {
   font-family: "JetBrains Mono", monospace;
 }
 
 * {
   box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }

@@ -1,41 +1,37 @@
-import styles from "./Link.module.scss";
+import classes from "./Link.module.scss";
 import { useRouter } from "next/router";
 import HandDrawnPaths from "../SVGs/HandDrawnPaths";
 
 interface LinkProps {
-  name: string;
+  children: string;
   href: string;
   icon?: React.ReactNode;
-  openOnNewTab?: boolean;
+  target?: "_self" | "_blank";
   onClick?: () => void;
   isCTA?: boolean;
   downloadable?: boolean;
   type?: "default" | "nav";
 }
 
-enum Target {
-  Self = "_self",
-  Blank = "_blank",
-}
-
 export default function Link(props: LinkProps) {
   const router = useRouter();
 
-  const { href, openOnNewTab, isCTA, downloadable, type } = props;
+  const { href, target, isCTA, downloadable, type } = props;
 
   return (
-    <li className={styles.link}>
+    <li className={classes.link}>
       <a
         href={href}
-        target={openOnNewTab ? Target.Blank : Target.Self}
-        className={isCTA ? styles.cta : ""}
+        target={target}
+        rel="noopener noreferrer"
+        className={isCTA ? classes.cta : ""}
         download={downloadable}
       >
-        {props.name}
+        {props.children}
         {props.icon}
       </a>
 
-      {type === "nav" && "/" + props.name.toLowerCase() === router.route ? (
+      {type === "nav" && "/" + props.children.toLowerCase() === router.route ? (
         <HandDrawnPaths route={router.route} />
       ) : null}
     </li>

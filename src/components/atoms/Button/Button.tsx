@@ -1,4 +1,4 @@
-import styles from "./Button.module.scss";
+import classes from "./Button.module.scss";
 import { useSpring, animated, config } from "@react-spring/web";
 import { colors } from "src/theme/palette";
 
@@ -79,7 +79,7 @@ export default function Button(props: ButtonProps) {
       style={{ backgroundColor: bgColor, transform }}
       type={type}
       disabled={isDisabled}
-      className={disableStyles ? "" : styles.button}
+      className={disableStyles ? "" : classes.button}
       onClick={() => {}} // onClick={onClick}
     >
       {children}

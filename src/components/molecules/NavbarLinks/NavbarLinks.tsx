@@ -4,11 +4,21 @@ import Link from "@/components/atoms/Link/Link";
 export default function NavbarLinks(): JSX.Element {
   return (
     <Ul>
-      <Link name="Portfolio" href="/portfolio" type="nav" />
-      <Link name="About" href="/about" type="nav" />
-      <Link name="Blog" href="/blog" type="nav" />
-      <Link name="Resources" href="/resources" type="nav" />
-      <Link name="Contact" href="/contact" type="nav" />
+      <Link href="/portfolio" type="nav">
+        Portfolio
+      </Link>
+      <Link href="/about" type="nav">
+        About
+      </Link>
+      <Link href="/blog" type="nav">
+        Blog
+      </Link>
+      <Link href="/resources" type="nav">
+        Resources
+      </Link>
+      <Link href="/contact" type="nav">
+        Contact
+      </Link>
     </Ul>
   );
 }

@@ -1,7 +1,8 @@
-import styles from "./Navbar.module.scss";
+import classes from "./Navbar.module.scss";
 import BrandLogo from "@/components/atoms/BrandLogo/BrandLogo";
 import NavbarLinks from "@/components/molecules/NavbarLinks/NavbarLinks";
 import NavbarActions from "@/components/molecules/NavbarActions/NavbarActions";
+import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 
 interface NavbarProps {
   children?: React.ReactNode;
@@ -9,10 +10,12 @@ interface NavbarProps {
 
 export default function Navbar(props: NavbarProps) {
   return (
-    <nav className={styles.navbar}>
-      <BrandLogo href="/" />
-      <NavbarLinks />
-      <NavbarActions />
-    </nav>
+    <Wrapper>
+      <nav className={classes.navbar}>
+        <BrandLogo href="/" />
+        <NavbarLinks />
+        <NavbarActions />
+      </nav>
+    </Wrapper>
   );
 }
