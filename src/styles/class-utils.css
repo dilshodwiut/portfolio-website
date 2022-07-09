@@ -1,3 +1,19 @@
+.m-sm {
+  margin: 1rem;
+}
+
+.m-md {
+  margin: 2rem;
+}
+
+.m-lg {
+  margin: 3rem;
+}
+
+.m-xl {
+  margin: 4rem;
+}
+
 .my-sm {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -68,4 +84,20 @@
 
 .ml-xl {
   margin-left: 4rem;
+}
+
+.mb-sm {
+  margin-bottom: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 2rem;
+}
+
+.mb-lg {
+  margin-bottom: 3rem;
+}
+
+.mb-xl {
+  margin-bottom: 4rem;
 }

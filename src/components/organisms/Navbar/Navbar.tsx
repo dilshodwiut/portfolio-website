@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <Wrapper className="my-lg">
       <nav className={classes.navbar}>
-        <BrandLogo href="/" className="mr-sm" />
+        <BrandLogo href="/" className="mr-md" />
         <NavbarLinks />
         <NavbarActions />
       </nav>

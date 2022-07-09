@@ -4,6 +4,7 @@ interface ProjectColors {
   yellow: string;
   blue: string;
   darkblue: string;
+  black: string;
 }
 
 const colors: ProjectColors = {
@@ -12,6 +13,7 @@ const colors: ProjectColors = {
   yellow: "#E9C46A",
   blue: "#2A9D8F",
   darkblue: "#264653",
+  black: "#1e1e1e",
 };
 
 export default colors;

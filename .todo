@@ -2,6 +2,10 @@ explore eslint-plugin-next && eslint-config-next on https://nextjs.org/docs/basi
 update packages to the latest patch versions
 create better link component
 spread footer into atomic pattern
-enhance nav bar
 make it responsive
-fix footer heart animation __done__
+is super-tiny-icons useful ?
+change herocurve into sth else
+double check eslint ignores later
+testing
+floating icons
+refactor HandDrawnPaths
