@@ -1,14 +1,14 @@
 import * as React from "react";
-import { animated } from "@react-spring/web";
+import { animated, SpringValues } from "@react-spring/web";
 
-export default function JavaScript({ style }) {
+export default function JavaScript({ style }: { style?: SpringValues }) {
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="JavaScript"
       role="img"
       viewBox="0 0 512 512"
-      width={32}
+      width={40}
       style={style}
     >
       <rect width="512" height="512" rx="15%" fill="#f7df1e" />
@@ -16,3 +16,7 @@ export default function JavaScript({ style }) {
     </animated.svg>
   );
 }
+
+JavaScript.defaultProps = {
+  style: {},
+};

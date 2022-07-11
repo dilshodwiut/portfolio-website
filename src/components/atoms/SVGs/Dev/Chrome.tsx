@@ -1,14 +1,14 @@
 import * as React from "react";
-import { animated } from "@react-spring/web";
+import { animated, SpringValues } from "@react-spring/web";
 
-export default function Chrome({ style }) {
+export default function Chrome({ style }: { style?: SpringValues }) {
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Chrome"
       role="img"
       viewBox="0 0 512 512"
-      width={32}
+      width={40}
       style={style}
     >
       <path d="M256 140h228A256 256 0 0 1 244 511.7" fill="#fc4" />
@@ -25,3 +25,7 @@ export default function Chrome({ style }) {
     </animated.svg>
   );
 }
+
+Chrome.defaultProps = {
+  style: {},
+};

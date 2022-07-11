@@ -7,6 +7,8 @@ is super-tiny-icons useful ?
 change herocurve into sth else
 double check eslint ignores later
 testing
-floating icons
-refactor HandDrawnPaths
+refactor HandDrawnPaths - https://www.sinwaver.com/
 custom cursor
+locales
+custom error handling service
+worklets, service workers, web workers

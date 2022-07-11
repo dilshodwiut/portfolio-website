@@ -1,17 +1,16 @@
 import * as React from "react";
-import { animated } from "@react-spring/web";
+import { animated, SpringValues } from "@react-spring/web";
 
-export default function GitLab({ style }) {
+export default function GitLab({ style }: { style?: SpringValues }) {
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="GitLab"
       role="img"
       viewBox="0 0 512 512"
-      width={32}
+      width={40}
       style={style}
     >
-      <rect width="512" height="512" rx="15%" fill="#30353e" />
       <path
         fill="#e24329"
         d="M84 215l43-133c2-7 12-7 14 0l115 353L371 82c2-7 12-7 14 0l43 133"
@@ -27,3 +26,7 @@ export default function GitLab({ style }) {
     </animated.svg>
   );
 }
+
+GitLab.defaultProps = {
+  style: {},
+};

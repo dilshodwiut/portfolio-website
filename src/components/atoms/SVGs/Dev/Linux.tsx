@@ -1,7 +1,7 @@
 import * as React from "react";
-import { animated } from "@react-spring/web";
+import { animated, SpringValues } from "@react-spring/web";
 
-export default function Linux({ style }) {
+export default function Linux({ style }: { style?: SpringValues }) {
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ export default function Linux({ style }) {
       role="img"
       viewBox="0 0 512 512"
       fill="#333"
-      width={32}
+      width={40}
       style={style}
     >
       <g transform="matrix(2 0 0 2 256 256)">
@@ -27,3 +27,7 @@ export default function Linux({ style }) {
     </animated.svg>
   );
 }
+
+Linux.defaultProps = {
+  style: {},
+};

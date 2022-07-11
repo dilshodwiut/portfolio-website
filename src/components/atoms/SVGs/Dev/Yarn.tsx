@@ -1,7 +1,7 @@
 import * as React from "react";
-import { animated } from "@react-spring/web";
+import { animated, SpringValues } from "@react-spring/web";
 
-export default function Yarn({ style }) {
+export default function Yarn({ style }: { style?: SpringValues }) {
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,7 @@ export default function Yarn({ style }) {
       role="img"
       viewBox="0 0 512 512"
       fill="#117cad"
-      width={32}
+      width={40}
       style={style}
     >
       <rect width="512" height="512" rx="15%" />
@@ -22,3 +22,7 @@ export default function Yarn({ style }) {
     </animated.svg>
   );
 }
+
+Yarn.defaultProps = {
+  style: {},
+};

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Float from "@/components/molecules/Float/Float";
+import dynamic from "next/dynamic";
 import VSCode from "@/components/atoms/SVGs/Dev/VSCode";
 import WebAssembly from "@/components/atoms/SVGs/Dev/WebAssembly";
 import Npm from "@/components/atoms/SVGs/Dev/Npm";
@@ -22,6 +22,10 @@ import Typescript from "@/components/atoms/SVGs/Dev/TypeScript";
 import classes from "./Hero.module.scss";
 
 export default function Hero() {
+  const Float = dynamic(() => import("@/components/molecules/Float/Float"), {
+    ssr: false,
+  });
+
   return (
     <section className={classes.hero}>
       <Float>
