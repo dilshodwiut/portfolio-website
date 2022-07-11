@@ -8,18 +8,18 @@ interface State {
   hasError: boolean;
 }
 
-export default class ErrorBoundary extends React.Component {
+export default class ErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error: Error) {
     console.error(error);
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
     console.error(error, info);
   }
 
