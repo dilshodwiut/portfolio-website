@@ -1,13 +1,15 @@
 import * as React from "react";
+import { animated } from "@react-spring/web";
 
-export default function Css() {
+export default function Css({ style }) {
   return (
-    <svg
+    <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="CSS3"
       role="img"
       viewBox="0 0 512 512"
       width={32}
+      style={style}
     >
       <path fill="#264de4" d="M72 460L30 0h451l-41 460-184 52" />
       <path fill="#2965f1" d="M256 37V472l149-41 35-394" />
@@ -19,6 +21,6 @@ export default function Css() {
         fill="#fff"
         d="m256 208v57h69l-7 73-62 17v59l115-32 26-288H256v56h80l-5.5 58Z"
       />
-    </svg>
+    </animated.svg>
   );
 }

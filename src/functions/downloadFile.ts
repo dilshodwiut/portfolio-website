@@ -1,5 +1,3 @@
-import * as React from "react";
-
 export default function downloadFile(
   event: React.MouseEvent,
   filepath: string

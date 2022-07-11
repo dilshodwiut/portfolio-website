@@ -1,16 +1,17 @@
 import * as React from "react";
+import { animated } from "@react-spring/web";
 
-export default function Linux() {
+export default function Linux({ style }) {
   return (
-    <svg
+    <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Linux"
       role="img"
       viewBox="0 0 512 512"
       fill="#333"
       width={32}
+      style={style}
     >
-      <rect width="512" height="512" rx="15%" fill="#fff" />
       <g transform="matrix(2 0 0 2 256 256)">
         <path d="M-32-25c-3 7-24 29-22 51 8 92 36 30 78 53 0 0 75-42 15-110-17-24-2-43-13-59s-30-17-44-2 6 37-14 67" />
         <path
@@ -23,6 +24,6 @@ export default function Linux() {
         </g>
         <path d="M-10-54c-2 0 1-2 2-1m7 1c1-1-1-2-3-1" />
       </g>
-    </svg>
+    </animated.svg>
   );
 }

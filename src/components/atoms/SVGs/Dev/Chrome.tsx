@@ -1,13 +1,15 @@
 import * as React from "react";
+import { animated } from "@react-spring/web";
 
-export default function Chrome() {
+export default function Chrome({ style }) {
   return (
-    <svg
+    <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Chrome"
       role="img"
       viewBox="0 0 512 512"
       width={32}
+      style={style}
     >
       <path d="M256 140h228A256 256 0 0 1 244 511.7" fill="#fc4" />
       <path d="M357 314 244 511.7A256 256 0 0 1 40 118" fill="#0f9d58" />
@@ -20,6 +22,6 @@ export default function Chrome() {
         stroke="#f1f1f1"
         strokeWidth="24"
       />
-    </svg>
+    </animated.svg>
   );
 }

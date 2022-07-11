@@ -1,38 +1,16 @@
 import * as React from "react";
-import { useSpring, animated, config } from "@react-spring/web";
-import colors from "src/theme/palette";
+import { animated } from "@react-spring/web";
 
-export default function VSCode() {
-  const [{ transform }, setSpring] = useSpring(() => ({
-    from: { transform: "translate(0px, 0px)" },
-    config: { ...config.molasses, duration: 5000 },
-  }));
-
-  React.useEffect(() => {
-    let x = 0;
-    let y = 0;
-    setInterval(() => {
-      x = Math.random() * 100;
-      y = Math.random() * 100;
-      setSpring.start({ transform: `translate(${x}px, ${y}px)` });
-    }, 5000);
-    setSpring.start({
-      transform: `translate(${Math.random() * 100}px, ${
-        Math.random() * 440
-      }px)`,
-    });
-  }, [setSpring]);
-
+export default function VSCode({ style }) {
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Visual Studio Code"
       role="img"
       viewBox="0 0 512 512"
-      style={{ transform }}
       width={32}
+      style={style}
     >
-      {/* <rect width="512" height="512" rx="15%" fill={colors.black} /> */}
       <filter id="a">
         <feFlood floodOpacity="0" result="b" />
         <feColorMatrix

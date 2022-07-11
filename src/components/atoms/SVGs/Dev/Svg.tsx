@@ -1,13 +1,15 @@
 import * as React from "react";
+import { animated } from "@react-spring/web";
 
-export default function Svg() {
+export default function Svg({ style }) {
   return (
-    <svg
+    <animated.svg
       xmlns="http://www.w3.org/2000/svg"
       aria-label="SVG"
       role="img"
       viewBox="0 0 512 512"
       width={32}
+      style={style}
     >
       <rect width="512" height="512" rx="15%" fill="#f90" />
       <path d="M122 157h268v99H122" />
@@ -30,6 +32,6 @@ export default function Svg() {
         d="M191 318a35 35 0 10-35 35 35 35 0 11-35 35m171-125l-36 172-36-172m-29 55a35 35 0 10-35 35 35 35 0 11-35 35m270-70a35 35 0 00-35-35 35 35 0 00-35 35v70a35 35 0 0035 35 35 35 0 0035-35v-35h-35"
       />
       <path d="M64 256h384v12H64" />
-    </svg>
+    </animated.svg>
   );
 }
