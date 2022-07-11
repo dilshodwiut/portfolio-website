@@ -19,7 +19,6 @@
     "gsap": "^3.10.4",
     "lodash": "^4.17.21",
     "next": "12.1.5",
-    "next-i18next": "^11.0.0",
     "next-seo": "^5.4.0",
     "normalize.css": "^8.0.1",
     "react": "18.0.0",

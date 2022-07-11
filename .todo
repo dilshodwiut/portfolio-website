@@ -10,5 +10,6 @@ testing
 refactor HandDrawnPaths - https://www.sinwaver.com/
 custom cursor
 locales
-custom error handling service
+custom error handling service, with error boundaries
 worklets, service workers, web workers
+produce icons according to screen size
