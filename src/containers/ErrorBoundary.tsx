@@ -15,11 +15,13 @@ export default class ErrorBoundary extends React.Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error) {
+    // eslint-disable-next-line no-console
     console.error(error);
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, info: React.ErrorInfo) {
+    // eslint-disable-next-line no-console
     console.error(error, info);
   }
 

@@ -13,6 +13,7 @@ const Contact: NextPage = () => {
         <link rel="icon" href="/man.png" />
       </Head>
       <Navbar />
+      <div style={{ flex: "1 0 auto" }}>Contact page</div>
       <Footer />
     </>
   );

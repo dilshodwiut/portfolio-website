@@ -11,11 +11,6 @@ export default function NavbarLinks(): JSX.Element {
         </Link>
       </li>
       <li>
-        <Link href="/about" type="nav">
-          About
-        </Link>
-      </li>
-      <li>
         <Link href="/blog" type="nav">
           Blog
         </Link>
@@ -28,6 +23,11 @@ export default function NavbarLinks(): JSX.Element {
       <li>
         <Link href="/contact" type="nav">
           Contact
+        </Link>
+      </li>
+      <li>
+        <Link href="/about" type="nav">
+          About
         </Link>
       </li>
     </Ul>

@@ -1,13 +1,22 @@
 .button {
   color: var(--white);
   border: 2px solid var(--red);
+  background-color: var(--red);
   border-radius: 5px;
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // margin: 0 0.5rem;
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   width: 11rem;
+  height: 3rem;
+
+  span {
+    height: 20px;
+    // position: absolute;
+    // top: 40%;
+    // right: 5%;
+    // transform: translate(-5%, -40%);
+  }
 }

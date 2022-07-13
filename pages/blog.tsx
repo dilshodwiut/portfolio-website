@@ -13,6 +13,7 @@ const Blog: NextPage = () => {
         <link rel="icon" href="/man.png" />
       </Head>
       <Navbar />
+      <div style={{ flex: "1 0 auto" }}>Blog page</div>
       <Footer />
     </>
   );

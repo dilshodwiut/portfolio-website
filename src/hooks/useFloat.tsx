@@ -1,6 +1,9 @@
 import * as React from "react";
 import { useSprings, config } from "@react-spring/web";
-import randomize, { randomizeInitialLocation } from "src/functions/randomize";
+import {
+  randomizeLocation,
+  randomizeInitialLocation,
+} from "src/functions/randomize";
 import useResizeDetector from "src/hooks/useResizeDetector";
 
 export default function useFloat(children: React.ReactElement[]) {
@@ -16,7 +19,7 @@ export default function useFloat(children: React.ReactElement[]) {
   });
 
   React.useEffect(() => {
-    const gen = randomize(WIDTH, HEIGHT);
+    const gen = randomizeLocation(WIDTH, HEIGHT);
     api.start((i) => {
       const { x, y } = gen.next().value!;
       return {

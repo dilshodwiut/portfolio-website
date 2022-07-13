@@ -22,9 +22,8 @@ interface ButtonProps {
 }
 
 export default function Button(props: ButtonProps) {
-  const [{ bgColor, transform }, set] = useSpring(() => ({
-    bgColor: "transparent",
-    transform: "translate3d(0,0px,0)",
+  const [{ transform }, set] = useSpring(() => ({
+    transform: "translateY(0px)",
     config: { ...config.molasses, duration: 25 },
   }));
 
@@ -47,27 +46,25 @@ export default function Button(props: ButtonProps) {
         if (typeof onMouseEnter === "function") {
           onMouseEnter(e);
         }
-        // set({ bgColor: colors.red });
       }}
       onMouseLeave={(e) => {
         if (typeof onMouseLeave === "function") {
           onMouseLeave(e);
         }
-        // set({ bgColor: "transparent" });
       }}
       onMouseDown={(e) => {
         if (typeof onMouseDown === "function") {
           onMouseDown(e);
         }
-        set({ transform: "translate3d(0,3px,0)" });
+        set({ transform: "translateY(3px)" });
       }}
       onMouseUp={(e) => {
         if (typeof onMouseUp === "function") {
           onMouseUp(e);
         }
-        set({ transform: "translate3d(0,0px,0)" });
+        set({ transform: "translateY(0px)" });
       }}
-      style={{ backgroundColor: bgColor, transform }}
+      style={{ transform }}
       type={type}
       disabled={isDisabled}
       className={clsx(disableStyles ? "" : classes.button, className)}

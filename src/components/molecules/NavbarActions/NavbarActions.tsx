@@ -45,18 +45,14 @@ export default function NavbarActions() {
         }}
       >
         Download CV{" "}
-        <animated.div
-          style={
-            animationStarted ? { transform } : { transform: "translateY(0px)" }
-          }
-        >
+        <animated.span style={animationStarted ? { transform } : {}}>
           <IconDownload
             size={20}
             color="#fff"
             stroke={3}
             strokeLinejoin="miter"
           />
-        </animated.div>
+        </animated.span>
       </Button>
     </Ul>
   );

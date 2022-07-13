@@ -1,2 +1,1 @@
 pages/**/*.tsx
-src/containers/ErrorBoundary.tsx

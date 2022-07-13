@@ -3,13 +3,17 @@ update packages to the latest patch versions
 create better link component
 spread footer into atomic pattern
 make it responsive
-is super-tiny-icons useful ?
-change herocurve into sth else
+is super-tiny-icons useful ? icons set
 double check eslint ignores later
 testing
 refactor HandDrawnPaths - https://www.sinwaver.com/
-custom cursor
-locales
 custom error handling service, with error boundaries
 worklets, service workers, web workers
 produce icons according to screen size
+use all node packages
+redux vs react query
+tdd
+pages titles
+remove "data-name"s
+404 page
+mouse move, move icons on download btn

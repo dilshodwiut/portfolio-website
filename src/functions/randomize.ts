@@ -1,4 +1,4 @@
-export default function* randomize(x: number, y: number) {
+export function* randomizeLocation(x: number, y: number) {
   const xArr: number[] = [];
   const yArr: number[] = [];
 
@@ -23,4 +23,15 @@ export function randomizeInitialLocation(x: number, y: number) {
   const initialY = Math.floor(Math.random() * y);
 
   return [initialX, initialY];
+}
+
+export default function randomize() {
+  const randomN = Math.random();
+  if (randomN > 0.66) {
+    return "#fff";
+  }
+  if (randomN > 0.33) {
+    return "#e6e6e6";
+  }
+  return "#6c63ff";
 }
