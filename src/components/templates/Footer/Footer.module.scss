@@ -1,13 +1,16 @@
 .footer {
-  padding: 1rem;
-  background: #222222;
+  position: relative;
 
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .footerContent {
+    padding: 1rem;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // for sticky footer
+    flex-shrink: 0;
   }
-
-  // for sticky footer
-  flex-shrink: 0;
 }

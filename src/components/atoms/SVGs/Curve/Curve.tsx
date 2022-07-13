@@ -6,15 +6,17 @@ interface CurveProps {
   position: "top" | "bottom";
   rotate?: boolean;
   fill?: string;
+  style?: React.CSSProperties;
 }
 
-export default function Curve({ position, fill, rotate }: CurveProps) {
+export default function Curve({ position, fill, rotate, style }: CurveProps) {
   return (
     <div
       className={clsx(
         classes.curve,
         position === "top" ? classes.top : classes.bottom
       )}
+      style={style}
     >
       <svg
         data-name="Layer 1"
@@ -34,5 +36,6 @@ export default function Curve({ position, fill, rotate }: CurveProps) {
 
 Curve.defaultProps = {
   rotate: false,
-  fill: "#222222",
+  fill: "#1e1e1e",
+  style: {},
 };
