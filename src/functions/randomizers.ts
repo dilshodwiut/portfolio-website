@@ -25,7 +25,7 @@ export function* randomizeLocation(x: number, y: number) {
   }
 }
 
-export default function randomize() {
+export function randomize() {
   const randomN = Math.random();
   if (randomN > 0.66) {
     return "#fff";
@@ -34,4 +34,24 @@ export default function randomize() {
     return "#e6e6e6";
   }
   return "#6c63ff";
+}
+
+export function randomizeRotationDegree() {
+  const randomN = Math.random();
+  if (randomN > 0.66) {
+    return 0;
+  }
+  if (randomN > 0.33) {
+    return 90;
+  }
+  return 180;
+  // return Math.floor(Math.random() * 360);
+}
+
+export function randomizeRotationDirection() {
+  const randomN = Math.random();
+  if (randomN > 0.5) {
+    return "-";
+  }
+  return "";
 }

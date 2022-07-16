@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useSprings, config, animated } from "@react-spring/web";
-import randomize from "src/functions/randomize";
+import { randomize } from "src/functions/randomizers";
 
 export default function useRandomColorizer() {
   const [springs, api] = useSprings(50, (index) => {

@@ -44,15 +44,15 @@ export default function NavbarActions() {
           setAnimationStarted(true);
         }}
       >
-        Download CV{" "}
-        <animated.span style={animationStarted ? { transform } : {}}>
+        Download CV
+        {/* <animated.span style={animationStarted ? { transform } : {}}>
           <IconDownload
             size={20}
             color="#fff"
             stroke={3}
             strokeLinejoin="miter"
           />
-        </animated.span>
+        </animated.span> */}
       </Button>
     </Ul>
   );

@@ -3,10 +3,10 @@ import { useSprings, config } from "@react-spring/web";
 import {
   randomizeLocation,
   randomizeInitialLocation,
-} from "src/functions/randomize";
+} from "src/functions/randomizers";
 import useResizeDetector from "src/hooks/useResizeDetector";
 
-export default function useFloat(children: React.ReactElement[]) {
+export default function useFloat(children: JSX.Element | JSX.Element[]) {
   const { width: WIDTH, height: HEIGHT } = useResizeDetector();
 
   const [springs, api] = useSprings(React.Children.count(children), (index) => {
