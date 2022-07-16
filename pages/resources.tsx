@@ -14,7 +14,7 @@ const Resources: NextPage = () => {
       </Head>
       <Navbar />
       <div style={{ flex: "1 0 auto" }}>Resources page</div>
-      <Footer />
+      <Footer backgroundColor="#212121" />
     </>
   );
 };

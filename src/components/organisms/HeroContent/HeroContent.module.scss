@@ -2,35 +2,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  margin: 10rem auto;
+
+  position: relative; // for floating icons move behind
   z-index: 10;
 
   .content {
     position: relative;
     width: 50%;
-    height: 345px;
+    height: 420px; // fit-content
+    padding: 2rem;
+    // border: 1px solid var(--dark-blue);
     border-radius: 1rem;
-    padding: 2rem 2rem;
-    // background-color: #212121;
-    border: 1px solid var(--light-blue);
-    // box-shadow: 0px 0px 3rem rgba(42, 157, 143, 0.1);
-    transition: box-shadow 0.3s ease-in;
-    &:hover {
-      box-shadow: 0px 0px 3rem rgba(42, 157, 143, 0.3);
-    }
+    background-color: var(--bg-black);
+
+    box-shadow: 0 0 0.5rem var(--dark-blue);
 
     .switch {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 20px;
+      right: 20px;
 
-      color: grey;
+      color: #808080;
       display: inline-block;
-      border-bottom: 1px dotted black;
 
       .tooltip {
-        // visibility: hidden;
-        width: 120px;
+        visibility: hidden;
         background-color: black;
         color: #fff;
         text-align: center;
@@ -39,16 +36,31 @@
 
         position: absolute;
         z-index: 2;
+        width: 120px;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
       }
 
-      input[type="checkbox"]:hover .tooltip {
+      .tooltip::after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+
+      &:hover .tooltip {
         visibility: visible;
       }
 
       input[type="checkbox"] {
         height: 0;
         width: 0;
-        visibility: hidden;
+        display: none;
       }
 
       label {
@@ -56,7 +68,7 @@
         text-indent: -9999px;
         width: 50px;
         height: 25px;
-        background: grey;
+        background: #808080;
         display: block;
         border-radius: 25px;
         position: relative;
@@ -75,7 +87,7 @@
       }
 
       input:checked + label {
-        background: var(--light-blue);
+        background: var(--dark-blue);
       }
 
       input:checked + label:after {
@@ -90,25 +102,8 @@
 
     h1 {
       display: inline-block;
-      font-weight: var(--font-weight-black);
-      font-size: var(--font-size-xl);
-      line-height: 1;
-      color: var(--yellow);
+      font-size: 5rem;
 
-      // background: linear-gradient(
-      //   to right,
-      //   var(--yellow) 0%,
-      //   var(--orange) 50%,
-      //   var(--red) 100%
-      // );
-      // background: linear-gradient(
-      //   to right,
-      //   var(--red) 0%,
-      //   var(--orange) 50%,
-      //   var(--yellow) 100%
-      // );
-      // background: linear-gradient(to right, var(--yellow), var(--red));
-      // background: var(--orange);
       background: linear-gradient(to right, #1b5bf7, #f32170, #ff6b08);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
@@ -117,26 +112,51 @@
 
     p {
       font-size: 1.5rem;
-      font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-medium);
     }
 
-    backdrop-filter: blur(5px);
+    // backdrop-filter: blur(5px);
 
     .keyword {
-      color: var(--light-blue);
+      // color: var(--dark-blue);
+      color: #569cd6;
     }
 
-    .code {
+    .unicode {
       color: var(--yellow);
     }
 
     .arrow {
-      color: grey;
+      color: #808080;
     }
 
     // center icons horizontally
-    .icons {
-      vertical-align: middle;
-    }
+    // .icons {
+    //   vertical-align: middle;
+    // }
+  }
+}
+
+.code {
+  h1,
+  p {
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  h1 {
+    font-weight: var(--font-weight-light);
+    margin: 0;
+    // color: #4ec9b0;
+    // margin: 0 !important;
+  }
+}
+
+.view {
+  // line-height: 1;
+
+  h1 {
+    font-weight: var(--font-weight-medium);
+    // line-height: 1;
+    margin: 1rem 0;
   }
 }

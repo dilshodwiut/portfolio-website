@@ -1,3 +1,10 @@
+export function randomizeInitialLocation(x: number, y: number) {
+  const initialX = Math.floor(Math.random() * x);
+  const initialY = Math.floor(Math.random() * y);
+
+  return [initialX, initialY];
+}
+
 export function* randomizeLocation(x: number, y: number) {
   const xArr: number[] = [];
   const yArr: number[] = [];
@@ -16,13 +23,6 @@ export function* randomizeLocation(x: number, y: number) {
 
     yield { x: xArr[xIdx], y: yArr[yIdx] };
   }
-}
-
-export function randomizeInitialLocation(x: number, y: number) {
-  const initialX = Math.floor(Math.random() * x);
-  const initialY = Math.floor(Math.random() * y);
-
-  return [initialX, initialY];
 }
 
 export default function randomize() {

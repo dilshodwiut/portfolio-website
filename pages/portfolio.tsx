@@ -173,7 +173,7 @@ const Portfolio: NextPage = () => {
           position: "relative",
         }}
       ></div>
-      <Footer />
+      <Footer backgroundColor="#212121" />
     </>
   );
 };

@@ -19,6 +19,7 @@ import Svg from "@/components/atoms/SVGs/Dev/Svg";
 import Stackoverflow from "@/components/atoms/SVGs/Dev/Stackoverflow";
 import Yarn from "@/components/atoms/SVGs/Dev/Yarn";
 import Typescript from "@/components/atoms/SVGs/Dev/TypeScript";
+import CodePen from "@/components/atoms/SVGs/Dev/CodePen";
 
 export default function FloatingIcons() {
   const Float = dynamic(() => import("@/components/molecules/Float/Float"), {
@@ -46,6 +47,7 @@ export default function FloatingIcons() {
       <Svg />
       <Stackoverflow />
       <Yarn />
+      <CodePen />
     </Float>
   );
 }

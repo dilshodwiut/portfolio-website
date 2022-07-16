@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <Header />
       <Hero />
       {/* Recent Posts */}
-      <Footer backgroundColor="#212121" />
+      <Footer />
     </>
   );
 };

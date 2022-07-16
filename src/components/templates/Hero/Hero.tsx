@@ -6,7 +6,7 @@ import classes from "./Hero.module.scss";
 export default function Hero() {
   return (
     <section className={classes.hero}>
-      <FloatingIcons />
+      {/* <FloatingIcons /> */}
       <HeroContent />
     </section>
   );

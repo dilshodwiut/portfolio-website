@@ -18,15 +18,15 @@ export default function Footer({ className, backgroundColor }: FooterProps) {
   const isVisible = !!entry?.isIntersecting;
 
   const { transform, opacity } = useSpring({
-    from: { transform: "translateX(100%)", opacity: 0 },
+    from: { transform: "translateY(1rem)", opacity: 0 },
     to: {
-      transform: isVisible ? "translateX(0%)" : "translateX(100%)",
+      transform: isVisible ? "translateY(0%)" : "translateY(1rem)",
       opacity: isVisible ? 1 : 0,
     },
     loop: {
       reverse: false,
     },
-    config: { ...config.wobbly, duration: 500 },
+    config: { ...config.slow, duration: 800 },
   });
 
   return (
@@ -35,7 +35,7 @@ export default function Footer({ className, backgroundColor }: FooterProps) {
       className={clsx(classes.footer, className)}
       style={{ backgroundColor }}
     >
-      <Curve position="top" fill="#212121" style={{ top: "-170%" }} />
+      {/* <Curve position="top" fill="#212121" style={{ top: "-170%" }} /> */}
       <div className={classes.footerContent}>
         <animated.div style={{ transform, opacity }}>
           Made with <Heart isVisible={isVisible} /> by{" "}
@@ -50,5 +50,5 @@ export default function Footer({ className, backgroundColor }: FooterProps) {
 
 Footer.defaultProps = {
   className: "",
-  backgroundColor: "#1e1e1e",
+  backgroundColor: "#000",
 };

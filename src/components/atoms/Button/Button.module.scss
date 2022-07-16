@@ -1,16 +1,16 @@
 .button {
-  color: var(--white);
-  border: 2px solid var(--red);
+  color: var(--text-white);
+  // border: 2px solid var(--red);
   background-color: var(--red);
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  padding: 0.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: var(--font-size-md);
+  // font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
-  width: 11rem;
-  height: 3rem;
+  // width: 11rem;
+  // height: 3rem;
 
   span {
     height: 20px;

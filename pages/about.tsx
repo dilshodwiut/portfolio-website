@@ -14,7 +14,7 @@ const About: NextPage = () => {
       </Head>
       <Navbar />
       <div style={{ flex: "1 0 auto" }}>About page</div>
-      <Footer />
+      <Footer backgroundColor="#212121" />
     </>
   );
 };
