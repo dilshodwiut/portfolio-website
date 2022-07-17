@@ -15,7 +15,7 @@ export default function Astronaut() {
   });
 
   const [{ rotate }, api] = useSpring(() => ({
-    rotate: "0deg",
+    rotate: `${randomizeRotationDirection() + randomizeRotationDegree()}deg`,
     config: { ...config.slow, duration: 60000 },
     loop: {
       reverse: true,
@@ -40,12 +40,7 @@ export default function Astronaut() {
   return (
     <>
       <Float specialStyles={{ rotate }}>
-        <animated.img
-          src="/astronaut.png"
-          alt="astronaut"
-          width={200}
-          style={{ rotate }}
-        />
+        <animated.img src="/astronaut.png" alt="astronaut" width={200} />
       </Float>
 
       <Wrapper>

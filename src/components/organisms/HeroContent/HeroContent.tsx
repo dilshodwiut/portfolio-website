@@ -4,6 +4,7 @@ import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import Image from "next/image";
 import { useSpring, animated, config } from "@react-spring/web";
 import clsx from "clsx";
+import TypeWriter from "@/components/molecules/TypeWriter/TypeWriter";
 import classes from "./HeroContent.module.scss";
 
 export default function HeroContent() {
@@ -22,18 +23,22 @@ export default function HeroContent() {
         alt="man in dark"
         width={1100}
         height={750}
+        priority
       />
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <TypeWriter
+        text="I am - "
+        words={[
+          "Software Engineer",
+          "Functional Programmer",
+          "Linux Enthusiast",
+        ]}
+        wait={1000}
+      />
+
+      <div className={classes.technologies}>
+        <h1>My stack:</h1>
+      </div>
     </Wrapper>
   );
 }
