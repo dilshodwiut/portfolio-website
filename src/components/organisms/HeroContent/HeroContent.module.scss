@@ -167,4 +167,29 @@
     margin: 1rem 0;
     text-align: center;
   }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: stretch;
+    align-items: stretch;
+    gap: 1rem;
+
+    * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem;
+      border-radius: 5px;
+      background: #0d1321;
+    }
+  }
+}
+
+.practices {
+  h1 {
+    text-align: center;
+    font-weight: var(--font-weight-medium);
+  }
 }
