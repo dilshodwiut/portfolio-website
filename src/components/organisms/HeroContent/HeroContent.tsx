@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useSpring, animated, config } from "@react-spring/web";
 import clsx from "clsx";
 import TypeWriter from "@/components/molecules/TypeWriter/TypeWriter";
+import Hr from "@/components/atoms/Hr/Hr";
 import classes from "./HeroContent.module.scss";
 
 export default function HeroContent() {
@@ -36,7 +37,9 @@ export default function HeroContent() {
         wait={1000}
       />
 
-      <div className={classes.technologies}>
+      <Hr />
+
+      <div className={classes.stack}>
         <h1>My stack:</h1>
       </div>
     </Wrapper>

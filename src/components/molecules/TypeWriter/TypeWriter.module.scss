@@ -1,8 +1,16 @@
 .container {
+  h1 {
+    width: 545px;
+    margin: auto;
+    padding: 1rem;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: #ccc;
+  }
   .cursor {
     color: #20bf55;
+    // color: #04f06a;
     font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-medium);
     animation: blink 1s infinite;
   }
 }

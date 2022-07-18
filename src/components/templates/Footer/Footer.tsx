@@ -5,6 +5,7 @@ import Link from "@/components/atoms/Link/Link";
 import Heart from "@/components/atoms/SVGs/Heart";
 import clsx from "clsx";
 import Curve from "@/components/atoms/SVGs/Curve/Curve";
+import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import classes from "./Footer.module.scss";
 
 interface FooterProps {
@@ -35,15 +36,17 @@ export default function Footer({ className, backgroundColor }: FooterProps) {
       className={clsx(classes.footer, className)}
       style={{ backgroundColor }}
     >
-      {/* <Curve position="top" fill="#212121" style={{ top: "-170%" }} /> */}
-      <div className={classes.footerContent}>
-        <animated.div style={{ transform, opacity }}>
-          Made with <Heart isVisible={isVisible} /> by{" "}
-          <Link href="https://github.com/dilshodwiut" target="_blank">
-            Dilshod
-          </Link>
-        </animated.div>
-      </div>
+      <Wrapper>
+        {/* <Curve position="top" fill="#212121" style={{ top: "-170%" }} /> */}
+        <div className={classes.footerContent}>
+          <animated.div style={{ transform, opacity }}>
+            Made with <Heart isVisible={isVisible} /> by{" "}
+            <Link href="https://github.com/dilshodwiut" target="_blank">
+              Dilshod
+            </Link>
+          </animated.div>
+        </div>
+      </Wrapper>
     </footer>
   );
 }

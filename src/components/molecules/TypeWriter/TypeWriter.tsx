@@ -19,7 +19,6 @@ export default function TypeWriter(props: Props) {
         {text} {output}
         <span className={classes.cursor}>|</span>
       </h1>
-      <h2>Welcome to my website</h2>
     </div>
   );
 }
