@@ -15,7 +15,6 @@ redux vs react query
 tdd
 pages titles
 remove "data-name"s
-404 page
-mouse move, move icons on download btn
 deal with floating icon overflow on footer
 scroll snap
+refresh at scroll position
