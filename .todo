@@ -18,3 +18,5 @@ remove "data-name"s
 deal with floating icon overflow on footer
 scroll snap
 refresh at scroll position
+on Image component, use "100" or {100} ?
+typewriter: blink cursor on finished mode

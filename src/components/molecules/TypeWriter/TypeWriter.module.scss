@@ -10,7 +10,9 @@
     // color: #20bf55;
     color: #04f06a;
     font-size: var(--font-size-xl);
-    // animation: blink 1s infinite;
+    .blink {
+      animation: blink 1s infinite;
+    }
   }
 }
 
