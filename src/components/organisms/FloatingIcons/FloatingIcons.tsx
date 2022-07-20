@@ -22,7 +22,7 @@ import Typescript from "@/components/atoms/SVGs/Dev/TypeScript";
 import CodePen from "@/components/atoms/SVGs/Dev/CodePen";
 
 export default function FloatingIcons() {
-  const Float = dynamic(() => import("@/components/molecules/Float/Float"), {
+  const Float = dynamic(() => import("src/containers/Float/Float"), {
     ssr: false,
   });
 

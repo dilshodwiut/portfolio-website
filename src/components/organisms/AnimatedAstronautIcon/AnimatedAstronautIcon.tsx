@@ -5,12 +5,9 @@ import {
   randomizeRotationDegree,
   randomizeRotationDirection,
 } from "src/functions/randomizers";
-import Link from "next/link";
-import Wrapper from "@/components/atoms/Wrapper/Wrapper";
-import classes from "./Astronaut.module.scss";
 
-export default function Astronaut() {
-  const Float = dynamic(() => import("@/components/molecules/Float/Float"), {
+export default function AnimatedAstronautIcon() {
+  const Float = dynamic(() => import("src/containers/Float/Float"), {
     ssr: false,
   });
 
@@ -38,22 +35,8 @@ export default function Astronaut() {
   }, [api]);
 
   return (
-    <>
-      <Float specialStyles={{ rotate }}>
-        <animated.img src="/astronaut.png" alt="astronaut" width={200} />
-      </Float>
-
-      <Wrapper>
-        <div className={classes.messageContainer}>
-          <div className={classes.message}>
-            <h1>404 Error</h1>
-            <p>Don&apos;t panic and make sure to watch your oxygen levels.</p>
-          </div>
-          <div className={classes.messageLink}>
-            <Link href="/">Return to safety</Link>
-          </div>
-        </div>
-      </Wrapper>
-    </>
+    <Float specialStyles={{ rotate }}>
+      <animated.img src="/astronaut.png" alt="astronaut" width={200} />
+    </Float>
   );
 }

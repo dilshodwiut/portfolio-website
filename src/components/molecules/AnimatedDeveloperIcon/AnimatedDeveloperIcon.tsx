@@ -1,11 +1,11 @@
 import * as React from "react";
 import dynamic from "next/dynamic";
 import { animated } from "@react-spring/web";
-import classes from "./AnimatedDeveloper.module.scss";
+import classes from "./AnimatedDeveloperIcon.module.scss";
 
-function AnimatedDeveloper() {
+function AnimatedDeveloperIcon() {
   const RandomColorizer = dynamic(
-    () => import("@/components/molecules/RandomColorizer/RandomColorizer"),
+    () => import("src/containers/RandomColorizer"),
     {
       ssr: false,
     }
@@ -378,4 +378,4 @@ function AnimatedDeveloper() {
   );
 }
 
-export default React.memo(AnimatedDeveloper);
+export default React.memo(AnimatedDeveloperIcon);

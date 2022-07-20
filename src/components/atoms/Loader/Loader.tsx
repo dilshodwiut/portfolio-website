@@ -3,11 +3,9 @@ import classes from "./Loader.module.scss";
 
 export default function Loader() {
   return (
-    <div className={classes.container}>
-      <div className={classes.wrapper}>
-        <div className={classes.text}>loading</div>
-        <div className={classes.ring} />
-      </div>
+    <div className={classes.wrapper}>
+      <div className={classes.text}>loading</div>
+      <div className={classes.ring} />
     </div>
   );
 }

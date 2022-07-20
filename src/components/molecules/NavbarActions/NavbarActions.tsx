@@ -2,7 +2,7 @@ import * as React from "react";
 import { IconDownload } from "@tabler/icons";
 import { useSpring, animated, config } from "@react-spring/web";
 import downloadFile from "src/functions/downloadFile";
-import Ul from "@/components/atoms/Ul/Ul";
+import List from "@/components/atoms/List/List";
 import Button from "@/components/atoms/Button/Button";
 
 export default function NavbarActions() {
@@ -26,7 +26,7 @@ export default function NavbarActions() {
   }));
 
   return (
-    <Ul>
+    <List>
       <Button
         onClick={(event: React.MouseEvent) =>
           downloadFile(event, "Dilshod Ramatilloev.pdf")
@@ -54,6 +54,6 @@ export default function NavbarActions() {
           />
         </animated.span> */}
       </Button>
-    </Ul>
+    </List>
   );
 }

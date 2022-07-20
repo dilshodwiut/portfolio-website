@@ -20,3 +20,5 @@ scroll snap
 refresh at scroll position
 on Image component, use "100" or {100} ?
 typewriter: blink cursor on finished mode
+filter: blur(5px);
+key prop

@@ -1,10 +1,10 @@
 import * as React from "react";
-import Ul from "@/components/atoms/Ul/Ul";
+import List from "@/components/atoms/List/List";
 import Link from "@/components/atoms/Link/Link";
 
 export default function NavbarLinks(): JSX.Element {
   return (
-    <Ul>
+    <List>
       <li>
         <Link href="/portfolio" type="nav">
           Portfolio
@@ -30,6 +30,6 @@ export default function NavbarLinks(): JSX.Element {
           About
         </Link>
       </li>
-    </Ul>
+    </List>
   );
 }
