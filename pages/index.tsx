@@ -4,6 +4,7 @@ import Head from "next/head";
 import Hero from "@/components/templates/Hero/Hero";
 import Footer from "@/components/templates/Footer/Footer";
 import Header from "@/components/templates/Header/Header";
+import Content from "@/components/atoms/Content/Content";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +15,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/man.png" />
       </Head>
       <Header />
-      <Hero />
+      <Content>
+        <Hero />
+      </Content>
       {/* Recent Posts */}
       <Footer />
     </>

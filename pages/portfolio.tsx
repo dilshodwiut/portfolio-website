@@ -9,6 +9,7 @@ import Statistics from "@/components/templates/Statistics/Statistics";
 import Delivery from "@/components/templates/Delivery/Delivery";
 import Projects from "@/components/templates/Projects/Projects";
 import Practices from "@/components/templates/Practices/Practices";
+import Content from "@/components/atoms/Content/Content";
 
 const Portfolio: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Portfolio: NextPage = () => {
         <link rel="icon" href="/man.png" />
       </Head>
       <Header />
-      <div style={{ flex: "1 0 auto" }}>
+      <Content>
         <Expertise />
         <Divider />
         <Statistics />
@@ -29,7 +30,7 @@ const Portfolio: NextPage = () => {
         <Projects />
         <Divider />
         <Practices />
-      </div>
+      </Content>
       <Footer />
     </>
   );
