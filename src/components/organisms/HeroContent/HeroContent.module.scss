@@ -170,24 +170,6 @@
     margin: 1rem 0;
     text-align: center;
   }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-items: stretch;
-    align-items: stretch;
-    gap: 1rem;
-
-    * {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0.8rem;
-      border-radius: 5px;
-      background: #0d1321;
-    }
-  }
 }
 
 .practices {
@@ -222,7 +204,6 @@
         .card__content__text {
           font-size: 1.5rem;
           font-variant-numeric: tabular-nums;
-          // color: var(--purple); #0cb0d3, #9f2fff, f605fe, 25bbe3, fa01ff, 02dade
           // background: linear-gradient(to bottom, #0cb0d3, #9f2fff);
           // background: linear-gradient(to bottom, #25bbe3, #f605fe);
           background: linear-gradient(to bottom, #02dade, #fa01ff);
@@ -246,43 +227,5 @@
   h1 {
     text-align: center;
     font-weight: var(--font-weight-medium);
-  }
-}
-
-.slider {
-  height: 100px;
-  // margin: auto;
-  overflow: hidden;
-  position: relative;
-  // width: 960px;
-
-  .slider__track {
-    animation: scroll 120s linear infinite;
-    display: flex;
-    gap: 2rem;
-    width: calc(200px * 12);
-
-    .slider__track__item {
-      height: 100px;
-      width: 200px;
-
-      .slider__track__item__container {
-        height: inherit;
-        border-radius: 15px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-200px * 6));
   }
 }

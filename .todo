@@ -22,3 +22,7 @@ on Image component, use "100" or {100} ?
 typewriter: blink cursor on finished mode
 filter: blur(5px);
 key prop
+in svg file, what is aria-label, title tag, role
+herocontent must be template
+reusable slider
+semantic html (lesser divs)

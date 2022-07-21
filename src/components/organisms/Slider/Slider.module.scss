@@ -1,0 +1,37 @@
+.slider {
+  height: 100px;
+  // margin: auto;
+  overflow: hidden;
+  position: relative;
+  // width: 960px;
+
+  .slider__track {
+    animation: scroll 120s linear infinite;
+    display: flex;
+    gap: 2rem;
+    width: calc(200px * 12);
+
+    .slider__track__item {
+      height: 100px;
+      width: 200px;
+
+      .slider__track__item__wrapper {
+        height: inherit;
+        border-radius: 15px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 6));
+  }
+}

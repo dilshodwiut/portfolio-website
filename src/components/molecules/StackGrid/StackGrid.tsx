@@ -1,0 +1,374 @@
+import * as React from "react";
+import Image from "next/image";
+import classes from "./StackGrid.module.scss";
+
+export default function StackGrid() {
+  return (
+    <div className={classes.grid}>
+      <span>
+        <Image
+          src="/svgs/stack/javascript.svg"
+          alt="JavaScript"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/typescript.svg"
+          alt="TypeScript"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/sass.svg" alt="Sass" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image src="/svgs/stack/css.svg" alt="CSS3" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/tailwindcss.svg"
+          alt="Tailwind CSS"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/postcss.svg"
+          alt="Post CSS"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/autoprefixer.svg"
+          alt="Autoprefixer"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/css_modules.svg"
+          alt="CSS Modules"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/jss.svg" alt="JSS" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/netlify.svg"
+          alt="Netlify"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/json.svg" alt="Json" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image src="/svgs/stack/jwt.svg" alt="JWT" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/nextjs.svg"
+          alt="Next.js"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/nodejs.svg"
+          alt="Node.js"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/rxjs.svg" alt="RxJS" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/threejs.svg"
+          alt="Three.js"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/lodash.svg"
+          alt="Lodash"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/html.svg"
+          alt="HTML5"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/reactjs.svg"
+          alt="React.js"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/react_query.svg"
+          alt="React Query"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/react_table.svg"
+          alt="React Table"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/react_router.svg"
+          alt="React Router"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/cra.svg"
+          alt="Create React App"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/prettier.svg"
+          alt="Prettier"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/eslint.svg"
+          alt="ESLint"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/jest.svg" alt="Jest" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/vscode.svg"
+          alt="Visual Studio Code"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/vim.svg" alt="Vim" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image src="/svgs/stack/vite.svg" alt="Vite" width="50%" height="50%" />
+      </span>
+
+      <span>
+        <Image src="/svgs/stack/gimp.svg" alt="Gimp" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/linux.svg"
+          alt="Linux"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/arch.svg"
+          alt="Arch Linux"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/firebase.svg"
+          alt="Firebase"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/bash.svg" alt="Bash" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/redux.svg"
+          alt="Redux"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/mui.svg" alt="MUI" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/postman.svg"
+          alt="Postman"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/chrome.svg"
+          alt="Google Chrome"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/svg.svg" alt="SVG" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image src="/svgs/stack/git.svg" alt="Git" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/github.svg"
+          alt="GitHub"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/gitlab.svg"
+          alt="GitLab"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/glitch.svg"
+          alt="Glitch"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/gatsby.svg"
+          alt="Gatsby"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/webpack.svg"
+          alt="Webpack"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/babel.svg"
+          alt="Babel"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/wasm.svg"
+          alt="WebAssembly"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/as.svg"
+          alt="AssemblyScript"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/graphql.svg"
+          alt="GraphQL"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/pwa.svg" alt="PWA" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/antd.svg"
+          alt="Ant Design"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image src="/svgs/stack/npm.svg" alt="Npm" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image src="/svgs/stack/yarn.svg" alt="Yarn" width="50%" height="50%" />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/markdown.svg"
+          alt="Markdown"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/i18next.svg"
+          alt="i18next"
+          width="50%"
+          height="50%"
+        />
+      </span>
+      <span>
+        <Image
+          src="/svgs/stack/bootstrap.svg"
+          alt="Bootstrap"
+          width="50%"
+          height="50%"
+        />
+      </span>
+    </div>
+  );
+}
