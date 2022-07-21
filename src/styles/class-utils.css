@@ -101,3 +101,19 @@
 .mb-xl {
   margin-bottom: 4rem;
 }
+
+.border-radius-sm {
+  border-radius: 0.25rem;
+}
+
+.border-radius-md {
+  border-radius: 0.5rem;
+}
+
+.border-radius-lg {
+  border-radius: 1rem;
+}
+
+.border-radius-xl {
+  border-radius: 2rem;
+}
