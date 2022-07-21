@@ -4,4 +4,14 @@
 
   // for sticky footer
   flex: 1 0 auto;
+
+  .welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10rem auto;
+
+    position: relative; // for floating icons move behind
+    z-index: 10;
+  }
 }

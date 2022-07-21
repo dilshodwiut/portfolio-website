@@ -10,10 +10,9 @@ import classes from "./Footer.module.scss";
 
 interface FooterProps {
   className?: string;
-  backgroundColor?: string;
 }
 
-export default function Footer({ className, backgroundColor }: FooterProps) {
+export default function Footer({ className }: FooterProps) {
   const ref = React.useRef<HTMLDivElement | null>(null);
   const entry = useIntersectionObserver(ref, {});
   const isVisible = !!entry?.isIntersecting;
@@ -31,11 +30,7 @@ export default function Footer({ className, backgroundColor }: FooterProps) {
   });
 
   return (
-    <footer
-      ref={ref}
-      className={clsx(classes.footer, className)}
-      style={{ backgroundColor }}
-    >
+    <footer ref={ref} className={clsx(classes.footer, className)}>
       <Wrapper>
         {/* <Curve position="top" fill="#212121" style={{ top: "-170%" }} /> */}
         <div className={classes.footerContent}>
@@ -53,5 +48,4 @@ export default function Footer({ className, backgroundColor }: FooterProps) {
 
 Footer.defaultProps = {
   className: "",
-  backgroundColor: "#000",
 };
