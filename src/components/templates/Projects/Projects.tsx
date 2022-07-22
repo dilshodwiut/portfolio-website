@@ -1,15 +1,19 @@
 import * as React from "react";
 import type { Project as ProjectType } from "@/types/project";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import Project from "@/components/organisms/Project/Project";
 import Image from "next/image";
 import classes from "./Projects.module.scss";
 
-interface Props {
-  projects: ProjectType[];
-}
+// interface Props {
+//   projects: ProjectType[];
+// }
 
-export default function Projects(props: Props) {
+export default function Projects(
+  props: InferGetStaticPropsType<typeof getStaticProps>
+) {
   const { projects } = props;
+  console.log(projects);
 
   return (
     <div className={classes.projects__list}>
@@ -42,3 +46,16 @@ export default function Projects(props: Props) {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  // const projects = await import("@/data/projects.json");
+  // const projects = await fetch("@/data/projects.json");
+  const projects = await fetch("https://dilshod.me/api/projects");
+  console.log(projects);
+  const data = await projects.json();
+  return {
+    props: {
+      projects: data,
+    },
+  };
+};

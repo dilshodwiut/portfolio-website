@@ -11,9 +11,9 @@ import Clients from "@/components/templates/Clients/Clients";
 import Practices from "@/components/templates/Practices/Practices";
 import Content from "@/components/atoms/Content/Content";
 import Projects from "@/components/templates/Projects/Projects";
+import { Project } from "@/types/project";
 
-const Portfolio: NextPage = (props) => {
-  const { projects } = props;
+const Portfolio: NextPage = () => {
   return (
     <>
       <Head>
@@ -30,7 +30,7 @@ const Portfolio: NextPage = (props) => {
         <Delivery />
         <Divider />
         <Clients />
-        <Projects projects={projects} />
+        <Projects />
         <Divider />
         <Practices />
       </Content>
@@ -40,16 +40,3 @@ const Portfolio: NextPage = (props) => {
 };
 
 export default Portfolio;
-
-export async function getStaticProps(context) {
-  // const projects = await import("@/data/projects.json");
-  // const projects = await fetch("@/data/projects.json");
-  const projects = await fetch("https://dilshod.me/api/projects");
-  console.log(projects);
-  const data = await projects.json();
-  return {
-    props: {
-      projects: data,
-    },
-  };
-}
