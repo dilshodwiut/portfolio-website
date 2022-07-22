@@ -28,4 +28,7 @@ reusable slider
 semantic html (lesser divs)
 rice sass files
 classses vs css properties (aka variables)
-h1 component
+h1, h2, h3 component
+refactor color, ranges, units to css variables
+bem or camelcase
+Image alt attr

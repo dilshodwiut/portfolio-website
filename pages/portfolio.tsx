@@ -7,11 +7,13 @@ import Expertise from "@/components/templates/Expertise/Expertise";
 import Divider from "@/components/atoms/Divider/Divider";
 import Statistics from "@/components/templates/Statistics/Statistics";
 import Delivery from "@/components/templates/Delivery/Delivery";
-import Projects from "@/components/templates/Projects/Projects";
+import Clients from "@/components/templates/Clients/Clients";
 import Practices from "@/components/templates/Practices/Practices";
 import Content from "@/components/atoms/Content/Content";
+import Projects from "@/components/templates/Projects/Projects";
 
-const Portfolio: NextPage = () => {
+const Portfolio: NextPage = (props) => {
+  const { projects } = props;
   return (
     <>
       <Head>
@@ -27,7 +29,8 @@ const Portfolio: NextPage = () => {
         <Divider />
         <Delivery />
         <Divider />
-        <Projects />
+        <Clients />
+        <Projects projects={projects} />
         <Divider />
         <Practices />
       </Content>
@@ -37,3 +40,16 @@ const Portfolio: NextPage = () => {
 };
 
 export default Portfolio;
+
+export async function getStaticProps(context) {
+  // const projects = await import("@/data/projects.json");
+  // const projects = await fetch("@/data/projects.json");
+  const projects = await fetch("https://dilshod.me/api/projects");
+  console.log(projects);
+  const data = await projects.json();
+  return {
+    props: {
+      projects: data,
+    },
+  };
+}

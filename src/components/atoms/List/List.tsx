@@ -5,14 +5,26 @@ import classes from "./List.module.scss";
 interface ListProps {
   className?: string;
   children: React.ReactNode;
+  direction?: "horizontal" | "vertical";
 }
 
 export default function List(props: ListProps) {
-  const { className, children } = props;
+  const { className, children, direction } = props;
 
-  return <ul className={clsx(classes.list, className)}>{children}</ul>;
+  return (
+    <ul
+      className={clsx(
+        classes.list,
+        direction === "vertical" ? classes.vertical : classes.horizontal,
+        className
+      )}
+    >
+      {children}
+    </ul>
+  );
 }
 
 List.defaultProps = {
   className: "",
+  direction: "horizontal",
 };
