@@ -58,7 +58,7 @@ export default function WelcomeMsg() {
           </>
         ) : (
           <Image
-            src="/star-struck.svg"
+            src="/svgs/star-struck.svg"
             alt="star struck face"
             width={29}
             height={29}

@@ -14,7 +14,7 @@ export default function Hero() {
       {/* <FloatingIcons /> */}
       <Wrapper>
         <Image
-          src="/man-in-dark.jpg"
+          src="/images/man-in-dark.jpg"
           alt="man in dark"
           width={1100}
           height={750}

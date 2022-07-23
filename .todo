@@ -31,6 +31,7 @@ classses vs css properties (aka variables)
 h1, h2, h3 component
 refactor color, ranges, units to css variables
 bem or camelcase
-Image alt attr
 should key be generated on backend with uid?
 blur slider sides
+.husky, .github, .local, .npmrc
+import type {...} vs import {...} for types and interfaces

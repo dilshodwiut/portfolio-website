@@ -9,7 +9,7 @@ export default function Stats() {
     <div className={classes.cards}>
       <Card className={classes.card}>
         <div className={classes.card__icon}>
-          <Image src="/commit.png" width={64} height={64} />
+          <Image src="/commit.png" width={64} height={64} alt="commit icon" />
         </div>
         <div className={classes.card__content}>
           <div className={classes.card__content__title}>Commits</div>
@@ -28,7 +28,12 @@ export default function Stats() {
 
       <Card className={classes.card}>
         <div className={classes.card__icon}>
-          <Image src="/development.png" width={64} height={64} />
+          <Image
+            src="/development.png"
+            width={64}
+            height={64}
+            alt="projects icon"
+          />
         </div>
         <div className={classes.card__content}>
           <div className={classes.card__content__title}>
@@ -48,7 +53,12 @@ export default function Stats() {
 
       <Card className={classes.card}>
         <div className={classes.card__icon}>
-          <Image src="/dropper.png" width={64} height={64} />
+          <Image
+            src="/dropper.png"
+            width={64}
+            height={64}
+            alt="experience icon"
+          />
         </div>
         <div className={classes.card__content}>
           <div className={classes.card__content__title}>
@@ -69,7 +79,7 @@ export default function Stats() {
 
       <Card className={classes.card}>
         <div className={classes.card__icon}>
-          <Image src="/office.png" width={64} height={64} />
+          <Image src="/office.png" width={64} height={64} alt="office icon" />
         </div>
         <div className={classes.card__content}>
           <div className={classes.card__content__title}>
