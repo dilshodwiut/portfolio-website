@@ -16,7 +16,7 @@ import { Project } from "@/types/project";
 const Portfolio: NextPage = (
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
-  const { projects, technologies } = props;
+  const { technologies, stats, projects } = props;
 
   return (
     <>
@@ -29,7 +29,7 @@ const Portfolio: NextPage = (
       <Content>
         <Expertise technologies={technologies} />
         <Divider />
-        <Statistics />
+        <Statistics stats={stats} />
         <Divider />
         <Delivery />
         <Divider />
@@ -48,15 +48,18 @@ export default Portfolio;
 export const getStaticProps: GetStaticProps = async (context) => {
   // const projects = await import("@/data/projects.json");
   // const projects = await fetch("@/data/projects.json");
-  const projects = await fetch(process.env.PROJECTS_URL);
   const technologies = await fetch(process.env.TECHNOLOGIES_URL);
-  const projectsData = await projects.json();
+  const stats = await fetch(process.env.STATS_URL);
+  const projects = await fetch(process.env.PROJECTS_URL);
   const technologiesData = await technologies.json();
+  const statsData = await stats.json();
+  const projectsData = await projects.json();
 
   return {
     props: {
-      projects: projectsData,
       technologies: technologiesData,
+      stats: statsData,
+      projects: projectsData,
     },
   };
 };

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { Project } from "@/types/project";
-import projects from "../../src/db/projects.json";
+import projects from "@/db/projects.json";
 
 export default function handler(
   req: NextApiRequest,

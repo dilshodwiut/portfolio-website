@@ -35,3 +35,4 @@ should key be generated on backend with uid?
 blur slider sides
 .husky, .github, .local, .npmrc
 import type {...} vs import {...} for types and interfaces
+better way to deliver getstaticprops to nested components without prop drilling

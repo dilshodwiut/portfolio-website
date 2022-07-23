@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { Image } from "@/types/image";
-import technologies from "../../src/db/stack.json";
+import technologies from "@/db/stack.json";
 
 export default function handler(
   req: NextApiRequest,
