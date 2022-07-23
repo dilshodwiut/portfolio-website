@@ -13,7 +13,7 @@ export default function Tag(props: Props) {
   const { children, className, color } = props;
 
   return (
-    <small className={clsx(classes.tag, classes.red, className)}>
+    <small className={clsx(classes.tag, classes[color!], className)}>
       {children}
     </small>
   );

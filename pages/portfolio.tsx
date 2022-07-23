@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { NextPage } from "next";
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Head from "next/head";
 import Header from "@/components/templates/Header/Header";
 import Footer from "@/components/templates/Footer/Footer";
@@ -13,7 +13,11 @@ import Content from "@/components/atoms/Content/Content";
 import Projects from "@/components/templates/Projects/Projects";
 import { Project } from "@/types/project";
 
-const Portfolio: NextPage = () => {
+const Portfolio: NextPage = (
+  props: InferGetStaticPropsType<typeof getStaticProps>
+) => {
+  const { projects } = props;
+
   return (
     <>
       <Head>
@@ -30,7 +34,7 @@ const Portfolio: NextPage = () => {
         <Delivery />
         <Divider />
         <Clients />
-        <Projects />
+        <Projects projects={projects} />
         <Divider />
         <Practices />
       </Content>
@@ -40,3 +44,15 @@ const Portfolio: NextPage = () => {
 };
 
 export default Portfolio;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  // const projects = await import("@/data/projects.json");
+  // const projects = await fetch("@/data/projects.json");
+  const projects = await fetch(process.env.NEXT_PROJECTS_URL);
+  const data = await projects.json();
+  return {
+    props: {
+      projects: data,
+    },
+  };
+};

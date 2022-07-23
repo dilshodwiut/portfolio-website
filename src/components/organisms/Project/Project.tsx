@@ -1,33 +1,25 @@
 import * as React from "react";
+import type { ProjectProps } from "@/types/project";
 import Image from "next/image";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import TagCmp from "@/components/atoms/Tag/Tag";
 import List from "@/components/atoms/List/List";
 import ListItem from "@/components/atoms/ListItem/ListItem";
+import clsx from "clsx";
 import classes from "./Project.module.scss";
 
-type ImageType = { src: string; alt: string };
-type Service = {
-  type: "website" | "admin";
-  image: ImageType;
-};
-type Tag = { text: string; color: string; image: ImageType };
-
-interface Props {
-  title: string | React.ReactNode;
-  description: string;
-  tags: Tag[];
-  services: Service[];
-  image: ImageType;
-}
-
-export default function Project(props: Props) {
-  const { title, description, tags, services, image } = props;
+export default function Project(props: ProjectProps) {
+  const { title, description, tags, services, image, reverseOrder } = props;
 
   return (
     <Wrapper>
       <div className={classes.container}>
-        <div className={classes.picture}>
+        <div
+          className={clsx(
+            classes.picture,
+            reverseOrder ? classes.reversedOrder : null
+          )}
+        >
           <Image
             src={image.src}
             alt={image.alt}
@@ -39,7 +31,7 @@ export default function Project(props: Props) {
         <div className={classes.project}>
           <span className={classes.project__title}>{title}</span>
           {tags.map((tag) => (
-            <TagCmp color={tag.color}>
+            <TagCmp key={tag.text} color={tag.color}>
               <Image
                 src={tag.image.src}
                 alt={tag.image.alt}

@@ -26,4 +26,14 @@
   background: lighten(#ea3d26, 30%);
 }
 
+.blue {
+  color: var(--light-blue);
+  background: lighten(#2a9d8f, 30%);
+}
+
+.darkblue {
+  color: var(--dark-blue);
+  background: lighten(#264653, 30%);
+}
+
 // sass function to gen lighter color of the provided color
