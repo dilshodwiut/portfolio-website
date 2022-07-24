@@ -12,10 +12,12 @@ interface FooterProps {
   className?: string;
 }
 
+let isTriggered: boolean = false;
+
 export default function Footer({ className }: FooterProps) {
   const ref = React.useRef<HTMLDivElement | null>(null);
   const entry = useIntersectionObserver(ref, {});
-  const isVisible = !!entry?.isIntersecting;
+  const isVisible = !isTriggered ? !!entry?.isIntersecting : true;
 
   const { transform, opacity } = useSpring({
     from: { transform: "translateY(1rem)", opacity: 0 },
@@ -23,11 +25,15 @@ export default function Footer({ className }: FooterProps) {
       transform: isVisible ? "translateY(0%)" : "translateY(1rem)",
       opacity: isVisible ? 1 : 0,
     },
-    loop: {
-      reverse: false,
-    },
     config: { ...config.slow, duration: 800 },
   });
+
+  React.useEffect(() => {
+    if (isVisible) {
+      // ref.current?.scrollIntoView({ behavior: "smooth" });
+      isTriggered = true;
+    }
+  }, [isVisible]);
 
   return (
     <footer ref={ref} className={clsx(classes.footer, className)}>

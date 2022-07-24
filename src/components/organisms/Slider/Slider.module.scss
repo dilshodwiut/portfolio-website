@@ -1,9 +1,11 @@
 .slider {
-  height: 100px;
+  height: 150px;
   // margin: auto;
   overflow: hidden;
   position: relative;
   // width: 960px;
+  display: flex;
+  align-items: center;
 
   .slider__track {
     animation: scroll 120s linear infinite;
@@ -14,6 +16,14 @@
     .slider__track__item {
       height: 100px;
       width: 200px;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      filter: grayscale(100%);
+
+      &:hover {
+        transform: scale(1.1);
+        filter: grayscale(0);
+      }
 
       .slider__track__item__wrapper {
         height: inherit;

@@ -7,7 +7,7 @@ is super-tiny-icons useful ? icons set
 double check eslint ignores later
 testing
 refactor HandDrawnPaths - https://www.sinwaver.com/
-custom error handling service, with error boundaries
+custom error handling service, with error boundaries, and _error page
 worklets, service workers, web workers
 produce icons according to screen size
 use all node packages
@@ -21,14 +21,13 @@ refresh at scroll position
 on Image component, use "100" or {100} ?
 typewriter: blink cursor on finished mode
 filter: blur(5px);
-key prop
 in svg file, what is aria-label, title tag, role
 herocontent must be template
 reusable slider
 semantic html (lesser divs)
 rice sass files
 classses vs css properties (aka variables)
-h1, h2, h3 component
+h1, h2, h3, title, component
 refactor color, ranges, units to css variables
 bem or camelcase
 should key be generated on backend with uid?
@@ -36,3 +35,5 @@ blur slider sides
 .husky, .github, .local, .npmrc
 import type {...} vs import {...} for types and interfaces
 better way to deliver getstaticprops to nested components without prop drilling
+change projects background positioning logic
+ditch react-intersection-observer

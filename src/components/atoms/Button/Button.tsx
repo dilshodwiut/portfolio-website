@@ -22,9 +22,9 @@ interface ButtonProps {
 }
 
 export default function Button(props: ButtonProps) {
-  const [{ transform }, set] = useSpring(() => ({
+  const [{ transform }, api] = useSpring(() => ({
     transform: "translateY(0px)",
-    config: { ...config.molasses, duration: 25 },
+    config: { ...config.stiff, duration: 1 },
   }));
 
   const {
@@ -56,13 +56,13 @@ export default function Button(props: ButtonProps) {
         if (typeof onMouseDown === "function") {
           onMouseDown(e);
         }
-        set({ transform: "translateY(3px)" });
+        api.start({ transform: "translateY(7px)" });
       }}
       onMouseUp={(e) => {
         if (typeof onMouseUp === "function") {
           onMouseUp(e);
         }
-        set({ transform: "translateY(0px)" });
+        api.start({ transform: "translateY(0px)" });
       }}
       style={{ transform }}
       type={type}

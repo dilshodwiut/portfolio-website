@@ -6,25 +6,34 @@ interface ListProps {
   className?: string;
   children: React.ReactNode;
   direction?: "horizontal" | "vertical";
+  // ref?: React.Ref<HTMLDivElement>;
 }
 
-export default function List(props: ListProps) {
-  const { className, children, direction } = props;
+// type ULProps = React.HTMLProps<HTMLUListElement>
 
-  return (
-    <ul
-      className={clsx(
-        classes.list,
-        direction === "vertical" ? classes.vertical : classes.horizontal,
-        className
-      )}
-    >
-      {children}
-    </ul>
-  );
-}
+const List = React.forwardRef<HTMLUListElement, ListProps>(
+  (props: ListProps, ref) => {
+    const { className, children, direction } = props;
+
+    return (
+      <ul
+        ref={ref}
+        className={clsx(
+          classes.list,
+          direction === "vertical" ? classes.vertical : classes.horizontal,
+          className
+        )}
+      >
+        {children}
+      </ul>
+    );
+  }
+);
 
 List.defaultProps = {
   className: "",
   direction: "horizontal",
+  // ref: null,
 };
+
+export default List;

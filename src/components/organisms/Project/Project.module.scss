@@ -12,16 +12,33 @@
   .picture {
     position: relative;
 
+    & > span {
+      right: -45px;
+    }
+
+    .polka {
+      background: radial-gradient(#655197 2px, transparent 3px),
+        radial-gradient(#655197 2px, transparent 3px), #fff;
+      background-position: 0 0, 20px 20px;
+      background-size: 40px 40px;
+    }
+
     &::before {
       position: absolute;
-      top: 50px;
-      left: 70px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       content: "";
       display: inline-block;
       width: 400px;
       height: 300px;
       background: #0d1321;
       border-radius: 15px;
+
+      background: radial-gradient(#655197 2px, transparent 3px),
+        radial-gradient(#655197 2px, transparent 3px), #000;
+      background-position: 0 0, 20px 20px;
+      background-size: 40px 40px;
     }
   }
 
@@ -66,4 +83,8 @@
 
 .reversedOrder {
   order: 1;
+
+  & > span {
+    right: -65px !important;
+  }
 }
