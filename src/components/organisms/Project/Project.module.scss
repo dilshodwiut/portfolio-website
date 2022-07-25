@@ -11,16 +11,10 @@
 
   .picture {
     position: relative;
+    flex: 1 1 auto;
 
     & > span {
       right: -45px;
-    }
-
-    .polka {
-      background: radial-gradient(#655197 2px, transparent 3px),
-        radial-gradient(#655197 2px, transparent 3px), #fff;
-      background-position: 0 0, 20px 20px;
-      background-size: 40px 40px;
     }
 
     &::before {
@@ -35,6 +29,7 @@
       background: #0d1321;
       border-radius: 15px;
 
+      // polka
       background: radial-gradient(#655197 2px, transparent 3px),
         radial-gradient(#655197 2px, transparent 3px), #000;
       background-position: 0 0, 20px 20px;
@@ -43,6 +38,7 @@
   }
 
   .project {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

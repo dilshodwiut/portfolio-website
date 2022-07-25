@@ -20,7 +20,7 @@
     ],
     "tags": [
       {
-        "text": "Delivery",
+        "text": "Ecommerce",
         "color": "red",
         "image": { "src": "/shopping-cart.png", "alt": "Shopping Cart" }
       }
@@ -63,6 +63,74 @@
         "text": "Banking",
         "color": "blue",
         "image": { "src": "/bank.png", "alt": "Bank" }
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Safia",
+    "image": { "src": "/safia_desktop.png", "alt": "Safia website" },
+    "title": "Safia",
+    "description": "Safia confectionery house in Tashkent.",
+    "services": [
+      {
+        "type": "admin",
+        "image": { "src": "/setting.png", "alt": "Admin Panel" }
+      }
+    ],
+    "tags": [
+      {
+        "text": "Bakery",
+        "color": "yellow",
+        "image": { "src": "/cupcake.png", "alt": "Cupcake" }
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Delever",
+    "image": { "src": "/delever_desktop.png", "alt": "Delever website" },
+    "title": "Delever",
+    "description": "Multi-functional platform to facilitate and speed up the delivery process.",
+    "services": [
+      {
+        "type": "admin",
+        "image": { "src": "/setting.png", "alt": "Admin Panel" }
+      },
+      {
+        "type": "website",
+        "image": { "src": "/global.png", "alt": "Web" }
+      }
+    ],
+    "tags": [
+      {
+        "text": "Delivery",
+        "color": "red",
+        "image": { "src": "/delivery.png", "alt": "Van" }
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Car24",
+    "image": { "src": "/car24_desktop.png", "alt": "Car24 website" },
+    "title": "Car24",
+    "description": "Car24 - car rental service based in Tashkent.",
+    "services": [
+      {
+        "type": "admin",
+        "image": { "src": "/setting.png", "alt": "Admin Panel" }
+      },
+      {
+        "type": "website",
+        "image": { "src": "/global.png", "alt": "Web" }
+      }
+    ],
+    "tags": [
+      {
+        "text": "Rental",
+        "color": "purple",
+        "image": { "src": "/car.png", "alt": "Car" }
       }
     ]
   }

@@ -4,7 +4,7 @@
   border-radius: 5rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
-  width: 125px;
+  min-width: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,6 +34,21 @@
 .darkblue {
   color: var(--dark-blue);
   background: lighten(#264653, 30%);
+}
+
+.yellow {
+  color: var(--yellow);
+  background: lighten(#ecd444, 30%);
+}
+
+.orange {
+  color: var(--orange);
+  background: lighten(#e76f51, 30%);
+}
+
+.purple {
+  color: var(--purple);
+  background: lighten(#6e2594, 30%);
 }
 
 // other colors should also be available from the color palette or from types/tag.ts
