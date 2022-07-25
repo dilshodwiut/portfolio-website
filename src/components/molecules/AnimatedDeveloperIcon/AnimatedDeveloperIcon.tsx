@@ -17,6 +17,8 @@ function AnimatedDeveloperIcon() {
         data-name="Layer 1"
         viewBox="0 0 850.54 740.83"
         xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
       >
         <path
           transform="translate(-174.73 -79.585)"

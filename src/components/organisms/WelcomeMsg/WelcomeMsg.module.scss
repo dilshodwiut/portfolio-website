@@ -6,7 +6,7 @@
   // border: 1px solid var(--dark-blue);
   border-radius: 1rem;
   // background-color: var(--bg-black);
-
+  overflow: hidden;
   // box-shadow: 0 0 0.5rem var(--dark-blue);
 
   .switch {
@@ -28,17 +28,16 @@
       position: absolute;
       z-index: 2;
       width: 120px;
-      bottom: 150%;
-      left: 50%;
-      margin-left: -60px;
+      top: -5px;
+      right: 115%;
     }
 
     .tooltip::after {
       content: " ";
       position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
+      top: 50%;
+      left: 95%;
+      margin-top: -2.5px;
       border-width: 5px;
       border-style: solid;
       border-color: black transparent transparent transparent;
@@ -91,19 +90,28 @@
     }
   }
 
-  h1 {
-    display: inline-block;
-    font-size: 5rem;
+  .window {
+    width: calc(100% * 2 + 4rem);
+    height: calc(420px - 4rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    transform: translateX(-100%);
 
-    background: linear-gradient(to right, #1b5bf7, #f32170, #ff6b08);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
+    h1 {
+      display: inline-block;
+      font-size: 5rem;
 
-  p {
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-medium);
+      background: linear-gradient(to right, #1b5bf7, #f32170, #ff6b08);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: var(--font-weight-medium);
+    }
   }
 
   // backdrop-filter: blur(5px);

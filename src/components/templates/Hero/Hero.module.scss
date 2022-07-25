@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10rem auto;
+    gap: 2rem;
 
     position: relative; // for floating icons move behind
     z-index: 10;

@@ -9,14 +9,46 @@ export default function WelcomeMsg() {
   const [showCode, setShowCode] = React.useState(true);
   const [showSwitch, setShowSwitch] = React.useState(false);
 
-  const spring = useSpring({
-    opacity: showSwitch ? 1 : 0,
+  const [{ opacity }, switchApi] = useSpring(() => ({
+    from: { opacity: 0 },
     config: config.stiff,
-  });
+  }));
+
+  const [spring, springApi] = useSpring(() => ({
+    transform: "translateX(0%)",
+  }));
+
+  const [{ opacity: codeOpacity }, codeApi] = useSpring(() => ({
+    from: { opacity: 0 },
+    config: config.stiff,
+  }));
+
+  const [{ opacity: viewOpacity }, viewApi] = useSpring(() => ({
+    from: { opacity: 0 },
+    config: config.stiff,
+  }));
+
+  React.useEffect(() => {
+    switchApi.start({ opacity: showSwitch ? 1 : 0 });
+  }, [showSwitch, switchApi]);
+
+  React.useEffect(() => {
+    springApi.start({
+      transform: showCode ? "translateX(0%)" : "translateX(-53.5%)",
+    });
+  }, [showCode, springApi]);
+
+  React.useEffect(() => {
+    codeApi.start({ opacity: showCode ? 1 : 0 });
+  }, [showCode, codeApi]);
+
+  React.useEffect(() => {
+    viewApi.start({ opacity: !showCode ? 1 : 0 });
+  }, [showCode, viewApi]);
 
   return (
     <Card
-      className={clsx(classes.content, showCode ? classes.code : classes.view)}
+      className={classes.content}
       onMouseEnter={() => {
         setShowSwitch(true);
       }}
@@ -24,7 +56,15 @@ export default function WelcomeMsg() {
         setShowSwitch(false);
       }}
     >
-      <animated.span className={classes.switch} style={spring}>
+      <animated.span
+        className={classes.switch}
+        style={{
+          opacity,
+          transform: opacity.to(
+            (x) => `translate(${-(x * 45 - 45)}px, ${x * 45 - 45}px)`
+          ),
+        }}
+      >
         <span className={classes.tooltip}>
           {showCode ? "Hide" : "Show"} code
         </span>
@@ -39,70 +79,64 @@ export default function WelcomeMsg() {
         <label htmlFor="switch">Toggle</label>
       </animated.span>
 
-      {showCode ? <h1>&lt;Hello /&gt;</h1> : <h1>Hello</h1>}
-      <p>
-        {showCode ? (
-          <>
+      <animated.div
+        style={spring}
+        className={clsx(classes.window, showCode ? classes.code : classes.view)}
+      >
+        <animated.div style={{ opacity: codeOpacity }}>
+          <h1>&lt;Hello /&gt;</h1>
+          <p>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
-            <span className={classes.arrow}>&gt; </span>
-          </>
-        ) : null}
-        I make websites that people{" "}
-        {showCode ? (
-          <>
-            <span className={classes.unicode}>U+1F929 </span>
+            <span className={classes.arrow}>&gt; </span>I make websites that
+            people <span className={classes.unicode}>U+1F929 </span>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>/&gt;</span>
-          </>
-        ) : (
-          <Image
-            src="/svgs/star-struck.svg"
-            alt="star struck face"
-            width={29}
-            height={29}
-          />
-        )}
-      </p>
-      <p>
-        {showCode ? (
-          <>
+          </p>
+          <p>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>&gt; </span>
-          </>
-        ) : null}
-        My aim is to make the{" "}
-        {showCode ? (
-          <span className={classes.unicode}>U+1F578</span>
-        ) : (
-          <Image
-            priority
-            src="/spider-web.png"
-            alt="spider web"
-            width={29}
-            height={29}
-          />
-        )}{" "}
-        a better place{" "}
-        {showCode ? (
-          <>
+            My aim is to make the{" "}
+            <span className={classes.unicode}>U+1F578</span> a better place{" "}
             <span className={classes.unicode}>U+1F6E0 </span>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>/&gt;</span>
-          </>
-        ) : (
-          <Image
-            priority
-            src="/hammer-and-wrench.png"
-            alt="hammer and wrench"
-            width={29}
-            height={29}
-          />
-        )}
-      </p>
+          </p>
+        </animated.div>
+        <animated.div style={{ opacity: viewOpacity }}>
+          <h1>Hello</h1>
+          <p>
+            I make websites that people{" "}
+            <Image
+              src="/svgs/star-struck.svg"
+              alt="star struck face"
+              width={29}
+              height={29}
+            />
+          </p>
+          <p>
+            My aim is to make the{" "}
+            <Image
+              priority
+              src="/spider-web.png"
+              alt="spider web"
+              width={29}
+              height={29}
+            />{" "}
+            a better place{" "}
+            <Image
+              priority
+              src="/hammer-and-wrench.png"
+              alt="hammer and wrench"
+              width={29}
+              height={29}
+            />
+          </p>
+        </animated.div>
+      </animated.div>
     </Card>
   );
 }

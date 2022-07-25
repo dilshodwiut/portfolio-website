@@ -12,15 +12,17 @@ import classes from "./Project.module.scss";
 
 const AnimatedImage = animated(Image);
 const AnimatedListItem = animated(ListItem);
-let isTriggered: boolean = false;
 
 export default function Project(props: ProjectProps) {
   const { title, description, tags, services, image, reverseOrder } = props;
   const initialXPosition = reverseOrder ? "-20%" : "20%";
 
   const ref = React.useRef<HTMLDivElement | null>(null);
-  const entry = useIntersectionObserver(ref, { threshold: 1 });
-  const isVisible = !isTriggered ? !!entry?.isIntersecting : true;
+  const entry = useIntersectionObserver(ref, {
+    threshold: 1,
+    freezeOnceVisible: true,
+  });
+  const isVisible = !!entry?.isIntersecting;
 
   const { opacity: pOpacity, transform } = useSpring({
     from: {
@@ -58,13 +60,6 @@ export default function Project(props: ProjectProps) {
       opacity: isVisible ? 1 : 0,
     },
   });
-
-  React.useEffect(() => {
-    if (isVisible) {
-      // ref.current?.scrollIntoView({ behavior: "smooth" });
-      isTriggered = true;
-    }
-  }, [isVisible]);
 
   return (
     <Wrapper>
