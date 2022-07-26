@@ -49,6 +49,8 @@
     }
 
     .project__title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
     }
 
     .project__description {
@@ -83,4 +85,29 @@
   & > span {
     right: -65px !important;
   }
+}
+
+.delever {
+  color: var(--orange);
+}
+
+.car24 {
+  color: #703581;
+}
+
+.car24::after {
+  content: "24";
+  color: #8bc348;
+}
+
+.safia {
+  color: #333333;
+}
+
+.aloqabank {
+  color: #0093dc;
+}
+
+.utas {
+  color: #16376b;
 }

@@ -16,6 +16,7 @@ export type Project = {
 };
 
 export type ProjectProps = {
+  name: string;
   reverseOrder?: boolean;
   image: Image;
   title: React.ReactNode | string;

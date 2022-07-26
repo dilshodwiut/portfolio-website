@@ -16,6 +16,7 @@ export default function Projects(props: Props) {
       {projects.map((project, i) => (
         <Project
           key={project.id}
+          name={project.name}
           reverseOrder={i % 2 !== 0}
           image={{ src: project.image.src, alt: project.image.alt }}
           title={

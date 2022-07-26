@@ -37,3 +37,5 @@ import type {...} vs import {...} for types and interfaces
 better way to deliver getstaticprops to nested components without prop drilling
 change projects background positioning logic
 ditch react-intersection-observer
+
+// grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

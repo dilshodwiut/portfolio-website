@@ -14,7 +14,8 @@ const AnimatedImage = animated(Image);
 const AnimatedListItem = animated(ListItem);
 
 export default function Project(props: ProjectProps) {
-  const { title, description, tags, services, image, reverseOrder } = props;
+  const { name, title, description, tags, services, image, reverseOrder } =
+    props;
   const initialXPosition = reverseOrder ? "-20%" : "20%";
 
   const ref = React.useRef<HTMLDivElement | null>(null);
@@ -80,7 +81,9 @@ export default function Project(props: ProjectProps) {
           />
         </div>
         <div className={classes.project}>
-          <span className={classes.project__title}>{title}</span>
+          <span className={clsx(classes.project__title, classes[name])}>
+            {title}
+          </span>
           {tags.map((tag) => (
             <TagCmp key={tag.text} color={tag.color}>
               <Image
