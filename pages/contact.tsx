@@ -13,7 +13,7 @@ const Contact: NextPage = () => {
         <link rel="icon" href="/man.png" />
       </Head>
       <Header />
-      <div style={{ flex: "1 0 auto" }}>Contact page</div>
+      <div style={{ flex: "1 0 auto" }}>This section is under development</div>
       <Footer />
     </>
   );

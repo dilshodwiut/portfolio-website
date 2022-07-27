@@ -39,3 +39,4 @@ change projects background positioning logic
 ditch react-intersection-observer
 
 // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+emerge practices to the paper depending on scroll position

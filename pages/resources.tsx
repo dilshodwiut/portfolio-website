@@ -14,7 +14,7 @@ const Resources: NextPage = () => {
         <link rel="icon" href="/man.png" />
       </Head>
       <Header />
-      <div style={{ flex: "1 0 auto" }}>Resources page</div>
+      <div style={{ flex: "1 0 auto" }}>This section is under development</div>
       <div
         style={{
           height: "100vh",
