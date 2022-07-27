@@ -3,7 +3,7 @@ import type { Stats as StatsType } from "@/types/stats";
 import Image from "next/image";
 import Card from "@/components/atoms/Card/Card";
 import CountUp from "react-countup";
-import useIntersectionObserver from "src/hooks/useIntersectionObserver";
+import IntersectedCountUp from "./IntersectedCountUp";
 import classes from "./Stats.module.scss";
 
 interface Props {
@@ -47,24 +47,4 @@ export default function Stats(props: Props) {
       ))}
     </div>
   );
-}
-
-function IntersectedCountUp(props: {
-  countUpRef: React.RefObject<any>;
-  start: () => void;
-}) {
-  const { countUpRef, start } = props;
-
-  const scrollSpyRef = React.useRef<boolean>(false);
-  const entry = useIntersectionObserver(countUpRef, {});
-  const isVisible = !!entry?.isIntersecting;
-
-  React.useEffect(() => {
-    if (isVisible && !scrollSpyRef.current) {
-      start();
-      scrollSpyRef.current = true;
-    }
-  }, [isVisible, start, scrollSpyRef]);
-
-  return <span ref={countUpRef} />;
 }

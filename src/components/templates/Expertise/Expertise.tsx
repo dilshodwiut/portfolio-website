@@ -1,8 +1,8 @@
 import * as React from "react";
+import type { Image } from "@/types/image";
 import StackGrid from "@/components/organisms/StackGrid/StackGrid";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
-import type { Image } from "@/types/image";
-import classes from "./Expertise.module.scss";
+import Title from "@/components/atoms/Title/Title";
 
 interface Props {
   technologies: Image[];
@@ -13,10 +13,8 @@ export default function Expertise(props: Props) {
 
   return (
     <Wrapper>
-      <div className={classes.stack}>
-        <h1>My Expertise</h1>
-        <StackGrid technologies={technologies} />
-      </div>
+      <Title>My Expertise</Title>
+      <StackGrid technologies={technologies} />
     </Wrapper>
   );
 }

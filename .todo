@@ -7,7 +7,7 @@ is super-tiny-icons useful ? icons set
 double check eslint ignores later
 testing
 refactor HandDrawnPaths - https://www.sinwaver.com/
-custom error handling service, with error boundaries, and _error page
+custom error handling service, with error boundaries, and \_error page
 worklets, service workers, web workers
 produce icons according to screen size
 use all node packages
@@ -27,7 +27,7 @@ reusable slider
 semantic html (lesser divs)
 rice sass files
 classses vs css properties (aka variables)
-h1, h2, h3, title, component
+subtitle component
 refactor color, ranges, units to css variables
 bem or camelcase
 should key be generated on backend with uid?
@@ -39,4 +39,6 @@ change projects background positioning logic
 ditch react-intersection-observer
 
 // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-emerge practices to the paper depending on scroll position
+const { size = "medium" } = props;
+
+cleanup components, practices directory, intersectedCountUp

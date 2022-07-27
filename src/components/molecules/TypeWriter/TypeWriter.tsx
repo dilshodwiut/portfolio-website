@@ -1,4 +1,5 @@
 import * as React from "react";
+import Title from "@/components/atoms/Title/Title";
 import useTypeWriter from "src/hooks/useTypeWriter";
 import classes from "./TypeWriter.module.scss";
 
@@ -15,10 +16,10 @@ export default function TypeWriter(props: Props) {
 
   return (
     <div className={classes.container}>
-      <h1>
+      <Title align="left" style={{ width: "545px" }}>
         {text} {output}
         <span className={classes.cursor}>|</span>
-      </h1>
+      </Title>
     </div>
   );
 }

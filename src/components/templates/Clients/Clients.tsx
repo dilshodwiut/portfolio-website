@@ -1,15 +1,13 @@
 import * as React from "react";
 import Slider from "@/components/organisms/Slider/Slider";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
-import classes from "./Clients.module.scss";
+import Title from "@/components/atoms/Title/Title";
 
 export default function Clients() {
   return (
     <Wrapper>
-      <div className={classes.clients}>
-        <h1>Clients</h1>
-        <Slider />
-      </div>
+      <Title>Clients</Title>
+      <Slider />
     </Wrapper>
   );
 }

@@ -1,0 +1,14 @@
+.paper {
+  width: 99%;
+  margin: auto;
+  height: 322px;
+  background-image: linear-gradient(#264653 0.05em, transparent 0.05em),
+    linear-gradient(90deg, #264653 0.05em, transparent 0.05em);
+  background-size: 1em 1em;
+  font: var(--font-size-lg) "Architects Daughter", cursive;
+  overflow: hidden;
+
+  & > * {
+    display: inline-block;
+  }
+}

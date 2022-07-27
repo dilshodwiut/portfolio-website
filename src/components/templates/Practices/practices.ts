@@ -1,0 +1,148 @@
+const practices = [
+  {
+    name: "Data Structures",
+    rotation: -20,
+    x: 0,
+    y: 4.5,
+  },
+  {
+    name: "Algorithms",
+    rotation: 0,
+    x: 1,
+    y: 0,
+  },
+  {
+    name: "Design Patterns",
+    rotation: 25,
+    x: -2,
+    y: 5,
+  },
+  {
+    name: "Software Architecture",
+    rotation: 15,
+    x: 3.5,
+    y: 1.5,
+  },
+  {
+    name: "Agile",
+    rotation: -15,
+    x: 1,
+    y: -1.5,
+  },
+  {
+    name: "Scrum",
+    rotation: 20,
+    x: 1,
+    y: -2,
+  },
+  {
+    name: "Test Driven Development",
+    rotation: -50,
+    x: 3,
+    y: 7,
+  },
+  {
+    name: "Kanban",
+    rotation: -1,
+    x: 0.5,
+    y: 5,
+  },
+  {
+    name: "Jira",
+    rotation: 10,
+    x: 0,
+    y: 2.5,
+  },
+  {
+    name: "Googling",
+    rotation: -5,
+    x: 2,
+    y: -1.5,
+  },
+  {
+    name: "FP",
+    rotation: 0,
+    x: -1,
+    y: 2,
+  },
+  {
+    name: "OOP",
+    rotation: 0,
+    x: 1,
+    y: 2,
+  },
+  {
+    name: "Documentation",
+    rotation: 0,
+    x: 0.5,
+    y: -2,
+  },
+  {
+    name: "Flux Architecture",
+    rotation: -10,
+    x: 4.5,
+    y: -2,
+  },
+  {
+    name: "Clean code",
+    rotation: 30,
+    x: -3,
+    y: 6.5,
+  },
+  {
+    name: "Dry",
+    rotation: -20,
+    x: 1,
+    y: 3,
+  },
+  {
+    name: "KISS",
+    rotation: 90,
+    x: 0,
+    y: 0,
+  },
+  {
+    name: "YAGNI",
+    rotation: 10,
+    x: 4,
+    y: -4,
+  },
+  {
+    name: "SOLID",
+    rotation: 15,
+    x: -1,
+    y: 3,
+  },
+  {
+    name: "SSR",
+    rotation: 0,
+    x: 0,
+    y: 3,
+  },
+  {
+    name: "SPA",
+    rotation: -90,
+    x: 0,
+    y: 0,
+  },
+  {
+    name: "Mobile First",
+    rotation: 80,
+    x: 2,
+    y: -3.5,
+  },
+  {
+    name: "Debugging",
+    rotation: 0,
+    x: -7,
+    y: 2.5,
+  },
+  {
+    name: "Responsive Web Design",
+    rotation: 5,
+    x: 9,
+    y: 2,
+  },
+];
+
+export default practices;
