@@ -11,12 +11,15 @@
 @media (max-width: 767px) {
   .paper {
     margin: 1rem auto;
-    font-size: var(--font-size-sm);
+    font-size: 0.634em;
     width: 295px;
-    height: 103px;
+    height: 102.5px;
     background-size: 1em 1em;
-    background-image: linear-gradient(var(--dark-blue) 0.1em, transparent 0.1em),
-      linear-gradient(90deg, var(--dark-blue) 0.1em, transparent 0.1em);
+    background-image: linear-gradient(
+        var(--dark-blue) 0.05em,
+        transparent 0.05em
+      ),
+      linear-gradient(90deg, var(--dark-blue) 0.05em, transparent 0.05em);
   }
 }
 
@@ -24,9 +27,9 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .paper {
     margin: 1rem auto;
-    font-size: var(--font-size-md);
+    font-size: 1.45rem;
     width: 674px;
-    height: 226px;
+    height: 234px;
     background-size: 1em 1em;
     background-image: linear-gradient(
         var(--dark-blue) 0.05em,
