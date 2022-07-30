@@ -5,8 +5,14 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import ScreenSizeProvider from "src/contexts/ScreenSizeContext";
+import dynamic from "next/dynamic";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const ScrollTopArrow = dynamic(
+    () => import("@/components/atoms/ScrollTopArrow/ScrollTopArrow"),
+    { ssr: false }
+  );
+
   return (
     <>
       <Head>
@@ -14,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ScreenSizeProvider>
         <Component {...pageProps} />
+        <ScrollTopArrow />
       </ScreenSizeProvider>
     </>
   );

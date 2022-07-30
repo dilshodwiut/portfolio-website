@@ -160,6 +160,10 @@
     padding: 1rem;
     height: auto;
 
+    .switch {
+      display: none;
+    }
+
     .window {
       height: auto;
       h1 {

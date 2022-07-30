@@ -1,5 +1,4 @@
 import * as React from "react";
-import { IconDownload } from "@tabler/icons";
 import { useSpring, animated, config } from "@react-spring/web";
 import downloadFile from "src/functions/downloadFile";
 import List from "@/components/atoms/List/List";

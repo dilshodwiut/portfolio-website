@@ -1,7 +1,8 @@
 import * as React from "react";
 import { useRouter } from "next/router";
-import classes from "./Link.module.scss";
+import clsx from "clsx";
 import HandDrawnPaths from "../SVGs/HandDrawnPaths";
+import classes from "./Link.module.scss";
 
 interface LinkProps {
   children: string;
@@ -20,7 +21,13 @@ export default function CustomLink(props: LinkProps) {
 
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-    <span className={classes.link} onClick={onClick}>
+    <span
+      className={clsx(
+        classes.link,
+        type === "nav" ? classes.hover : classes.underline
+      )}
+      onClick={onClick}
+    >
       <a
         href={href}
         target={target}
