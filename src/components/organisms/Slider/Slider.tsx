@@ -9,13 +9,18 @@ export default function Slider() {
       <div className={classes.slider__track}>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
-            <Image src="/utas.svg" width={100} height={50} alt="UTAS logo" />
+            <Image
+              src="/icons/utas.svg"
+              width={100}
+              height={50}
+              alt="UTAS logo"
+            />
           </Card>
         </div>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
             <Image
-              src="/aloqabank.svg"
+              src="/icons/aloqabank.svg"
               width={100}
               height={50}
               alt="Aloqabank logo"
@@ -24,13 +29,18 @@ export default function Slider() {
         </div>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
-            <Image src="/car24.jpg" width={150} height={50} alt="Car24 logo" />
+            <Image
+              src="/icons/car24.jpg"
+              width={150}
+              height={50}
+              alt="Car24 logo"
+            />
           </Card>
         </div>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
             <Image
-              src="/safia.webp"
+              src="/icons/safia.webp"
               width={150}
               height={150}
               alt="Safia logo"
@@ -59,13 +69,18 @@ export default function Slider() {
         </div>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
-            <Image src="/utas.svg" width={100} height={50} alt="UTAS logo" />
+            <Image
+              src="/icons/utas.svg"
+              width={100}
+              height={50}
+              alt="UTAS logo"
+            />
           </Card>
         </div>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
             <Image
-              src="/aloqabank.svg"
+              src="/icons/aloqabank.svg"
               width={100}
               height={50}
               alt="Aloqabank logo"
@@ -74,13 +89,18 @@ export default function Slider() {
         </div>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
-            <Image src="/car24.jpg" width={150} height={50} alt="Car24 logo" />
+            <Image
+              src="/icons/car24.jpg"
+              width={150}
+              height={50}
+              alt="Car24 logo"
+            />
           </Card>
         </div>
         <div className={classes.slider__track__item}>
           <Card className={classes.slider__track__item__wrapper}>
             <Image
-              src="/safia.webp"
+              src="/icons/safia.webp"
               width={150}
               height={150}
               alt="Safia logo"

@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import * as React from "react";
+import clsx from "clsx";
 import classes from "./Title.module.scss";
 
 type Props = {
@@ -20,9 +20,9 @@ export default function Title(props: Props) {
     <h1
       className={clsx(
         classes.title,
-        classes[align!],
-        classes[size!],
         className,
+        `text-${align}`,
+        size,
         noMargin ? classes.noMargin : classes.margin,
         noPadding ? classes.noPadding : classes.padding
       )}

@@ -3,16 +3,16 @@
     "id": "1",
     "name": "Experience in years",
     "icon": {
-      "src": "/dropper.png",
+      "src": "/icons/dropper.png",
       "alt": "experience icon"
     },
-    "totalNumber": 1.5
+    "totalNumber": 1
   },
   {
     "id": "2",
     "name": "Companies worked at",
     "icon": {
-      "src": "/office.png",
+      "src": "/icons/office.png",
       "alt": "office icon"
     },
     "totalNumber": 2,
@@ -31,7 +31,7 @@
     "id": "3",
     "name": "Projects contributed",
     "icon": {
-      "src": "/development.png",
+      "src": "/icons/development.png",
       "alt": "projects icon"
     },
     "totalNumber": 6
@@ -40,9 +40,9 @@
     "id": "4",
     "name": "Commits",
     "icon": {
-      "src": "/commit.png",
+      "src": "/icons/commit.png",
       "alt": "commit icon"
     },
-    "totalNumber": 5000
+    "totalNumber": 1000
   }
 ]

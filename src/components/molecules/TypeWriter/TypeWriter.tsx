@@ -1,6 +1,7 @@
 import * as React from "react";
 import Title from "@/components/atoms/Title/Title";
 import useTypeWriter from "src/hooks/useTypeWriter";
+import clsx from "clsx";
 import classes from "./TypeWriter.module.scss";
 
 interface Props {
@@ -16,9 +17,9 @@ export default function TypeWriter(props: Props) {
 
   return (
     <div className={classes.container}>
-      <Title align="left" style={{ width: "545px" }}>
+      <Title align="left">
         {text} {output}
-        <span className={classes.cursor}>|</span>
+        <span className={clsx(classes.cursor, "xl")}>|</span>
       </Title>
     </div>
   );

@@ -18,12 +18,26 @@ export default function Project(props: ProjectProps) {
     props;
   const initialXPosition = reverseOrder ? "-20%" : "20%";
 
-  const ref = React.useRef<HTMLDivElement | null>(null);
-  const entry = useIntersectionObserver(ref, {
+  const textRef = React.useRef<HTMLDivElement | null>(null);
+  const textEntry = useIntersectionObserver(textRef, {
+    threshold: 0.5,
+    freezeOnceVisible: true,
+  });
+  const isTextVisible = !!textEntry?.isIntersecting;
+
+  const serviceRef = React.useRef<HTMLDivElement | null>(null);
+  const serviceEntry = useIntersectionObserver(serviceRef, {
+    threshold: 0.5,
+    freezeOnceVisible: true,
+  });
+  const isServiceVisible = !!serviceEntry?.isIntersecting;
+
+  const imageRef = React.useRef<HTMLDivElement | null>(null);
+  const imageEntry = useIntersectionObserver(imageRef, {
     threshold: 1,
     freezeOnceVisible: true,
   });
-  const isVisible = !!entry?.isIntersecting;
+  const isImageVisible = !!imageEntry?.isIntersecting;
 
   const { opacity: pOpacity, transform } = useSpring({
     from: {
@@ -31,10 +45,10 @@ export default function Project(props: ProjectProps) {
       opacity: 0,
     },
     to: {
-      transform: isVisible
+      transform: isTextVisible
         ? "translateX(0%)"
         : `translateX(${initialXPosition})`,
-      opacity: isVisible ? 1 : 0,
+      opacity: isTextVisible ? 1 : 0,
     },
     config: config.stiff,
   });
@@ -45,8 +59,8 @@ export default function Project(props: ProjectProps) {
       opacity: 0,
     },
     to: {
-      scale: isVisible ? 1 : 0,
-      opacity: isVisible ? 1 : 0,
+      scale: isImageVisible ? 1 : 0,
+      opacity: isImageVisible ? 1 : 0,
     },
     config: config.stiff,
   });
@@ -57,20 +71,20 @@ export default function Project(props: ProjectProps) {
       opacity: 0,
     },
     to: {
-      transform: isVisible ? "translateY(0px)" : "translateY(100px)",
-      opacity: isVisible ? 1 : 0,
+      transform: isServiceVisible ? "translateY(0px)" : "translateY(100px)",
+      opacity: isServiceVisible ? 1 : 0,
     },
   });
 
   return (
     <Wrapper>
-      <div className={classes.container} ref={ref}>
-        <div
-          className={clsx(
-            classes.picture,
-            reverseOrder ? classes.reversedOrder : null
-          )}
-        >
+      <div
+        className={clsx(
+          classes.container,
+          reverseOrder ? classes.reversedOrder : null
+        )}
+      >
+        <div className={classes.picture} ref={imageRef}>
           <AnimatedImage
             src={image.src}
             alt={image.alt}
@@ -92,17 +106,18 @@ export default function Project(props: ProjectProps) {
                 width={20}
                 height={20}
               />
-              {tag.text}
+              <p>{tag.text}</p>
             </TagCmp>
           ))}
           <animated.p
+            ref={textRef}
             className={classes.project__description}
             style={{ transform, opacity: pOpacity }}
           >
             {/* Goodzone here should be link or attr */}
             {description}
           </animated.p>
-          <div className={classes.project__services}>
+          <div className={classes.project__services} ref={serviceRef}>
             <h3>What I did?</h3>
             <List>
               {services.map((service, i) => (

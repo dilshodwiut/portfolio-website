@@ -4,11 +4,37 @@
 
   .welcome {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
 
     position: relative; // for floating icons move behind
     z-index: 10;
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  .welcome {
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+  .welcome {
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// Desktop
+@media (min-width: 1024px) {
+  .welcome {
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
   }
 }

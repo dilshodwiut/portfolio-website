@@ -23,6 +23,7 @@ export default function Stats(props: Props) {
               width={64}
               height={64}
               alt={stat.icon.alt}
+              layout="responsive"
             />
           </div>
           <div className={classes.card__content}>
@@ -36,6 +37,7 @@ export default function Stats(props: Props) {
                 separator=" "
                 duration={2}
                 decimals={Number.isInteger(stat.totalNumber) ? 0 : 1}
+                suffix={stat.name === "Commits" ? " +" : ""}
               >
                 {({ countUpRef, start }) => (
                   <IntersectedCountUp countUpRef={countUpRef} start={start} />

@@ -2,8 +2,6 @@
   position: relative;
 
   .footerContent {
-    padding: 1rem;
-
     div {
       display: flex;
       justify-content: center;
@@ -12,5 +10,35 @@
 
     // for sticky footer
     flex-shrink: 0;
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  .footer {
+    .footerContent {
+      padding: 0.5rem;
+      font-size: var(--font-size-sm);
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    .footerContent {
+      padding: 1rem;
+      font-size: var(--font-size-md);
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 1024px) {
+  .footer {
+    .footerContent {
+      padding: 1rem;
+      font-size: var(--font-size-md);
+    }
   }
 }

@@ -36,7 +36,7 @@ const practices = [
     y: -2,
   },
   {
-    name: "Test Driven Development",
+    name: "TDD",
     rotation: -50,
     x: 3,
     y: 7,
@@ -90,7 +90,7 @@ const practices = [
     y: 6.5,
   },
   {
-    name: "Dry",
+    name: "DRY",
     rotation: -20,
     x: 1,
     y: 3,

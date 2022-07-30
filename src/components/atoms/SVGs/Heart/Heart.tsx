@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useSpring, animated, config } from "@react-spring/web";
+import classes from "./Heart.module.scss";
 
 export default function Heart({ isVisible }: { isVisible: boolean }) {
   const { transform } = useSpring({
@@ -15,8 +16,7 @@ export default function Heart({ isVisible }: { isVisible: boolean }) {
 
   return (
     <animated.svg
-      width={50}
-      height={50}
+      className={classes.heart}
       style={{ transform }}
       version="1.1"
       id="heart"

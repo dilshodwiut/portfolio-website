@@ -111,7 +111,7 @@ export default function WelcomeMsg() {
           <p>
             I make websites that people{" "}
             <Image
-              src="/svgs/star-struck.svg"
+              src="/icons/star-struck.svg"
               alt="star struck face"
               width={29}
               height={29}
@@ -121,7 +121,7 @@ export default function WelcomeMsg() {
             My aim is to make the{" "}
             <Image
               priority
-              src="/spider-web.png"
+              src="/icons/spider-web.png"
               alt="spider web"
               width={29}
               height={29}
@@ -129,7 +129,7 @@ export default function WelcomeMsg() {
             a better place{" "}
             <Image
               priority
-              src="/hammer-and-wrench.png"
+              src="/icons/hammer-and-wrench.png"
               alt="hammer and wrench"
               width={29}
               height={29}

@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import * as React from "react";
+import clsx from "clsx";
 import classes from "./Divider.module.scss";
 
 export default function Divider() {

@@ -1,226 +1,226 @@
 [
   {
-    "src": "/svgs/stack/javascript.svg",
+    "src": "/icons/stack/javascript.svg",
     "alt": "JavaScript"
   },
   {
-    "src": "/svgs/stack/typescript.svg",
+    "src": "/icons/stack/typescript.svg",
     "alt": "TypeScript"
   },
   {
-    "src": "/svgs/stack/sass.svg",
+    "src": "/icons/stack/sass.svg",
     "alt": "Sass"
   },
   {
-    "src": "/svgs/stack/css.svg",
+    "src": "/icons/stack/css.svg",
     "alt": "CSS3"
   },
   {
-    "src": "/svgs/stack/tailwindcss.svg",
+    "src": "/icons/stack/tailwindcss.svg",
     "alt": "Tailwind CSS"
   },
   {
-    "src": "/svgs/stack/postcss.svg",
+    "src": "/icons/stack/postcss.svg",
     "alt": "Post CSS"
   },
   {
-    "src": "/svgs/stack/autoprefixer.svg",
+    "src": "/icons/stack/autoprefixer.svg",
     "alt": "Autoprefixer"
   },
   {
-    "src": "/svgs/stack/css_modules.svg",
+    "src": "/icons/stack/css_modules.svg",
     "alt": "CSS Modules"
   },
   {
-    "src": "/svgs/stack/jss.svg",
+    "src": "/icons/stack/jss.svg",
     "alt": "JSS"
   },
   {
-    "src": "/svgs/stack/netlify.svg",
+    "src": "/icons/stack/netlify.svg",
     "alt": "Netlify"
   },
   {
-    "src": "/svgs/stack/json.svg",
+    "src": "/icons/stack/json.svg",
     "alt": "Json"
   },
   {
-    "src": "/svgs/stack/jwt.svg",
+    "src": "/icons/stack/jwt.svg",
     "alt": "JWT"
   },
   {
-    "src": "/svgs/stack/nextjs.svg",
+    "src": "/icons/stack/nextjs.svg",
     "alt": "Next.js"
   },
   {
-    "src": "/svgs/stack/nodejs.svg",
+    "src": "/icons/stack/nodejs.svg",
     "alt": "Node.js"
   },
   {
-    "src": "/svgs/stack/rxjs.svg",
+    "src": "/icons/stack/rxjs.svg",
     "alt": "RxJS"
   },
   {
-    "src": "/svgs/stack/threejs.svg",
+    "src": "/icons/stack/threejs.svg",
     "alt": "Three.js"
   },
   {
-    "src": "/svgs/stack/lodash.svg",
+    "src": "/icons/stack/lodash.svg",
     "alt": "Lodash"
   },
   {
-    "src": "/svgs/stack/html.svg",
+    "src": "/icons/stack/html.svg",
     "alt": "HTML5"
   },
   {
-    "src": "/svgs/stack/reactjs.svg",
+    "src": "/icons/stack/reactjs.svg",
     "alt": "React.js"
   },
   {
-    "src": "/svgs/stack/react_query.svg",
+    "src": "/icons/stack/react_query.svg",
     "alt": "React Query"
   },
   {
-    "src": "/svgs/stack/react_table.svg",
+    "src": "/icons/stack/react_table.svg",
     "alt": "React Table"
   },
   {
-    "src": "/svgs/stack/react_router.svg",
+    "src": "/icons/stack/react_router.svg",
     "alt": "React Router"
   },
   {
-    "src": "/svgs/stack/cra.svg",
+    "src": "/icons/stack/cra.svg",
     "alt": "Create React App"
   },
   {
-    "src": "/svgs/stack/prettier.svg",
+    "src": "/icons/stack/prettier.svg",
     "alt": "Prettier"
   },
   {
-    "src": "/svgs/stack/eslint.svg",
+    "src": "/icons/stack/eslint.svg",
     "alt": "ESLint"
   },
   {
-    "src": "/svgs/stack/jest.svg",
+    "src": "/icons/stack/jest.svg",
     "alt": "Jest"
   },
   {
-    "src": "/svgs/stack/vscode.svg",
+    "src": "/icons/stack/vscode.svg",
     "alt": "Visual Studio Code"
   },
   {
-    "src": "/svgs/stack/vim.svg",
+    "src": "/icons/stack/vim.svg",
     "alt": "Vim"
   },
   {
-    "src": "/svgs/stack/vite.svg",
+    "src": "/icons/stack/vite.svg",
     "alt": "Vite"
   },
   {
-    "src": "/svgs/stack/gimp.svg",
+    "src": "/icons/stack/gimp.svg",
     "alt": "GIMP"
   },
   {
-    "src": "/svgs/stack/linux.svg",
+    "src": "/icons/stack/linux.svg",
     "alt": "Linux"
   },
   {
-    "src": "/svgs/stack/arch.svg",
+    "src": "/icons/stack/arch.svg",
     "alt": "Arch Linux"
   },
   {
-    "src": "/svgs/stack/firebase.svg",
+    "src": "/icons/stack/firebase.svg",
     "alt": "Firebase"
   },
   {
-    "src": "/svgs/stack/bash.svg",
+    "src": "/icons/stack/bash.svg",
     "alt": "Bash"
   },
   {
-    "src": "/svgs/stack/redux.svg",
+    "src": "/icons/stack/redux.svg",
     "alt": "Redux"
   },
   {
-    "src": "/svgs/stack/mui.svg",
+    "src": "/icons/stack/mui.svg",
     "alt": "MUI"
   },
   {
-    "src": "/svgs/stack/postman.svg",
+    "src": "/icons/stack/postman.svg",
     "alt": "Postman"
   },
   {
-    "src": "/svgs/stack/chrome.svg",
+    "src": "/icons/stack/chrome.svg",
     "alt": "Google Chrome"
   },
   {
-    "src": "/svgs/stack/svg.svg",
+    "src": "/icons/stack/svg.svg",
     "alt": "SVG"
   },
   {
-    "src": "/svgs/stack/git.svg",
+    "src": "/icons/stack/git.svg",
     "alt": "Git"
   },
   {
-    "src": "/svgs/stack/github.svg",
+    "src": "/icons/stack/github.svg",
     "alt": "GitHub"
   },
   {
-    "src": "/svgs/stack/gitlab.svg",
+    "src": "/icons/stack/gitlab.svg",
     "alt": "GitLab"
   },
   {
-    "src": "/svgs/stack/glitch.svg",
+    "src": "/icons/stack/glitch.svg",
     "alt": "Glitch"
   },
   {
-    "src": "/svgs/stack/gatsby.svg",
+    "src": "/icons/stack/gatsby.svg",
     "alt": "Gatsby"
   },
   {
-    "src": "/svgs/stack/webpack.svg",
+    "src": "/icons/stack/webpack.svg",
     "alt": "Webpack"
   },
   {
-    "src": "/svgs/stack/babel.svg",
+    "src": "/icons/stack/babel.svg",
     "alt": "Babel"
   },
   {
-    "src": "/svgs/stack/wasm.svg",
+    "src": "/icons/stack/wasm.svg",
     "alt": "WebAssembly"
   },
   {
-    "src": "/svgs/stack/as.svg",
+    "src": "/icons/stack/as.svg",
     "alt": "AssemblyScript"
   },
   {
-    "src": "/svgs/stack/graphql.svg",
+    "src": "/icons/stack/graphql.svg",
     "alt": "GraphQL"
   },
   {
-    "src": "/svgs/stack/pwa.svg",
+    "src": "/icons/stack/pwa.svg",
     "alt": "PWA"
   },
   {
-    "src": "/svgs/stack/antd.svg",
+    "src": "/icons/stack/antd.svg",
     "alt": "Ant Design"
   },
   {
-    "src": "/svgs/stack/npm.svg",
+    "src": "/icons/stack/npm.svg",
     "alt": "Npm"
   },
   {
-    "src": "/svgs/stack/yarn.svg",
+    "src": "/icons/stack/yarn.svg",
     "alt": "Yarn"
   },
   {
-    "src": "/svgs/stack/markdown.svg",
+    "src": "/icons/stack/markdown.svg",
     "alt": "Markdown"
   },
   {
-    "src": "/svgs/stack/i18next.svg",
+    "src": "/icons/stack/i18next.svg",
     "alt": "i18next"
   },
   {
-    "src": "/svgs/stack/bootstrap.svg",
+    "src": "/icons/stack/bootstrap.svg",
     "alt": "Bootstrap"
   }
 ]

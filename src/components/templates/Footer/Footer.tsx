@@ -2,7 +2,7 @@ import * as React from "react";
 import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 import { useSpring, animated, config } from "@react-spring/web";
 import Link from "@/components/atoms/Link/Link";
-import Heart from "@/components/atoms/SVGs/Heart";
+import Heart from "@/components/atoms/SVGs/Heart/Heart";
 import clsx from "clsx";
 import Curve from "@/components/atoms/SVGs/Curve/Curve";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";

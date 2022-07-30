@@ -2,7 +2,6 @@ explore eslint-plugin-next && eslint-config-next on https://nextjs.org/docs/basi
 update packages to the latest patch versions
 create better link component
 spread footer into atomic pattern
-make it responsive
 is super-tiny-icons useful ? icons set
 double check eslint ignores later
 testing
@@ -42,3 +41,13 @@ ditch react-intersection-observer
 const { size = "medium" } = props;
 
 cleanup components, practices directory, intersectedCountUp
+@media screen or just @media
+react context for device width and height
+title.module.scss vs class-utils
+
+pwa, cra mobile app themes
+responsive next/image
+slider responsiveness bug
+responsive navbar
+welcomemsg mobile bug
+responsive paper

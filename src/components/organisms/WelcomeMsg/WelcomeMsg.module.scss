@@ -1,8 +1,5 @@
 .content {
   position: relative;
-  width: 50%;
-  height: 420px; // fit-content
-  padding: 2rem;
   // border: 1px solid var(--dark-blue);
   border-radius: 1rem;
   // background-color: var(--bg-black);
@@ -92,7 +89,6 @@
 
   .window {
     width: calc(100% * 2 + 4rem);
-    height: calc(420px - 4rem);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -100,7 +96,6 @@
 
     h1 {
       display: inline-block;
-      font-size: 5rem;
 
       background: linear-gradient(to right, #1b5bf7, #f32170, #ff6b08);
       -webkit-text-fill-color: transparent;
@@ -109,7 +104,6 @@
     }
 
     p {
-      font-size: 1.5rem;
       font-weight: var(--font-weight-medium);
     }
   }
@@ -156,5 +150,62 @@
     font-weight: var(--font-weight-medium);
     // line-height: 1;
     margin: 1rem 0;
+  }
+}
+
+// Mobile
+@media (max-width: 767px) {
+  .content {
+    width: 75%;
+    padding: 1rem;
+    height: auto;
+
+    .window {
+      height: auto;
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+  .content {
+    width: 75%;
+    padding: 2rem;
+    height: auto;
+
+    .window {
+      height: auto;
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 1024px) {
+  .content {
+    width: 100%;
+    padding: 2rem;
+    height: 420px; // fit-content
+
+    .window {
+      height: calc(420px - 4rem);
+      h1 {
+        font-size: 5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
