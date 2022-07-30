@@ -11,7 +11,6 @@ import classes from "./Hero.module.scss";
 export default function Hero() {
   return (
     <section className={classes.hero}>
-      {/* <FloatingIcons /> */}
       <Wrapper>
         <Image
           src="/images/man-in-dark.jpg"
@@ -27,7 +26,6 @@ export default function Hero() {
             "Software Engineer",
             "Functional Programmer",
             "Linux Enthusiast",
-            "WIUT Student",
           ]}
           wait={1000}
         />

@@ -42,11 +42,7 @@ const { size = "medium" } = props;
 
 cleanup components, practices directory, intersectedCountUp
 @media screen or just @media
-react context for device width and height
 title.module.scss vs class-utils
-
-pwa, cra mobile app themes
-responsive next/image
 responsive navbar
-welcomemsg mobile bug
 scrollintoview navbar
+useId or uuid

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import "normalize.css";
 import "@/styles/globals.css";
@@ -17,6 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="I am a software engineer" />
       </Head>
       <ScreenSizeProvider>
         <Component {...pageProps} />
