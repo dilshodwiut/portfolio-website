@@ -14,7 +14,11 @@ interface ScreenSize {
   isDesktopOrLaptop: boolean;
 }
 
-export const ScreenSizeContext = React.createContext<ScreenSize>({
+type Props = {
+  children: React.ReactNode;
+};
+
+const ScreenSizeContext = React.createContext<ScreenSize>({
   isMobile: false,
   isTablet: false,
   isDesktop: true,
@@ -27,15 +31,9 @@ export const ScreenSizeContext = React.createContext<ScreenSize>({
   isDesktopOrLaptop: false,
 });
 
-const ScreenSizeContextConsumer = ScreenSizeContext.Consumer;
-
-export { ScreenSizeContextConsumer as ScreenSizeConsumer };
-
 ScreenSizeContext.displayName = "ScreenSizeContext";
 
-type Props = {
-  children: React.ReactNode;
-};
+const ScreenSizeContextConsumer = ScreenSizeContext.Consumer;
 
 export default function ScreenSizeProvider(props: Props) {
   const { children } = props;
@@ -83,4 +81,14 @@ export default function ScreenSizeProvider(props: Props) {
       {children}
     </ScreenSizeContext.Provider>
   );
+}
+
+export {
+  ScreenSizeContextConsumer as ScreenSizeConsumer,
+  ScreenSizeContext,
+  useScreenSizeContext,
+};
+
+function useScreenSizeContext() {
+  return React.useContext(ScreenSizeContext);
 }

@@ -6,17 +6,23 @@ import Footer from "@/components/templates/Footer/Footer";
 import Expertise from "@/components/templates/Expertise/Expertise";
 import Divider from "@/components/atoms/Divider/Divider";
 import Statistics from "@/components/templates/Statistics/Statistics";
-import Delivery from "@/components/templates/Delivery/Delivery";
 import Clients from "@/components/templates/Clients/Clients";
 import Practices from "@/components/templates/Practices/Practices";
 import Content from "@/components/atoms/Content/Content";
 import Projects from "@/components/templates/Projects/Projects";
-import { Project } from "@/types/project";
+import dynamic from "next/dynamic";
 
 const Portfolio: NextPage = (
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const { technologies, stats, projects } = props;
+
+  const Delivery = dynamic(
+    () => import("@/components/templates/Delivery/Delivery"),
+    {
+      ssr: false,
+    }
+  );
 
   return (
     <>
