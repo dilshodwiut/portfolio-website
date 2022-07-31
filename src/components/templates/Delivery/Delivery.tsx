@@ -7,6 +7,8 @@ import ReactFlow, {
   useEdgesState,
   addEdge,
   Connection,
+  Controls,
+  Background,
 } from "react-flow-renderer";
 import {
   initialVerticalNodes,
@@ -40,8 +42,11 @@ export default function Delivery() {
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
           fitView
-          attributionPosition={isMobile ? "bottom-right" : "bottom-left"}
-        />
+          attributionPosition={isMobile ? "bottom-right" : "bottom-right"}
+        >
+          <Background color="#aaa" gap={16} />
+          {isMobile ? null : <Controls />}
+        </ReactFlow>
       </div>
     </Wrapper>
   );
