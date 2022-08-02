@@ -5,6 +5,7 @@ declare global {
       readonly PROJECTS_URL: string;
       readonly TECHNOLOGIES_URL: string;
       readonly STATS_URL: string;
+      readonly CLIENTS_URL: string;
     }
   }
 }

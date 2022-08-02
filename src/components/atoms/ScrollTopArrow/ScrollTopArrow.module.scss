@@ -1,7 +1,9 @@
 .scrollTop {
+  display: block; // for layout: responsive
+  width: 50px;
+  height: 50px;
   position: fixed;
   z-index: 1000;
-  cursor: pointer;
   animation: fadeIn 0.3s;
   transition: opacity 0.4s;
   opacity: 0.5;
@@ -23,8 +25,8 @@
 // Mobile
 @media (max-width: 767px) {
   .scrollTop {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     bottom: 20px;
     right: 25px;
   }
@@ -33,29 +35,25 @@
 // Tablet
 @media (min-width: 768px) and (max-width: 1023px) {
   .scrollTop {
-    width: 35px;
-    height: 35px;
     bottom: 40px;
-    right: 50px;
+    right: 40px;
   }
 }
 
 // Desktop
 @media (min-width: 1024px) {
   .scrollTop {
-    width: 50px;
-    height: 50px;
     bottom: 40px;
-    right: 50px;
+    right: 60px;
   }
 }
 
 @media (hover: none) {
   .scrollTop {
-    opacity: 0.5;
+    opacity: 1;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 1;
     }
   }
 }

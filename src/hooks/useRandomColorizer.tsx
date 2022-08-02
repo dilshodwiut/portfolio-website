@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useSprings, config, animated } from "@react-spring/web";
+import { useSprings, config } from "@react-spring/web";
 import { randomize } from "src/functions/randomizers";
 
 export default function useRandomColorizer() {

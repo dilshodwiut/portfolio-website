@@ -19,11 +19,21 @@ export default function StackGrid(props: Props) {
   });
   const isVisible = !!entry?.isIntersecting;
 
-  const trail = useTrail(technologies.length, {
-    from: { opacity: 0, scale: 0 },
-    to: { opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 },
-    config: { ...config.default, duration: 75 },
-  });
+  const [trail, api] = useTrail(technologies.length, () => ({
+    opacity: 0,
+    scale: 0,
+    config: { ...config.wobbly, duration: 75 },
+  }));
+
+  React.useEffect(() => {
+    if (isVisible) {
+      api.start({ opacity: 1, scale: 1 });
+    }
+
+    return () => {
+      api.stop();
+    };
+  }, [isVisible, api]);
 
   return (
     <div className={classes.grid} ref={ref}>
@@ -34,6 +44,7 @@ export default function StackGrid(props: Props) {
             alt={technologies[i].alt}
             width="50%"
             height="50%"
+            priority
           />
         </animated.span>
       ))}

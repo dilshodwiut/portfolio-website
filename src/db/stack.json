@@ -56,14 +56,6 @@
     "alt": "Node.js"
   },
   {
-    "src": "/icons/stack/rxjs.svg",
-    "alt": "RxJS"
-  },
-  {
-    "src": "/icons/stack/threejs.svg",
-    "alt": "Three.js"
-  },
-  {
     "src": "/icons/stack/lodash.svg",
     "alt": "Lodash"
   },
@@ -184,20 +176,8 @@
     "alt": "Babel"
   },
   {
-    "src": "/icons/stack/wasm.svg",
-    "alt": "WebAssembly"
-  },
-  {
-    "src": "/icons/stack/as.svg",
-    "alt": "AssemblyScript"
-  },
-  {
     "src": "/icons/stack/graphql.svg",
     "alt": "GraphQL"
-  },
-  {
-    "src": "/icons/stack/pwa.svg",
-    "alt": "PWA"
   },
   {
     "src": "/icons/stack/antd.svg",

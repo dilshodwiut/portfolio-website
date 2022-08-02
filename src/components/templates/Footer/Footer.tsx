@@ -4,7 +4,6 @@ import { useSpring, animated, config } from "@react-spring/web";
 import Link from "@/components/atoms/Link/Link";
 import Heart from "@/components/atoms/SVGs/Heart/Heart";
 import clsx from "clsx";
-import Curve from "@/components/atoms/SVGs/Curve/Curve";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import classes from "./Footer.module.scss";
 
@@ -20,19 +19,28 @@ export default function Footer({ className }: FooterProps) {
   });
   const isVisible = !!entry?.isIntersecting;
 
-  const { transform, opacity } = useSpring({
-    from: { transform: "translateY(1rem)", opacity: 0 },
-    to: {
-      transform: isVisible ? "translateY(0%)" : "translateY(1rem)",
-      opacity: isVisible ? 1 : 0,
-    },
-    config: { ...config.slow, duration: 800 },
-  });
+  const [{ transform, opacity }, api] = useSpring(() => ({
+    transform: "translateY(1rem)",
+    opacity: 0,
+    config: config.molasses,
+  }));
+
+  React.useEffect(() => {
+    if (isVisible) {
+      api.start({
+        transform: isVisible ? "translateY(0rem)" : "translateY(1rem)",
+        opacity: isVisible ? 1 : 0,
+      });
+    }
+
+    return () => {
+      api.stop();
+    };
+  }, [isVisible, api]);
 
   return (
     <footer ref={ref} className={clsx(classes.footer, className)}>
       <Wrapper>
-        {/* <Curve position="top" fill="#212121" style={{ top: "-170%" }} /> */}
         <div className={classes.footerContent}>
           <animated.div style={{ transform, opacity }}>
             Made with <Heart isVisible={isVisible} /> by{" "}

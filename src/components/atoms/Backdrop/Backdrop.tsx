@@ -8,23 +8,15 @@ import {
   useChain,
 } from "@react-spring/web";
 import MobileNav from "@/components/templates/MobileNav/MobileNav";
+import links from "./links";
 import classes from "./Backdrop.module.scss";
-
-const links = [
-  { text: "Expertise", href: "#expertise" },
-  { text: "Stats", href: "#stats" },
-  { text: "Delivery", href: "#delivery" },
-  { text: "Clients", href: "#clients" },
-  { text: "Practices", href: "#practices" },
-  { text: "Download CV", href: "/" },
-];
 
 export default function Backdrop() {
   const { isOpen, setIsOpen } = useHamburgerContext();
   const [zIndex, setZIndex] = React.useState<number | undefined>(-1);
 
   const backdropRef = useSpringRef();
-  const backdropTransitions = useTransition(isOpen, {
+  const [backdropTransitions, backdropTransApi] = useTransition(isOpen, () => ({
     ref: backdropRef,
     from: {
       backdropFilter: "blur(0px)",
@@ -38,10 +30,10 @@ export default function Backdrop() {
       backdropFilter: "blur(0px)",
       backgroundColor: "rgba(0, 0, 0, 0)",
     },
-  });
+  }));
 
   const transitionRef = useSpringRef();
-  const transitions = useTransition(isOpen ? links : [], {
+  const [transitions, transApi] = useTransition(isOpen ? links : [], () => ({
     ref: transitionRef,
     trail: isOpen ? 100 : 50,
     from: { opacity: 0, transform: "translateX(-50%)" },
@@ -49,7 +41,7 @@ export default function Backdrop() {
     leave: { opacity: 0, transform: "translateX(-50%)" },
     // delay: 200,
     config: { ...config.slow, duration: isOpen ? 200 : 50 },
-  });
+  }));
 
   useChain(
     isOpen ? [backdropRef, transitionRef] : [transitionRef, backdropRef],

@@ -1,28 +1,17 @@
-explore eslint-plugin-next && eslint-config-next on https://nextjs.org/docs/basic-features/eslint
-update packages to the latest patch versions
+# explore eslint-plugin-next && eslint-config-next on <https://nextjs.org/docs/basic-features/eslint>
+
 create better link component
-spread footer into atomic pattern
-is super-tiny-icons useful ? icons set
 double check eslint ignores later
-testing
-refactor HandDrawnPaths - https://www.sinwaver.com/
+refactor HandDrawnPaths - <https://www.sinwaver.com/>
 custom error handling service, with error boundaries, and \_error page
 worklets, service workers, web workers
 produce icons according to screen size
-use all node packages
-redux vs react query
 tdd
-pages titles
 remove "data-name"s
-deal with floating icon overflow on footer
 scroll snap
-refresh at scroll position
 on Image component, use "100" or {100} ?
-typewriter: blink cursor on finished mode
-filter: blur(5px);
+filter: blur(5px); vs backdrop-filter: blur(5px);
 in svg file, what is aria-label, title tag, role
-atomic design
-reusable slider
 semantic html (lesser divs)
 rice sass files
 classses vs css properties (aka variables)
@@ -34,17 +23,28 @@ blur slider sides
 .husky, .github, .local, .npmrc
 import type {...} vs import {...} for types and interfaces
 better way to deliver getstaticprops to nested components without prop drilling
-change projects background positioning logic
-ditch react-intersection-observer
 
 // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 const { size = "medium" } = props;
 
-cleanup components, practices directory, intersectedCountUp
+cleanup practices directory
 @media screen or just @media
 title.module.scss vs class-utils
-responsive navbar
 scrollintoview navbar
 useId or uuid
 polish react flow
 animated developer proper react spring style type
+
+LEARN: webassembly, assemblyscript, rxjs, pwa, three.js
+stackgrid labels
+
+outsource types from each individual components, e.g SpringValue
+typewriter fix
+hamburger animation fix
+welcomemsg fix
+usetransition and useeffect on backdrop component
+hamburger click bug
+
+reevaluate dynamic imports without ssr
+
+parallax and curve?

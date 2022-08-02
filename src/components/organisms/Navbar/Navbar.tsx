@@ -7,17 +7,22 @@ import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import classes from "./Navbar.module.scss";
 
 export default function Navbar() {
-  const spring = useSpring({
-    from: {
-      opacity: 0,
-      transform: "translateY(-50%)",
-    },
-    to: {
+  const [spring, api] = useSpring(() => ({
+    opacity: 0,
+    transform: "translateY(-50%)",
+    config: { ...config.molasses, duration: 1000 },
+  }));
+
+  React.useEffect(() => {
+    api.start({
       opacity: 1,
       transform: "translateY(0%)",
-    },
-    config: { ...config.molasses, duration: 1000 },
-  });
+    });
+
+    return () => {
+      api.stop();
+    };
+  }, [api]);
 
   return (
     <Wrapper className="my-lg">

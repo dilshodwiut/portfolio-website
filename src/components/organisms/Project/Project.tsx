@@ -1,13 +1,13 @@
 import * as React from "react";
 import type { ProjectProps } from "@/types/project";
+import { useSpring, useTrail, animated, config } from "@react-spring/web";
+import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 import Image from "next/image";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import TagCmp from "@/components/atoms/Tag/Tag";
 import List from "@/components/atoms/List/List";
 import ListItem from "@/components/atoms/ListItem/ListItem";
 import clsx from "clsx";
-import { useSpring, useTrail, animated, config } from "@react-spring/web";
-import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 import classes from "./Project.module.scss";
 
 const AnimatedImage = animated(Image);
@@ -34,47 +34,64 @@ export default function Project(props: ProjectProps) {
 
   const imageRef = React.useRef<HTMLDivElement | null>(null);
   const imageEntry = useIntersectionObserver(imageRef, {
-    threshold: 1,
+    threshold: 0.5,
     freezeOnceVisible: true,
   });
-  const isImageVisible = !!imageEntry?.isIntersecting;
+  const isImgVisible = !!imageEntry?.isIntersecting;
 
-  const { opacity: pOpacity, transform } = useSpring({
-    from: {
-      transform: `translateX(${initialXPosition})`,
-      opacity: 0,
-    },
-    to: {
-      transform: isTextVisible
-        ? "translateX(0%)"
-        : `translateX(${initialXPosition})`,
-      opacity: isTextVisible ? 1 : 0,
-    },
+  const [{ opacity: pOpacity, transform }, textSpringApi] = useSpring(() => ({
+    transform: `translateX(${initialXPosition})`,
+    opacity: 0,
     config: config.stiff,
-  });
+  }));
 
-  const { scale, opacity } = useSpring({
-    from: {
-      scale: 0,
-      opacity: 0,
-    },
-    to: {
-      scale: isImageVisible ? 1 : 0,
-      opacity: isImageVisible ? 1 : 0,
-    },
+  const [{ scale, opacity }, imgSpringApi] = useSpring(() => ({
+    scale: 0,
+    opacity: 0,
     config: config.stiff,
-  });
+  }));
 
-  const trail = useTrail(services.length, {
-    from: {
-      transform: "translateY(100px)",
-      opacity: 0,
-    },
-    to: {
-      transform: isServiceVisible ? "translateY(0px)" : "translateY(100px)",
-      opacity: isServiceVisible ? 1 : 0,
-    },
-  });
+  const [trail, trailApi] = useTrail(services.length, () => ({
+    transform: "translateY(100px)",
+    opacity: 0,
+    config: config.stiff,
+  }));
+
+  React.useEffect(() => {
+    if (isTextVisible) {
+      textSpringApi.start({
+        transform: "translateX(0%)",
+        opacity: 1,
+      });
+    }
+    return () => {
+      textSpringApi.stop();
+    };
+  }, [textSpringApi, isTextVisible]);
+
+  React.useEffect(() => {
+    if (isImgVisible) {
+      imgSpringApi.start({
+        scale: 1,
+        opacity: 1,
+      });
+    }
+    return () => {
+      imgSpringApi.stop();
+    };
+  }, [isImgVisible, imgSpringApi]);
+
+  React.useEffect(() => {
+    if (isServiceVisible) {
+      trailApi.start({
+        transform: "translateY(0px)",
+        opacity: 1,
+      });
+    }
+    return () => {
+      trailApi.stop();
+    };
+  }, [isServiceVisible, trailApi]);
 
   return (
     <Wrapper>
@@ -92,6 +109,7 @@ export default function Project(props: ProjectProps) {
             height={400}
             // layout="fill"
             style={{ scale, opacity }}
+            priority
           />
         </div>
         <div className={classes.project}>

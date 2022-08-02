@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { Stats as StatsType } from "@/types/stats";
-import { useTrail, animated } from "@react-spring/web";
+import { useTrail, animated, config } from "@react-spring/web";
 import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 import Image from "next/image";
 import Card from "@/components/atoms/Card/Card";
@@ -24,13 +24,24 @@ export default function Stats(props: Props) {
   });
   const isVisible = !!entry?.isIntersecting;
 
-  const trail = useTrail(stats.length, {
-    from: { opacity: 0, transform: "translateY(100%)" },
-    to: {
-      opacity: isVisible ? 1 : 0,
-      transform: isVisible ? "translateY(0%)" : "translateY(100%)",
-    },
-  });
+  const [trail, api] = useTrail(stats.length, () => ({
+    opacity: 0,
+    transform: "translateY(100%)",
+    config: config.slow,
+  }));
+
+  React.useEffect(() => {
+    if (isVisible) {
+      api.start({
+        opacity: 1,
+        transform: "translateY(0%)",
+      });
+    }
+
+    return () => {
+      api.stop();
+    };
+  }, [isVisible, api]);
 
   return (
     <div className={classes.cards} ref={ref}>
@@ -43,6 +54,7 @@ export default function Stats(props: Props) {
               height={64}
               alt={stat.icon.alt}
               layout="responsive"
+              priority
             />
           </div>
           <div className={classes.card__content}>

@@ -14,6 +14,7 @@ export default function Paper() {
 
   const [springs, api] = useSprings(practices.length, (index) => ({
     transform: "rotate(0deg) translate(0em, 100em)",
+    config: config.slow,
   }));
 
   React.useEffect(() => {

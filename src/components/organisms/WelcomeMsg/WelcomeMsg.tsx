@@ -27,6 +27,7 @@ export default function WelcomeMsg(props: Props) {
 
   const [spring, springApi] = useSpring(() => ({
     transform: "translateX(0%)",
+    config: config.wobbly,
   }));
 
   const [{ opacity: codeOpacity }, codeApi] = useSpring(() => ({
@@ -41,20 +42,36 @@ export default function WelcomeMsg(props: Props) {
 
   React.useEffect(() => {
     switchApi.start({ opacity: showSwitch ? 1 : 0 });
+
+    return () => {
+      switchApi.stop();
+    };
   }, [showSwitch, switchApi]);
 
   React.useEffect(() => {
     springApi.start({
       transform: showCode ? "translateX(0%)" : "translateX(-53.5%)",
     });
+
+    return () => {
+      springApi.stop();
+    };
   }, [showCode, springApi]);
 
   React.useEffect(() => {
     codeApi.start({ opacity: showCode ? 1 : 0 });
+
+    return () => {
+      codeApi.stop();
+    };
   }, [showCode, codeApi]);
 
   React.useEffect(() => {
     viewApi.start({ opacity: !showCode ? 1 : 0 });
+
+    return () => {
+      viewApi.stop();
+    };
   }, [showCode, viewApi]);
 
   return (

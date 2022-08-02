@@ -16,7 +16,7 @@ import dynamic from "next/dynamic";
 const Home: NextPage = (
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
-  const { technologies, stats, projects } = props;
+  const { technologies, stats, clients, projects } = props;
 
   const Delivery = dynamic(
     () => import("@/components/templates/Delivery/Delivery"),
@@ -45,7 +45,7 @@ const Home: NextPage = (
         <Divider />
         <Delivery />
         <Divider />
-        <Clients />
+        <Clients clients={clients} />
         <Projects projects={projects} />
         <Divider />
         <Practices />
@@ -63,16 +63,20 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const [technologies, stats, projects] = await Promise.all([
     fetch(process.env.TECHNOLOGIES_URL),
     fetch(process.env.STATS_URL),
+    // fetch(process.env.CLIENTS_URL),
     fetch(process.env.PROJECTS_URL),
   ]);
   const technologiesData = await technologies.json();
   const statsData = await stats.json();
+  // const clientsData = await clients.json();
   const projectsData = await projects.json();
 
   return {
     props: {
       technologies: technologiesData,
       stats: statsData,
+      // clients: clientsData,
+      clients: [],
       projects: projectsData,
     },
   };

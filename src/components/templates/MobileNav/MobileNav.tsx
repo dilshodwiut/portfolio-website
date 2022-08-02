@@ -3,7 +3,7 @@ import List from "@/components/atoms/List/List";
 import Link from "@/components/atoms/Link/Link";
 import Button from "@/components/atoms/Button/Button";
 import downloadFile from "src/functions/downloadFile";
-import { animated, SpringValue, TransitionFn } from "@react-spring/web";
+import { animated, TransitionFn } from "@react-spring/web";
 import classes from "./MobileNav.module.scss";
 
 interface Props {

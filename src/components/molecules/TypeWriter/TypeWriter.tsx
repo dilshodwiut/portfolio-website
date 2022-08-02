@@ -12,21 +12,26 @@ interface Props {
 }
 
 export default function TypeWriter(props: Props) {
-  const spring = useSpring({
-    from: {
-      opacity: 0,
-      transform: "translateY(50%)",
-    },
-    to: {
-      opacity: 1,
-      transform: "translateY(0%)",
-    },
-    config: { ...config.molasses, duration: 1000 },
-  });
-
   const { text, words, wait } = props;
 
   const output = useTypeWriter({ words, wait });
+
+  const [spring, api] = useSpring(() => ({
+    opacity: 0,
+    transform: "translateY(50%)",
+    config: { ...config.molasses, duration: 1000 },
+  }));
+
+  React.useEffect(() => {
+    api.start({
+      opacity: 1,
+      transform: "translateY(0%)",
+    });
+
+    return () => {
+      api.stop();
+    };
+  }, [api]);
 
   return (
     <animated.div className={classes.container} style={spring}>

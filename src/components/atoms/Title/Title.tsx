@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring, animated, config } from "@react-spring/web";
 import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 import clsx from "clsx";
 import classes from "./Title.module.scss";
@@ -36,19 +36,30 @@ export default function Title(props: Props) {
   });
   const isVisible = !!entry?.isIntersecting;
 
-  const spring = useSpring({
-    from: { opacity: 0, transform: calculateInitialPosition(side!) },
-    to: {
-      opacity: isVisible ? 1 : 0,
-      transform: isVisible
-        ? "translate(0%, 0%)"
-        : calculateInitialPosition(side!),
-    },
-  });
+  const [spring, api] = useSpring(() => ({
+    opacity: 0,
+    transform: calculateInitialPosition(side!),
+    config: config.stiff,
+  }));
 
   const extraProps = animate
     ? spring
     : { opacity: 1, transform: "translate(0%, 0%)" };
+
+  React.useEffect(() => {
+    if (isVisible) {
+      api.start({
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible
+          ? "translate(0%, 0%)"
+          : calculateInitialPosition(side!),
+      });
+    }
+
+    return () => {
+      api.stop();
+    };
+  }, [isVisible, api, side]);
 
   return (
     <animated.h1

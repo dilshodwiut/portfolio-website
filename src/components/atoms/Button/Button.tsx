@@ -1,5 +1,4 @@
 import * as React from "react";
-// import colors from "src/theme/palette";
 import { useSpring, animated, config, SpringValue } from "@react-spring/web";
 import clsx from "clsx";
 import classes from "./Button.module.scss";

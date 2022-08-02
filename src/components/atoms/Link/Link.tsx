@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
-import HandDrawnPaths from "../SVGs/HandDrawnPaths";
 import classes from "./Link.module.scss";
 
 interface LinkProps {

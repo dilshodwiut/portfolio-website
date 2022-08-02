@@ -1,13 +1,14 @@
 import * as React from "react";
 import { useSpring, useTrail, animated, config } from "@react-spring/web";
 import useIntersectionObserver from "src/hooks/useIntersectionObserver";
-import FloatingIcons from "@/components/organisms/FloatingIcons/FloatingIcons";
 import AnimatedDeveloper from "@/components/molecules/AnimatedDeveloperIcon/AnimatedDeveloperIcon";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import Image from "next/image";
 import TypeWriter from "@/components/molecules/TypeWriter/TypeWriter";
 import WelcomeMsg from "@/components/organisms/WelcomeMsg/WelcomeMsg";
 import classes from "./Hero.module.scss";
+
+const AnimatedImage = animated(Image);
 
 export default function Hero() {
   const ref = React.useRef<HTMLDivElement | null>(null);
@@ -17,28 +18,37 @@ export default function Hero() {
   });
   const isVisible = !!entry?.isIntersecting;
 
-  const spring = useSpring({
-    from: {
-      opacity: 0,
-    },
-    to: {
-      opacity: 1,
-    },
+  const [spring, springApi] = useSpring(() => ({
+    opacity: 0,
     config: { ...config.molasses, duration: 1000 },
-  });
+  }));
 
-  const trail = useTrail(2, {
-    from: {
-      transform: "translateY(100px)",
-      opacity: 0,
-    },
-    to: {
-      transform: isVisible ? "translateY(0px)" : "translateY(100px)",
-      opacity: isVisible ? 1 : 0,
-    },
-  });
+  const [trail, trailApi] = useTrail(2, () => ({
+    transform: "translateY(100px)",
+    opacity: 0,
+    config: config.slow,
+  }));
 
-  const AnimatedImage = animated(Image);
+  React.useEffect(() => {
+    springApi.start({ opacity: 1 });
+
+    return () => {
+      springApi.stop();
+    };
+  }, [springApi]);
+
+  React.useEffect(() => {
+    if (isVisible) {
+      trailApi.start({
+        transform: "translateY(0px)",
+        opacity: 1,
+      });
+    }
+
+    return () => {
+      trailApi.stop();
+    };
+  }, [isVisible, trailApi]);
 
   return (
     <section className={classes.hero}>
