@@ -13,8 +13,10 @@ export default function Expertise(props: Props) {
 
   return (
     <Wrapper>
-      <Title>My Expertise</Title>
-      <StackGrid technologies={technologies} />
+      <div id="expertise">
+        <Title side="left">My Expertise</Title>
+        <StackGrid technologies={technologies} />
+      </div>
     </Wrapper>
   );
 }

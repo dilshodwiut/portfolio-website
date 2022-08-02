@@ -2,10 +2,21 @@ import * as React from "react";
 import Image from "next/image";
 import Card from "@/components/atoms/Card/Card";
 import clsx from "clsx";
-import { useSpring, animated, config } from "@react-spring/web";
+import { useSpring, animated, config, SpringValue } from "@react-spring/web";
 import classes from "./WelcomeMsg.module.scss";
 
-export default function WelcomeMsg() {
+const AnimatedCard = animated(Card);
+
+interface Props {
+  style: {
+    transform: SpringValue<string>;
+    opacity: SpringValue<number>;
+  };
+}
+
+export default function WelcomeMsg(props: Props) {
+  const { style } = props;
+
   const [showCode, setShowCode] = React.useState(true);
   const [showSwitch, setShowSwitch] = React.useState(false);
 
@@ -47,7 +58,7 @@ export default function WelcomeMsg() {
   }, [showCode, viewApi]);
 
   return (
-    <Card
+    <AnimatedCard
       className={classes.content}
       onMouseEnter={() => {
         setShowSwitch(true);
@@ -55,6 +66,7 @@ export default function WelcomeMsg() {
       onMouseLeave={() => {
         setShowSwitch(false);
       }}
+      style={style}
     >
       <animated.span
         className={classes.switch}
@@ -137,6 +149,6 @@ export default function WelcomeMsg() {
           </p>
         </animated.div>
       </animated.div>
-    </Card>
+    </AnimatedCard>
   );
 }

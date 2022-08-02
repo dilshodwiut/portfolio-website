@@ -33,20 +33,22 @@ export default function Delivery() {
 
   return (
     <Wrapper>
-      <Title>How I deliver projects</Title>
-      <div className={classes.delivery}>
-        <ReactFlow
-          nodes={nodes}
-          edges={edges}
-          onNodesChange={onNodesChange}
-          onEdgesChange={onEdgesChange}
-          onConnect={onConnect}
-          fitView
-          attributionPosition={isMobile ? "bottom-right" : "bottom-right"}
-        >
-          <Background color="#aaa" gap={16} />
-          {isMobile ? null : <Controls />}
-        </ReactFlow>
+      <div id="delivery">
+        <Title side="top">How I deliver projects</Title>
+        <div className={classes.delivery}>
+          <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            onConnect={onConnect}
+            fitView
+            attributionPosition={isMobile ? "bottom-right" : "bottom-right"}
+          >
+            <Background color="#aaa" gap={16} />
+            {isMobile ? null : <Controls />}
+          </ReactFlow>
+        </div>
       </div>
     </Wrapper>
   );

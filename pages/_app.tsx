@@ -1,17 +1,16 @@
+// eslint
 import * as React from "react";
 import "normalize.css";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import ScreenSizeProvider from "src/contexts/ScreenSizeContext";
-import dynamic from "next/dynamic";
+import HamburgerProvider from "src/contexts/HamburgerContext";
+import ScrollTopArrow from "@/components/atoms/ScrollTopArrow/ScrollTopArrow";
+import Backdrop from "@/components/atoms/Backdrop/Backdrop";
+import Hamburger from "@/components/atoms/Hamburger/Hamburger";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const ScrollTopArrow = dynamic(
-    () => import("@/components/atoms/ScrollTopArrow/ScrollTopArrow"),
-    { ssr: false }
-  );
-
   return (
     <>
       <Head>
@@ -20,8 +19,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="I am a software engineer" />
       </Head>
       <ScreenSizeProvider>
-        <Component {...pageProps} />
-        <ScrollTopArrow />
+        <HamburgerProvider>
+          <Hamburger />
+          <Backdrop />
+          <ScrollTopArrow />
+          <Component {...pageProps} />
+        </HamburgerProvider>
       </ScreenSizeProvider>
     </>
   );

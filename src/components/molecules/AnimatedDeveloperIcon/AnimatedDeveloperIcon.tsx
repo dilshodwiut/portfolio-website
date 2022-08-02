@@ -1,9 +1,18 @@
 import * as React from "react";
 import dynamic from "next/dynamic";
-import { animated } from "@react-spring/web";
+import { animated, SpringValue } from "@react-spring/web";
 import classes from "./AnimatedDeveloperIcon.module.scss";
 
-function AnimatedDeveloperIcon() {
+interface Props {
+  style: {
+    transform: SpringValue<string>;
+    opacity: SpringValue<number>;
+  };
+}
+
+function AnimatedDeveloperIcon(props: Props) {
+  const { style } = props;
+
   const RandomColorizer = dynamic(
     () => import("src/containers/RandomColorizer"),
     {
@@ -12,7 +21,7 @@ function AnimatedDeveloperIcon() {
   );
 
   return (
-    <div className={classes.developer}>
+    <animated.div className={classes.developer} style={style}>
       <svg
         data-name="Layer 1"
         viewBox="0 0 850.54 740.83"
@@ -376,7 +385,7 @@ function AnimatedDeveloperIcon() {
           fill="#3f3d56"
         />
       </svg>
-    </div>
+    </animated.div>
   );
 }
 

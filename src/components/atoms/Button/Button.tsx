@@ -1,6 +1,6 @@
 import * as React from "react";
 // import colors from "src/theme/palette";
-import { useSpring, animated, config } from "@react-spring/web";
+import { useSpring, animated, config, SpringValue } from "@react-spring/web";
 import clsx from "clsx";
 import classes from "./Button.module.scss";
 
@@ -8,6 +8,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   children: React.ReactNode;
   className?: string;
+  style?: { opacity?: SpringValue<number>; transform?: SpringValue<string> };
   onClick: (event: React.MouseEvent<HTMLElement>) => void;
   // size?: "small" | "medium" | "large";
   isDisabled?: boolean;
@@ -38,6 +39,7 @@ export default function Button(props: ButtonProps) {
     onMouseDown,
     onMouseUp,
     className,
+    style,
   } = props;
 
   return (
@@ -64,7 +66,7 @@ export default function Button(props: ButtonProps) {
         }
         api.start({ transform: "translateY(0px)" });
       }}
-      style={{ transform }}
+      style={{ transform, ...style }}
       type={type}
       disabled={isDisabled}
       className={clsx(disableStyles ? "" : classes.button, className)}
@@ -80,6 +82,7 @@ Button.defaultProps = {
   isDisabled: false,
   disableStyles: false,
   className: "",
+  style: {},
   onMouseEnter: () => {},
   onMouseLeave: () => {},
   onMouseDown: () => {},

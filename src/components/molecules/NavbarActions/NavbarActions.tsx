@@ -3,6 +3,7 @@ import { useSpring, animated, config } from "@react-spring/web";
 import downloadFile from "src/functions/downloadFile";
 import List from "@/components/atoms/List/List";
 import Button from "@/components/atoms/Button/Button";
+import classes from "./NavbarActions.module.scss";
 
 export default function NavbarActions() {
   const [animationStarted, setAnimationStarted] = React.useState(false);
@@ -25,7 +26,7 @@ export default function NavbarActions() {
   }));
 
   return (
-    <List>
+    <List className={classes.navbar__actions}>
       <Button
         onClick={(event: React.MouseEvent) =>
           downloadFile(event, "/assets/Dilshod Ramatilloev.pdf")

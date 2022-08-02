@@ -1,33 +1,34 @@
 import * as React from "react";
 import List from "@/components/atoms/List/List";
 import Link from "@/components/atoms/Link/Link";
+import classes from "./NavbarLinks.module.scss";
 
 export default function NavbarLinks(): JSX.Element {
   return (
-    <List>
+    <List className={classes.navbar__links}>
       <li>
-        <Link href="/portfolio" type="nav">
-          Portfolio
+        <Link href="#expertise" type="nav">
+          Expertise
         </Link>
       </li>
       <li>
-        <Link href="/blog" type="nav">
-          Blog
+        <Link href="#stats" type="nav">
+          Stats
         </Link>
       </li>
       <li>
-        <Link href="/resources" type="nav">
-          Resources
+        <Link href="#delivery" type="nav">
+          Delivery
         </Link>
       </li>
       <li>
-        <Link href="/contact" type="nav">
-          Contact
+        <Link href="#clients" type="nav">
+          Clients
         </Link>
       </li>
       <li>
-        <Link href="/about" type="nav">
-          About
+        <Link href="#practices" type="nav">
+          Practices
         </Link>
       </li>
     </List>

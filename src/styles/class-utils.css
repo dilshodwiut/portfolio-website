@@ -150,6 +150,7 @@
   font-size: var(--font-size-sm);
 }
 
+/* Mobile */
 @media (max-width: 767px) {
   .xxl {
     font-size: var(--font-size-xl);
@@ -170,8 +171,14 @@
   .sm {
     font-size: var(--font-size-sm);
   }
+
+  .my-lg {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
+/* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
   .xxl {
     font-size: var(--font-size-xxl);
@@ -194,6 +201,7 @@
   }
 }
 
+/* Desktop */
 @media (min-width: 1024px) {
   .xxl {
     font-size: var(--font-size-xxl);

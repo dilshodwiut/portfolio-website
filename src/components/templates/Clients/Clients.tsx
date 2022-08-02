@@ -6,8 +6,10 @@ import Title from "@/components/atoms/Title/Title";
 export default function Clients() {
   return (
     <Wrapper>
-      <Title>Clients</Title>
-      <Slider />
+      <div id="clients">
+        <Title side="bottom">Clients</Title>
+        <Slider />
+      </div>
     </Wrapper>
   );
 }

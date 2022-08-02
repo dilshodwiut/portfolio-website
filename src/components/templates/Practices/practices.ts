@@ -62,7 +62,7 @@ const practices = [
   {
     name: "FP",
     rotation: -4,
-    x: 1,
+    x: 0.5,
     y: -1.5,
   },
   {
@@ -104,7 +104,7 @@ const practices = [
   {
     name: "YAGNI",
     rotation: -3,
-    x: 0,
+    x: -0.5,
     y: 0,
   },
   {
@@ -140,7 +140,7 @@ const practices = [
   {
     name: "Responsive Web Design",
     rotation: -15,
-    x: 1,
+    x: 0.5,
     y: 2,
   },
 ];

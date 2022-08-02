@@ -6,8 +6,10 @@ import Paper from "./Paper";
 export default function Practices() {
   return (
     <Wrapper>
-      <Title>Engineering Practices</Title>
-      <Paper />
+      <div id="practices">
+        <Title>Engineering Practices</Title>
+        <Paper />
+      </div>
     </Wrapper>
   );
 }

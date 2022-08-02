@@ -19,6 +19,20 @@ export default function CustomLink(props: LinkProps) {
 
   const { href, target, downloadable, type, children, icon, onClick } = props;
 
+  const clickHandler = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const targetEl = e.target as HTMLAnchorElement;
+
+    const link = targetEl.getAttribute("href");
+
+    const { offsetTop } = document.querySelector(link!) as HTMLDivElement;
+
+    document.body.scroll({
+      top: offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <span
@@ -26,21 +40,17 @@ export default function CustomLink(props: LinkProps) {
         classes.link,
         type === "nav" ? classes.hover : classes.underline
       )}
-      onClick={onClick}
     >
       <a
         href={href}
         target={target}
         rel="noopener noreferrer"
         download={downloadable}
+        onClick={clickHandler}
       >
         {children}
         {icon}
       </a>
-
-      {type === "nav" && `/${children.toLocaleLowerCase()}` === router.route ? (
-        <HandDrawnPaths route={router.route} />
-      ) : null}
     </span>
   );
 }

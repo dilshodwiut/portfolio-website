@@ -29,6 +29,7 @@
     "react-query": "^3.39.1",
     "react-responsive": "^9.0.0-beta.6",
     "react-router-dom": "6",
+    "sharp": "^0.30.7",
     "three": "^0.142.0",
     "uuid": "^8.3.2",
     "yup": "^0.32.11"

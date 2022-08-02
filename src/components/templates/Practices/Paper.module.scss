@@ -1,6 +1,7 @@
 .paper {
   overflow: hidden;
   font: var(--font-size-lg) "Architects Daughter", cursive;
+  margin: 0 auto 3rem auto;
 
   & > * {
     display: inline-block;
@@ -10,7 +11,6 @@
 // Mobile
 @media (max-width: 767px) {
   .paper {
-    margin: 1rem auto;
     font-size: 0.634em;
     width: 295px;
     height: 102.5px;
@@ -26,7 +26,6 @@
 // Tablet
 @media (min-width: 768px) and (max-width: 1023px) {
   .paper {
-    margin: 1rem auto;
     font-size: 1.45rem;
     width: 674px;
     height: 234px;
@@ -42,7 +41,6 @@
 // Desktop
 @media (min-width: 1024px) {
   .paper {
-    margin: 1rem auto;
     width: 930px;
     height: 322px;
     background-size: 1em 1em;

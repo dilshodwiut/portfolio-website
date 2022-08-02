@@ -7,3 +7,21 @@
   padding-right: 32px;
   padding-left: 32px;
 }
+
+// Mobile
+@media (max-width: 767px) {
+  .navbar {
+  }
+}
+
+// Tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+  }
+}
+
+// Desktop
+@media (min-width: 1024px) {
+  .navbar {
+  }
+}

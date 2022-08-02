@@ -13,8 +13,10 @@ export default function Statistics(props: Props) {
 
   return (
     <Wrapper>
-      <Title>Statistics</Title>
-      <Stats stats={stats} />
+      <div id="stats">
+        <Title side="right">Statistics</Title>
+        <Stats stats={stats} />
+      </div>
     </Wrapper>
   );
 }
