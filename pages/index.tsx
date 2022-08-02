@@ -60,23 +60,22 @@ export default Home;
 export const getStaticProps: GetStaticProps = async (context) => {
   // const projects = await import("@/data/projects.json");
   // const projects = await fetch("@/data/projects.json");
-  const [technologies, stats, projects] = await Promise.all([
+  const [technologies, stats, clients, projects] = await Promise.all([
     fetch(process.env.TECHNOLOGIES_URL),
     fetch(process.env.STATS_URL),
-    // fetch(process.env.CLIENTS_URL),
+    fetch(process.env.CLIENTS_URL),
     fetch(process.env.PROJECTS_URL),
   ]);
   const technologiesData = await technologies.json();
   const statsData = await stats.json();
-  // const clientsData = await clients.json();
+  const clientsData = await clients.json();
   const projectsData = await projects.json();
 
   return {
     props: {
       technologies: technologiesData,
       stats: statsData,
-      // clients: clientsData,
-      clients: [],
+      clients: clientsData,
       projects: projectsData,
     },
   };
