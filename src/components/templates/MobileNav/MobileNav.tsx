@@ -30,7 +30,7 @@ export default function NavbarLinks(props: Props): JSX.Element {
             <Button
               onClick={(event: React.MouseEvent) => {
                 event.preventDefault();
-                downloadFile(event, "/assets/Dilshod Ramatilloev.pdf");
+                downloadFile(event, "/assets/dilshod_ramatilloev.pdf");
               }}
               style={styles}
             >

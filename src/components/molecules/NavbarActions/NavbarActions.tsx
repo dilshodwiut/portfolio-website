@@ -29,7 +29,7 @@ export default function NavbarActions() {
     <List className={classes.navbar__actions}>
       <Button
         onClick={(event: React.MouseEvent) => {
-          downloadFile(event, "/assets/Dilshod Ramatilloev.pdf");
+          downloadFile(event, "/assets/dilshod_ramatilloev.pdf");
         }}
         // onMouseEnter={() => {
         //   setAnimationStarted(true);
