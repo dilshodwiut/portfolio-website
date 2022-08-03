@@ -38,7 +38,11 @@ export default function StackGrid(props: Props) {
   return (
     <div className={classes.grid} ref={ref}>
       {trail.map((style, i) => (
-        <animated.span key={technologies[i].alt} style={style}>
+        <animated.span
+          key={technologies[i].alt}
+          style={style}
+          title={technologies[i].alt}
+        >
           <Image
             src={technologies[i].src}
             alt={technologies[i].alt}

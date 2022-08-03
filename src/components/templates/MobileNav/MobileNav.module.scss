@@ -5,7 +5,7 @@
   align-items: flex-start;
   justify-content: center;
 
-  & > *:not(:last-child) > span {
+  & > *:not(:last-child) > a {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
     padding: 1rem;

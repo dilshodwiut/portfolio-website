@@ -3,21 +3,28 @@ import { useSpring, animated, config } from "@react-spring/web";
 import classes from "./Heart.module.scss";
 
 export default function Heart({ isVisible }: { isVisible: boolean }) {
-  const { transform } = useSpring({
-    from: {
-      transform: "scale(1)",
-    },
-    to: {
-      transform: isVisible ? "scale(1.2)" : "scale(1)",
-    },
+  const [spring, api] = useSpring(() => ({
+    from: { transform: "scale(1) translateZ(1px)" },
     config: { ...config.wobbly, duration: 500 },
-    loop: { reverse: true },
-  });
+  }));
+
+  React.useEffect(() => {
+    if (isVisible) {
+      api.start({
+        transform: "scale(1.2) translateZ(1px)",
+        loop: { reverse: true },
+      });
+    }
+
+    return () => {
+      api.stop();
+    };
+  }, [isVisible, api]);
 
   return (
     <animated.svg
       className={classes.heart}
-      style={{ transform }}
+      style={spring}
       version="1.1"
       id="heart"
       xmlns="http://www.w3.org/2000/svg"

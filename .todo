@@ -43,9 +43,11 @@ typewriter fix
 hamburger animation fix
 welcomemsg fix
 usetransition and useeffect on backdrop component
-hamburger click bug
 
 reevaluate dynamic imports without ssr
 
 parallax and curve?
 resume renaming issue, don't hardcode
+next-seo
+
+firefox: late render man in dark on mobile, backdrop-filter is not well supported

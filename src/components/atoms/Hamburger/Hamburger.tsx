@@ -26,10 +26,10 @@ export default function Hamburger() {
 
   /* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
   return (
-    <animated.div
+    <animated.button
+      type="button"
       className={clsx(classes.hamburger, isOpen ? classes.open : "")}
       onClick={() => setIsOpen(!isOpen)}
-      // style={spring}
     >
       <span />
       <span />
@@ -37,6 +37,6 @@ export default function Hamburger() {
       <span />
       <span />
       <span />
-    </animated.div>
+    </animated.button>
   );
 }
