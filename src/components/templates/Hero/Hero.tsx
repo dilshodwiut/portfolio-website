@@ -9,6 +9,11 @@ import WelcomeMsg from "@/components/organisms/WelcomeMsg/WelcomeMsg";
 import classes from "./Hero.module.scss";
 
 const AnimatedImage = animated(Image);
+const words = [
+  "Software Engineer",
+  "Functional Programmer",
+  "Linux Enthusiast",
+];
 
 export default function Hero() {
   const ref = React.useRef<HTMLDivElement | null>(null);
@@ -62,15 +67,7 @@ export default function Hero() {
           style={spring}
         />
 
-        <TypeWriter
-          text="I am - "
-          words={[
-            "Software Engineer",
-            "Functional Programmer",
-            "Linux Enthusiast",
-          ]}
-          wait={1000}
-        />
+        <TypeWriter text="I am - " words={words} wait={1000} />
 
         <div className={classes.welcome} ref={ref}>
           <AnimatedDeveloper style={trail[0]} />

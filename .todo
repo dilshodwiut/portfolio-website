@@ -51,3 +51,5 @@ resume renaming issue, don't hardcode
 next-seo
 
 firefox: late render man in dark on mobile, backdrop-filter is not well supported
+
+welcomemsg unnecessary state updates on mobile onclick

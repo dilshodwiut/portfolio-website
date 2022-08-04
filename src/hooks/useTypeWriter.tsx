@@ -1,100 +1,142 @@
+/* eslint-disable no-var */
 import * as React from "react";
 
-type Mode = "typing" | "deleting" | "finished";
+type Mode = typeof TYPING | typeof DELETING | typeof FINISHED;
 
 type Props = {
   words: string[];
   wait: number;
 };
 
-let currentWord = 0;
-let currentLetter = 0;
+type Part = typeof WORD | typeof LETTER;
+
+type Timer = {
+  start: () => Timer;
+  clear: () => Timer;
+};
+
+let currentWordIdx = 0;
+let currentLetterIdx = 0;
+
+const WORD = "word";
+const LETTER = "letter";
+
+const TYPING = "typing";
+const DELETING = "deleting";
+const FINISHED = "finished";
 
 export default function useTypeWriter({ words, wait }: Props) {
-  const [mode, setMode] = React.useState<Mode>("typing");
+  const [mode, setMode] = React.useState<Mode>(TYPING);
   const [output, setOutput] = React.useState<string>("");
 
-  React.useEffect(() => {
-    let time;
+  const time = getTimeFrom(mode, wait);
 
-    if (mode === "deleting") {
-      time = wait / 10;
-    } else if (mode === "typing") {
-      time = wait / 5;
+  const setDeleting = createTimeout(() => {
+    setMode(DELETING);
+    setDeleting.clear();
+  }, wait);
+  const outputUpdater = createTimeout(
+    updateOutput(currentWordIdx, currentLetterIdx),
+    time
+  );
+
+  const takeAction = React.useCallback(() => {
+    if (words[currentWordIdx + 1]) {
+      incrementIdx(WORD);
     } else {
-      time = wait;
+      nullifyIdx(WORD);
     }
+    setMode(TYPING);
+    nullifyIdx(LETTER);
+  }, [words]);
 
-    const timeout = getTimeout(() => {
-      if (words[currentWord + 1]) {
-        increment("word");
+  const deferredAction = createTimeout(takeAction, wait);
+
+  function updateOutput(currWord: number, currLetter: number) {
+    const onTyping = () => {
+      if (currLetter === words[currWord].length) {
+        nullifyIdx(LETTER);
+        setMode(FINISHED);
       } else {
-        nullify("word");
-      }
-      setMode("typing");
-      nullify("letter");
-    }, wait);
-
-    const call = (currWord: number, currLetter: number) => () => {
-      if (mode === "typing") {
-        if (currLetter === words[currWord].length) {
-          nullify("letter");
-          setMode("finished");
-        } else {
-          setOutput((prev) => `${prev}${words[currWord][currLetter]}`);
-          increment("letter");
-        }
-      } else if (mode === "finished") {
-        setTimeout(() => {
-          setMode("deleting");
-        }, wait);
-      } else if (mode === "deleting") {
-        if (output) {
-          setOutput((prev) => prev.slice(0, -1));
-        } else {
-          timeout.start();
-        }
+        setOutput((prev) => `${prev}${words[currWord][currLetter]}`);
+        incrementIdx(LETTER);
       }
     };
 
-    const interval = setInterval(call(currentWord, currentLetter), time);
+    const onDeleting = () => {
+      if (output) {
+        setOutput((prev) => prev.slice(0, -1));
+      } else {
+        deferredAction.start();
+      }
+    };
 
     return () => {
-      clearInterval(interval);
-      timeout.stop();
+      if (mode === TYPING) {
+        onTyping();
+      } else if (mode === FINISHED) {
+        setDeleting.start();
+      } else if (mode === DELETING) {
+        onDeleting();
+      }
     };
-  }, [words, mode, wait, output]);
+  }
+
+  React.useEffect(() => {
+    outputUpdater.start();
+
+    return () => {
+      outputUpdater.clear();
+      deferredAction.clear();
+    };
+  }, [deferredAction, outputUpdater]);
 
   return output;
 }
 
-function increment(part: "word" | "letter") {
-  if (part === "word") {
-    currentWord += 1;
-  } else if (part === "letter") {
-    currentLetter += 1;
-  }
-}
-
-function nullify(part: "word" | "letter") {
-  if (part === "word") {
-    currentWord = 0;
-  } else if (part === "letter") {
-    currentLetter = 0;
-  }
-}
-
-function getTimeout(cb: Function, time: number) {
+function createTimeout(cb: Function, time: number) {
   let timer: number;
 
+  function start(this: Timer) {
+    if (!timer) {
+      timer = setTimeout(cb, time);
+    }
+    return this;
+  }
+
+  function clear(this: Timer) {
+    clearTimeout(timer);
+    return this;
+  }
+
   return {
-    start: () => {
-      if (!timer) {
-        timer = setTimeout(cb, time);
-      }
-    },
-    stop: () => {
-      clearTimeout(timer);
-    },
+    start,
+    clear,
   };
+}
+
+function incrementIdx(part: Part) {
+  if (part === WORD) {
+    currentWordIdx += 1;
+  } else if (part === LETTER) {
+    currentLetterIdx += 1;
+  }
+}
+
+function nullifyIdx(part: Part) {
+  if (part === WORD) {
+    currentWordIdx = 0;
+  } else if (part === LETTER) {
+    currentLetterIdx = 0;
+  }
+}
+
+function getTimeFrom(mode: Mode, waitTime: number = 0) {
+  if (mode === DELETING) {
+    return waitTime / 10;
+  }
+  if (mode === TYPING) {
+    return waitTime / 5;
+  }
+  return waitTime;
 }
