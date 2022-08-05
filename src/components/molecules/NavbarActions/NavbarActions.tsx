@@ -3,6 +3,7 @@ import * as React from "react";
 import downloadFile from "src/functions/downloadFile";
 import List from "@/components/atoms/List/List";
 import Button from "@/components/atoms/Button/Button";
+import urls from "src/shared/urls";
 import classes from "./NavbarActions.module.scss";
 
 export default function NavbarActions() {
@@ -29,7 +30,7 @@ export default function NavbarActions() {
     <List className={classes.navbar__actions}>
       <Button
         onClick={(event: React.MouseEvent) => {
-          downloadFile(event, "/assets/dilshod_ramatilloev.pdf");
+          downloadFile(event, urls.resume);
         }}
         // onMouseEnter={() => {
         //   setAnimationStarted(true);

@@ -1,4 +1,3 @@
-/* eslint-disable no-var */
 import * as React from "react";
 
 type Mode = typeof TYPING | typeof DELETING | typeof FINISHED;

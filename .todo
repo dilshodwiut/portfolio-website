@@ -32,6 +32,7 @@ cleanup practices directory
 title.module.scss vs class-utils
 scrollintoview navbar
 useId or uuid
+
 polish react flow
 animated developer proper react spring style type
 
@@ -39,9 +40,6 @@ LEARN: webassembly, assemblyscript, rxjs, pwa, three.js
 stackgrid labels
 
 outsource types from each individual components, e.g SpringValue
-typewriter fix
-hamburger animation fix
-welcomemsg fix
 usetransition and useeffect on backdrop component
 
 reevaluate dynamic imports without ssr
@@ -53,3 +51,5 @@ next-seo
 firefox: late render man in dark on mobile, backdrop-filter is not well supported
 
 welcomemsg unnecessary state updates on mobile onclick
+remove nested span of top arrow
+hover me msg for welcomemsg

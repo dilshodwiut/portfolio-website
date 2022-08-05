@@ -4,6 +4,7 @@ import Link from "@/components/atoms/Link/Link";
 import Button from "@/components/atoms/Button/Button";
 import downloadFile from "src/functions/downloadFile";
 import { animated, TransitionFn } from "@react-spring/web";
+import urls from "src/shared/urls";
 import classes from "./MobileNav.module.scss";
 
 interface Props {
@@ -30,7 +31,7 @@ export default function NavbarLinks(props: Props): JSX.Element {
             <Button
               onClick={(event: React.MouseEvent) => {
                 event.preventDefault();
-                downloadFile(event, "/assets/dilshod_ramatilloev.pdf");
+                downloadFile(event, urls.resume);
               }}
               style={styles}
             >
