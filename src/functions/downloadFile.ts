@@ -1,20 +1,23 @@
-export default function downloadFile(
-  event: React.MouseEvent,
-  filepath: string
-) {
+/*
+Download a file
+
+@param {string} filepath - The path to the file to download
+
+*/
+
+export default function downloadFile(filepath: string) {
   try {
-    if (!event || !filepath.trim()) {
-      throw new Error("Missing event or filepath");
+    if (!filepath.trim()) {
+      throw new Error("Missing filepath");
     }
-    event.preventDefault();
     const a = document.createElement("a");
     a.href = filepath;
     a.download = filepath.split("/").pop() || "";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  } catch {
+  } catch (e) {
     // eslint-disable-next-line no-console
-    console.error("Error downloading file");
+    console.error("Error downloading file", e);
   }
 }
