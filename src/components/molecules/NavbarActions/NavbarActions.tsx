@@ -30,7 +30,8 @@ export default function NavbarActions() {
     <List className={classes.navbar__actions}>
       <Button
         onClick={(event: React.MouseEvent) => {
-          downloadFile(event, urls.resume);
+          event.preventDefault();
+          downloadFile(urls.resume);
         }}
         // onMouseEnter={() => {
         //   setAnimationStarted(true);

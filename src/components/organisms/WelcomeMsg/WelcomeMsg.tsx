@@ -85,6 +85,15 @@ export default function WelcomeMsg(props: Props) {
       }}
       style={style}
     >
+      <button
+        className={classes.toggleBtn}
+        type="button"
+        onClick={() => {
+          setShowCode((prev) => !prev);
+        }}
+      >
+        Toggle
+      </button>
       <animated.span
         className={classes.switch}
         style={{
@@ -145,8 +154,8 @@ export default function WelcomeMsg(props: Props) {
               width={29}
               height={29}
             />
-          </p>
-          <p>
+            <br />
+            <br />
             My aim is to make the{" "}
             <Image
               priority

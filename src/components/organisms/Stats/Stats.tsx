@@ -68,7 +68,12 @@ export default function Stats(props: Props) {
                 separator=" "
                 duration={2}
                 decimals={Number.isInteger(stat.totalNumber) ? 0 : 1}
-                suffix={stat.name === "Commits" ? " +" : ""}
+                suffix={
+                  stat.name === "Commits" ||
+                  stat.name === "Projects contributed"
+                    ? " +"
+                    : ""
+                }
               >
                 {({ countUpRef, start }) => (
                   <IntersectedCountUp countUpRef={countUpRef} start={start} />

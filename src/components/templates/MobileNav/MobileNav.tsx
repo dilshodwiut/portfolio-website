@@ -31,7 +31,7 @@ export default function NavbarLinks(props: Props): JSX.Element {
             <Button
               onClick={(event: React.MouseEvent) => {
                 event.preventDefault();
-                downloadFile(event, urls.resume);
+                downloadFile(urls.resume);
               }}
               style={styles}
             >

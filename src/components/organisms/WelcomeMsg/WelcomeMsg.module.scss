@@ -6,6 +6,14 @@
   overflow: hidden;
   // box-shadow: 0 0 0.5rem var(--dark-blue);
 
+  .toggleBtn {
+    display: none;
+  }
+
+  .toggleBtn:active {
+    color: var(--yellow);
+  }
+
   .switch {
     position: absolute;
     top: 20px;
@@ -150,6 +158,10 @@
     // line-height: 1;
     margin: 1rem 0;
   }
+
+  p {
+    line-height: calc(1em + 0.725em);
+  }
 }
 
 // Mobile
@@ -158,6 +170,15 @@
     width: 75%;
     padding: 1rem;
     height: auto;
+
+    .toggleBtn {
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 7px;
+      color: var(--light-blue);
+      font-size: 0.9rem;
+    }
 
     .switch {
       display: none;
