@@ -6,7 +6,7 @@
       "src": "/icons/dropper.png",
       "alt": "experience icon"
     },
-    "totalNumber": 2
+    "count": 2
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
       "src": "/icons/office.png",
       "alt": "office icon"
     },
-    "totalNumber": 2,
+    "count": 2,
     "companies": [
       {
         "name": "Udevs",
@@ -34,7 +34,7 @@
       "src": "/icons/development.png",
       "alt": "projects icon"
     },
-    "totalNumber": 6
+    "count": 6
   },
   {
     "id": "4",
@@ -43,6 +43,6 @@
       "src": "/icons/commit.png",
       "alt": "commit icon"
     },
-    "totalNumber": 1000
+    "count": 1000
   }
 ]

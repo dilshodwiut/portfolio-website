@@ -64,10 +64,10 @@ export default function Stats(props: Props) {
                 enableScrollSpy
                 scrollSpyDelay={500}
                 scrollSpyOnce
-                end={stat.totalNumber}
+                end={stat.count}
                 separator=" "
                 duration={2}
-                decimals={Number.isInteger(stat.totalNumber) ? 0 : 1}
+                decimals={Number.isInteger(stat.count) ? 0 : 1}
                 suffix={
                   stat.name === "Commits" ||
                   stat.name === "Projects contributed"

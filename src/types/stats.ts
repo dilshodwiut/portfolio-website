@@ -9,6 +9,6 @@ export type Stats = {
   id: string;
   name: string;
   icon: Image;
-  totalNumber: number;
+  count: number;
   companies: Company[];
 };
