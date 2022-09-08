@@ -64,7 +64,14 @@ export default function Hero() {
           width={1100}
           height={750}
           priority
-          style={spring}
+          style={{
+            ...spring,
+            userSelect: "none",
+            WebkitUserSelect: "none",
+            msUserSelect: "none",
+            // WebkitUserDrag: "none",
+          }}
+          draggable={false}
         />
 
         <TypeWriter text="I am - " words={words} wait={1000} />

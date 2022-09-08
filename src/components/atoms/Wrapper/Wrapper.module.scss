@@ -3,25 +3,28 @@
   margin-left: auto;
 
   max-width: 1100px;
-
-  padding-right: 32px;
-  padding-left: 32px;
 }
 
 // Mobile
 @media (max-width: 767px) {
-  .navbar {
+  .wrapper {
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
 // Tablet
 @media (min-width: 768px) and (max-width: 1023px) {
-  .navbar {
+  .wrapper {
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 
 // Desktop
 @media (min-width: 1024px) {
-  .navbar {
+  .wrapper {
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }

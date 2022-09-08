@@ -27,7 +27,7 @@
   background-color: var(--red);
 }
 
-.button:before {
+.button::before {
   content: "";
   background-color: white;
   top: 0;
@@ -39,6 +39,6 @@
   transition: all 0.3s;
 }
 
-.button:hover:before {
+.button:hover::before {
   transform: translateX(100%) rotate(45deg);
 }

@@ -132,6 +132,7 @@ export default function WelcomeMsg(props: Props) {
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>/&gt;</span>
           </p>
+          <br />
           <p>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
@@ -154,8 +155,9 @@ export default function WelcomeMsg(props: Props) {
               width={29}
               height={29}
             />
-            <br />
-            <br />
+          </p>
+          <br />
+          <p>
             My aim is to make the{" "}
             <Image
               priority

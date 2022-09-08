@@ -24,7 +24,7 @@
   height: auto;
   color: gold;
   text-align: center;
-  &:after {
+  &::after {
     content: "★";
     text-shadow: -2em 0, -1em 0, 1em 0, 2em 0;
   }
