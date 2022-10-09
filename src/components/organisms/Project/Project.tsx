@@ -113,9 +113,9 @@ export default function Project(props: ProjectProps) {
           />
         </div>
         <div className={classes.project}>
-          <span className={clsx(classes.project__title, classes[name])}>
+          <h1 className={clsx(classes.project__title, classes[name])}>
             {title}
-          </span>
+          </h1>
           {tags.map((tag) => (
             <TagCmp key={tag.text} color={tag.color}>
               <Image
@@ -136,7 +136,7 @@ export default function Project(props: ProjectProps) {
             {description}
           </animated.p>
           <div className={classes.project__services} ref={serviceRef}>
-            <h3>What I did?</h3>
+            <h2>What I did?</h2>
             <List>
               {services.map((service, i) => (
                 <AnimatedListItem

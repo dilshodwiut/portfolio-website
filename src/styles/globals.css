@@ -31,6 +31,73 @@
   --thumbBG: #90a4ae;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""),
+    url("/fonts/montserrat-v25-latin-regular.woff2") format("woff2"),
+    url("/fonts/montserrat-v25-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(""), url("/fonts/montserrat-v25-latin-600.woff2") format("woff2"),
+    url("/fonts/montserrat-v25-latin-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""), url("/fonts/montserrat-v25-latin-700.woff2") format("woff2"),
+    url("/fonts/montserrat-v25-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local(""), url("/fonts/montserrat-v25-latin-900.woff2") format("woff2"),
+    url("/fonts/montserrat-v25-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local(""),
+    url("/fonts/jetbrains-mono-v13-latin-200.woff2") format("woff2"),
+    url("/fonts/jetbrains-mono-v13-latin-200.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""),
+    url("/fonts/jetbrains-mono-v13-latin-regular.woff2") format("woff2"),
+    url("/fonts/jetbrains-mono-v13-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: "Architects Daughter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""),
+    url("/fonts/architects-daughter-v18-latin-regular.woff2") format("woff2"),
+    url("/fonts/architects-daughter-v18-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 html,
 body {
   font: 16px "Montserrat", sans-serif;

@@ -9,37 +9,109 @@ export default function Document() {
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <Main />
         <NextScript />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
+          rel="preload"
+          as="font"
+          href="/fonts/montserrat-v25-latin-regular.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap"
-          rel="stylesheet"
-        />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          as="font"
+          href="/fonts/montserrat-v25-latin-regular.woff"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
+          rel="preload"
+          as="font"
+          href="/fonts/montserrat-v25-latin-700.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          as="font"
+          href="/fonts/montserrat-v25-latin-700.woff"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        <link
+          rel="preload"
+          as="font"
+          href="/fonts/montserrat-v25-latin-900.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          as="font"
+          href="/fonts/montserrat-v25-latin-900.woff"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/jetbrains-mono-v13-latin-regular.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/jetbrains-mono-v13-latin-regular.woff"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/jetbrains-mono-v13-latin-200.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/jetbrains-mono-v13-latin-200.woff"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/montserrat-v25-latin-600.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/montserrat-v25-latin-600.woff"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/architects-daughter-v18-latin-regular.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="prefetch"
+          as="font"
+          href="/fonts/architects-daughter-v18-latin-regular.woff"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
       </body>
     </Html>

@@ -26,7 +26,7 @@ export default function Projects(props: Props) {
               <Image
                 src={project.title.src}
                 width={250}
-                height={50}
+                height={55}
                 alt={project.title.alt}
               />
             )

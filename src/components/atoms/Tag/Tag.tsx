@@ -5,7 +5,6 @@ import classes from "./Tag.module.scss";
 interface Props {
   children: React.ReactNode;
   className?: string;
-  // color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
   color?: string;
 }
 
@@ -21,6 +20,5 @@ export default function Tag(props: Props) {
 
 Tag.defaultProps = {
   className: "",
-  // color: "primary",
   color: "red",
 };

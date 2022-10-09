@@ -14,10 +14,6 @@
   }
 }
 
-.primary {
-  // color: var(--color-primary);
-}
-
 .red {
   color: var(--red);
   // background: hsla(
@@ -26,32 +22,32 @@
   //   color.lightness(#ea3d26),
   //   0.3
   // );
-  background: lighten(#ea3d26, 30%);
+  background: lighten(#ea3d26, 40%);
 }
 
 .blue {
   color: var(--light-blue);
-  background: lighten(#2a9d8f, 30%);
+  background: lighten(#2a9d8f, 50%);
 }
 
 .darkblue {
   color: var(--dark-blue);
-  background: lighten(#264653, 30%);
+  background: lighten(#264653, 50%);
 }
 
 .yellow {
   color: darken(#ecd444, 20%);
-  background: lighten(#ecd444, 30%);
+  background: lighten(#ecd444, 35%);
 }
 
 .orange {
   color: var(--orange);
-  background: lighten(#e76f51, 30%);
+  background: lighten(#e76f51, 50%);
 }
 
 .purple {
   color: var(--purple);
-  background: lighten(#6e2594, 30%);
+  background: lighten(#6e2594, 50%);
 }
 
 // other colors should also be available from the color palette or from types/tag.ts
