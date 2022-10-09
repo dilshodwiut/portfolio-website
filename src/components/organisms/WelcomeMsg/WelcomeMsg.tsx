@@ -123,7 +123,7 @@ export default function WelcomeMsg(props: Props) {
       >
         <animated.div style={{ opacity: codeOpacity }}>
           <h1>&lt;Hello /&gt;</h1>
-          <p>
+          <code>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>&gt; </span>I make websites that
@@ -131,9 +131,10 @@ export default function WelcomeMsg(props: Props) {
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>/&gt;</span>
-          </p>
+          </code>
           <br />
-          <p>
+          <br />
+          <code>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>&gt; </span>
@@ -143,7 +144,7 @@ export default function WelcomeMsg(props: Props) {
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>/&gt;</span>
-          </p>
+          </code>
         </animated.div>
         <animated.div style={{ opacity: viewOpacity }}>
           <h1>Hello</h1>
