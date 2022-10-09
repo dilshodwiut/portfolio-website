@@ -36,7 +36,7 @@ export default function AnimatedAstronautIcon() {
 
   return (
     <Float specialStyles={{ rotate }}>
-      <animated.img src="/icons/astronaut.png" alt="astronaut" width={200} />
+      <animated.img src="/icons/astronaut.webp" alt="astronaut" width={200} />
     </Float>
   );
 }

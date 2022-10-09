@@ -54,11 +54,11 @@ export default function Stats(props: Props) {
               height={64}
               alt={stat.icon.alt}
               layout="responsive"
-              priority
+              // priority
             />
           </div>
           <div className={classes.card__content}>
-            <div className={classes.card__content__title}>{stat.name}</div>
+            <p className={classes.card__content__title}>{stat.name}</p>
             <div className={classes.card__content__text}>
               <CountUp
                 enableScrollSpy

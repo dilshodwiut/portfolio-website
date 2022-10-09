@@ -13,9 +13,8 @@ export default function Slider(props: Props) {
   return (
     <div className={classes.slider}>
       <div className={classes.slider__track}>
-        {clients.concat(clients).map(({ src, alt, width, height }, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <div key={alt + index} className={classes.slider__track__item}>
+        {clients.concat(clients).map(({ id, src, alt, width, height }) => (
+          <div key={id} className={classes.slider__track__item}>
             <Card className={classes.slider__track__item__wrapper}>
               <Image src={src} width={width} height={height} alt={alt} />
             </Card>

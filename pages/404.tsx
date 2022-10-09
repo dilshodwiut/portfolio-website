@@ -12,7 +12,7 @@ const Custom404: NextPage = () => {
           name="description"
           content="Frontend Developer's Portfolio Website"
         />
-        <link rel="icon" href="/icons/man.png" />
+        <link rel="icon" href="/icons/man.webp" />
       </Head>
       <Fallback404 />
     </>

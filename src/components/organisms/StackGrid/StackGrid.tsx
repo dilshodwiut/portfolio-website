@@ -46,8 +46,8 @@ export default function StackGrid(props: Props) {
           <Image
             src={technologies[i].src}
             alt={technologies[i].alt}
-            width="50%"
-            height="50%"
+            width={50}
+            height={50}
             priority
           />
         </animated.span>

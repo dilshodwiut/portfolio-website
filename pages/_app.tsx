@@ -1,4 +1,3 @@
-// eslint
 import * as React from "react";
 import "normalize.css";
 import "@/styles/globals.css";

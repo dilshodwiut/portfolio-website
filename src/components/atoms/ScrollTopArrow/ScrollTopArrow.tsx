@@ -37,7 +37,7 @@ export default function ScrollArrow() {
       onClick={scrollTop}
     >
       <Image
-        src="/icons/slideup.png"
+        src="/icons/slideup.webp"
         width={24}
         height={24}
         layout="responsive"

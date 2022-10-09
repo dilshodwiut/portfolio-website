@@ -4,7 +4,11 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
+      <Head></Head>
+      <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <Main />
+        <NextScript />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -37,11 +41,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
           rel="stylesheet"
         />
-      </Head>
-      <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <Main />
-        <NextScript />
       </body>
     </Html>
   );

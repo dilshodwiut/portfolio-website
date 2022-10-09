@@ -160,16 +160,16 @@ export default function WelcomeMsg(props: Props) {
           <p>
             My aim is to make the{" "}
             <Image
-              priority
-              src="/icons/spider-web.png"
+              // priority
+              src="/icons/spider-web.webp"
               alt="spider web"
               width={29}
               height={29}
             />{" "}
             a better place{" "}
             <Image
-              priority
-              src="/icons/hammer-and-wrench.png"
+              // priority
+              src="/icons/hammer-and-wrench.webp"
               alt="hammer and wrench"
               width={29}
               height={29}

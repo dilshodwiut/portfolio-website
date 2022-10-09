@@ -8,7 +8,7 @@ import TypeWriter from "@/components/molecules/TypeWriter/TypeWriter";
 import WelcomeMsg from "@/components/organisms/WelcomeMsg/WelcomeMsg";
 import classes from "./Hero.module.scss";
 
-const AnimatedImage = animated(Image);
+// const AnimatedImage = animated(Image);
 const words = [
   "Software Engineer",
   "Functional Programmer",
@@ -58,14 +58,14 @@ export default function Hero() {
   return (
     <section className={classes.hero}>
       <Wrapper>
-        <AnimatedImage
-          src="/images/man-in-dark.jpg"
+        <Image
+          src="/images/man-in-dark.webp"
           alt="man in dark"
-          width={1100}
-          height={750}
+          width={1200}
+          height={800}
           priority
           style={{
-            ...spring,
+            // ...spring,
             userSelect: "none",
             WebkitUserSelect: "none",
             msUserSelect: "none",
