@@ -39,7 +39,7 @@ export default function Title(props: Props) {
   const [spring, api] = useSpring(() => ({
     opacity: 0,
     transform: calculateInitialPosition(side!),
-    config: config.stiff,
+    config: config.slow,
   }));
 
   const extraProps = animate

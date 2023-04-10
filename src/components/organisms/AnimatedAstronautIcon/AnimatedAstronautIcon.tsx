@@ -6,11 +6,11 @@ import {
   randomizeRotationDirection,
 } from "src/functions/randomizers";
 
-export default function AnimatedAstronautIcon() {
-  const Float = dynamic(() => import("src/containers/Float/Float"), {
-    ssr: false,
-  });
+const Float = dynamic(() => import("src/containers/Float/Float"), {
+  ssr: false,
+});
 
+export default function AnimatedAstronautIcon() {
   const [{ rotate }, api] = useSpring(() => ({
     rotate: `${randomizeRotationDirection() + randomizeRotationDegree()}deg`,
     config: { ...config.slow, duration: 60000 },

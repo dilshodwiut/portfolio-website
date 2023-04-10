@@ -10,15 +10,15 @@ interface Props {
   };
 }
 
+const RandomColorizer = dynamic(
+  () => import("src/containers/RandomColorizer"),
+  {
+    ssr: false,
+  }
+);
+
 function AnimatedDeveloperIcon(props: Props) {
   const { style } = props;
-
-  const RandomColorizer = dynamic(
-    () => import("src/containers/RandomColorizer"),
-    {
-      ssr: false,
-    }
-  );
 
   return (
     <animated.div className={classes.developer} style={style}>

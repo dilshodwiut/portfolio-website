@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useSpring, useTrail, animated, config } from "@react-spring/web";
+import { useTrail, config } from "@react-spring/web";
 import useIntersectionObserver from "src/hooks/useIntersectionObserver";
 import AnimatedDeveloper from "@/components/molecules/AnimatedDeveloperIcon/AnimatedDeveloperIcon";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
@@ -8,7 +8,6 @@ import TypeWriter from "@/components/molecules/TypeWriter/TypeWriter";
 import WelcomeMsg from "@/components/organisms/WelcomeMsg/WelcomeMsg";
 import classes from "./Hero.module.scss";
 
-// const AnimatedImage = animated(Image);
 const words = [
   "Software Engineer",
   "Functional Programmer",
@@ -18,29 +17,16 @@ const words = [
 export default function Hero() {
   const ref = React.useRef<HTMLDivElement | null>(null);
   const entry = useIntersectionObserver(ref, {
-    threshold: 0.5,
+    threshold: 0.4,
     freezeOnceVisible: true,
   });
   const isVisible = !!entry?.isIntersecting;
-
-  const [spring, springApi] = useSpring(() => ({
-    opacity: 0,
-    config: { ...config.molasses, duration: 1000 },
-  }));
 
   const [trail, trailApi] = useTrail(2, () => ({
     transform: "translateY(100px)",
     opacity: 0,
     config: config.slow,
   }));
-
-  React.useEffect(() => {
-    springApi.start({ opacity: 1 });
-
-    return () => {
-      springApi.stop();
-    };
-  }, [springApi]);
 
   React.useEffect(() => {
     if (isVisible) {
