@@ -1,4 +1,4 @@
-/*
+/**
 Download a file
 
 @param {string} filepath - The path to the file to download

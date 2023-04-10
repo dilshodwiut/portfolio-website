@@ -35,7 +35,7 @@ export default function TypeWriter(props: Props) {
 
   return (
     <animated.div className={classes.container} style={spring}>
-      <Title align="left" animate={false}>
+      <Title align="left" animate={false} style={{ fontSize: "20px" }}>
         {text} {output}
         <span className={clsx(classes.cursor, "xl")}>|</span>
       </Title>

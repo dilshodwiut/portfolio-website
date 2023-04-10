@@ -74,7 +74,7 @@ export default function Hero() {
           draggable={false}
         />
 
-        <TypeWriter text="I am - " words={words} wait={1000} />
+        <TypeWriter text="I am - " words={words} wait={500} />
 
         <div className={classes.welcome} ref={ref}>
           <AnimatedDeveloper style={trail[0]} />

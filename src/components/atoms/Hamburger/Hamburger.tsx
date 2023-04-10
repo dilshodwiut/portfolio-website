@@ -28,18 +28,21 @@ export default function Hamburger() {
   return (
     // <>
     // <span className={classes.background} />
-    <animated.button
-      type="button"
-      className={clsx(classes.hamburger, isOpen ? classes.open : "")}
-      onClick={() => setIsOpen(!isOpen)}
-    >
-      <span />
-      <span />
-      <span />
-      <span />
-      <span />
-      <span />
-    </animated.button>
+    <>
+      <div className={clsx(classes.container)} />
+      <animated.button
+        type="button"
+        className={clsx(classes.hamburger, isOpen ? classes.open : "")}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </animated.button>
+    </>
     // </>
   );
 }

@@ -8,7 +8,7 @@ import {
   useChain,
 } from "@react-spring/web";
 import MobileNav from "@/components/templates/MobileNav/MobileNav";
-import links from "./links";
+import links from "../../../shared/links";
 import classes from "./Backdrop.module.scss";
 
 export default function Backdrop() {
@@ -20,14 +20,17 @@ export default function Backdrop() {
     ref: backdropRef,
     from: {
       backdropFilter: "blur(0px)",
+      WebkitBackdropFilter: "blur(0px)",
       backgroundColor: "rgba(0, 0, 0, 0)",
     },
     enter: {
       backdropFilter: isOpen ? "blur(8px)" : "blur(0px)",
+      WebkitBackdropFilter: isOpen ? "blur(8px)" : "blur(0px)",
       backgroundColor: isOpen ? "rgba(0, 0, 0, 0.7)" : "rgba(0, 0, 0, 0)",
     },
     leave: {
       backdropFilter: "blur(0px)",
+      WebkitBackdropFilter: "blur(0px)",
       backgroundColor: "rgba(0, 0, 0, 0)",
     },
   }));

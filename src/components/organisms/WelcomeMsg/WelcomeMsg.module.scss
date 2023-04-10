@@ -140,7 +140,7 @@
   h1 {
     font-family: "JetBrains Mono", monospace;
     font-weight: var(--font-weight-light);
-    margin: 0;
+    margin: 1rem 0;
     // color: #4ec9b0;
     // margin: 0 !important;
   }
@@ -190,6 +190,9 @@
         font-size: 2rem;
       }
       p {
+        font-size: 1rem;
+      }
+      code {
         font-size: 1rem;
       }
     }

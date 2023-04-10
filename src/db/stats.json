@@ -6,7 +6,7 @@
       "src": "/icons/dropper.webp",
       "alt": "experience icon"
     },
-    "count": 2
+    "count": 3
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
       "src": "/icons/commit.webp",
       "alt": "commit icon"
     },
-    "count": 1200
+    "count": 2000
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
       "src": "/icons/development.webp",
       "alt": "projects icon"
     },
-    "count": 8
+    "count": 10
   },
   {
     "id": "4",
@@ -42,6 +42,10 @@
       {
         "name": "Epam Systems",
         "url": "https://www.epam.com"
+      },
+      {
+        "name": "Invan",
+        "url": "https://in1.uz"
       }
     ]
   }

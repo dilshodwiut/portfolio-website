@@ -123,6 +123,7 @@ export default function WelcomeMsg(props: Props) {
       >
         <animated.div style={{ opacity: codeOpacity }}>
           <h1>&lt;Hello /&gt;</h1>
+          <br />
           <code>
             <span className={classes.arrow}>&lt;</span>
             <span className={classes.keyword}>p</span>
