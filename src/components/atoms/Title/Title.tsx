@@ -7,7 +7,7 @@ import classes from "./Title.module.scss";
 type Props = {
   children: React.ReactNode;
   className?: string;
-  size?: "sm" | "md" | "lg" | "xl" | "xxl";
+  size?: "sm" | "md" | "lg" | "xl" | "xxl" | "";
   align?: "left" | "center" | "right";
   noMargin?: boolean;
   noPadding?: boolean;

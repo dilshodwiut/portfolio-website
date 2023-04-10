@@ -12,6 +12,7 @@
 // }
 
 .container {
+  display: none;
   background-color: #264653;
   width: 50px;
   height: 45px;
@@ -121,6 +122,9 @@
 
 // Mobile
 @media (max-width: 767px) {
+  .container {
+    display: block;
+  }
   .hamburger {
     display: block;
   }

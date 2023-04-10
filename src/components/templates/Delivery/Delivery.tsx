@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ScreenSizeContext } from "src/contexts/ScreenSizeContext";
+import { useScreenSizeContext } from "src/contexts/ScreenSizeContext";
 import Wrapper from "@/components/atoms/Wrapper/Wrapper";
 import Title from "@/components/atoms/Title/Title";
 import ReactFlow, {
@@ -19,7 +19,7 @@ import {
 import classes from "./Delivery.module.scss";
 
 export default function Delivery() {
-  const { isMobile } = React.useContext(ScreenSizeContext);
+  const { isMobile } = useScreenSizeContext();
   const initialNodes = isMobile ? initialVerticalNodes : initialHorizontalNodes;
   const initialEdges = isMobile ? initialVerticalEdges : initialHorizontalEdges;
 
