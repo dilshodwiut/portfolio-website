@@ -18,6 +18,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 1;
 
     color: #808080;
     display: inline-block;
@@ -148,6 +149,10 @@
   code {
     font-size: 1.5rem;
   }
+
+  .mobile_br {
+    display: none;
+  }
 }
 
 .view {
@@ -194,6 +199,9 @@
       }
       code {
         font-size: 1rem;
+      }
+      .mobile_br {
+        display: block;
       }
     }
   }

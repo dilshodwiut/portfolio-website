@@ -133,7 +133,7 @@ export default function WelcomeMsg(props: Props) {
             <span className={classes.keyword}>p</span>
             <span className={classes.arrow}>/&gt;</span>
           </code>
-          <br />
+          <br className={classes.mobile_br} />
           <br />
           <code>
             <span className={classes.arrow}>&lt;</span>
