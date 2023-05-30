@@ -5,7 +5,7 @@ const nextConfig = {
 
 module.exports = {
   compiler: {
-    // removeConsole: true,
+    removeConsole: true,
     swcMinify: true,
   },
   experimental: {
