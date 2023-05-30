@@ -1,4 +1,4 @@
-export type Image = { src: string; alt: string };
+export type Image = { src: string; alt?: string };
 export type SizedImage = {
   id: string;
   src: string;

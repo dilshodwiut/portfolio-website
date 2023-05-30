@@ -2,8 +2,8 @@ import * as React from "react";
 import type { Image } from "./image";
 import type { Tag } from "./tag";
 
-type ServiceType = "website" | "admin";
-type Service = { type: ServiceType; image: Image };
+type ServiceType = "website" | "admin" | "crm" | "pos";
+type Service = { id: string; type: ServiceType; image: Image };
 
 export type Project = {
   id: string;

@@ -7,10 +7,12 @@
     "description": "Multi-functional platform to facilitate and speed up the delivery process.",
     "services": [
       {
-        "type": "admin",
-        "image": { "src": "/icons/setting.webp", "alt": "Admin Panel" }
+        "id": "1",
+        "type": "crm",
+        "image": { "src": "/icons/headphones.webp" }
       },
       {
+        "id": "2",
         "type": "website",
         "image": { "src": "/icons/global.webp", "alt": "Web" }
       }
@@ -31,10 +33,12 @@
     "description": "Car24 - car rental service based in Tashkent.",
     "services": [
       {
+        "id": "1",
         "type": "admin",
         "image": { "src": "/icons/setting.webp", "alt": "Admin Panel" }
       },
       {
+        "id": "2",
         "type": "website",
         "image": { "src": "/icons/global.webp", "alt": "Web" }
       }
@@ -58,10 +62,12 @@
     "description": "Goodzone - Internet shop of household appliances in Uzbekistan.",
     "services": [
       {
+        "id": "1",
         "type": "admin",
         "image": { "src": "/icons/setting.webp", "alt": "Admin Panel" }
       },
       {
+        "id": "2",
         "type": "website",
         "image": { "src": "/icons/global.webp", "alt": "Web" }
       }
@@ -82,6 +88,7 @@
     "description": "UTAS - University of Tashkent Applied Sciences.",
     "services": [
       {
+        "id": "2",
         "type": "website",
         "image": { "src": "/icons/global.webp", "alt": "Web" }
       }
@@ -102,6 +109,7 @@
     "description": "Safia confectionery house in Tashkent.",
     "services": [
       {
+        "id": "1",
         "type": "admin",
         "image": { "src": "/icons/setting.webp", "alt": "Admin Panel" }
       }
@@ -122,6 +130,7 @@
     "description": "Aloqabank - reliable, manufacturable and high quality of financial services.",
     "services": [
       {
+        "id": "2",
         "type": "website",
         "image": { "src": "/icons/global.webp", "alt": "Web" }
       }
@@ -131,6 +140,27 @@
         "text": "Banking",
         "color": "blue",
         "image": { "src": "/icons/bank2.webp", "alt": "Bank" }
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "tiin",
+    "image": { "src": "/images/tiin.webp", "alt": "Tiin Market" },
+    "title": "Tiin Market",
+    "description": "TIIN is a new generation wholesale supermarket chain!",
+    "services": [
+      {
+        "id": "4",
+        "type": "pos",
+        "image": { "src": "/icons/cashier.webp" }
+      }
+    ],
+    "tags": [
+      {
+        "text": "Supermarket",
+        "color": "green",
+        "image": { "src": "/icons/grocery.png", "alt": "Grocery" }
       }
     ]
   }

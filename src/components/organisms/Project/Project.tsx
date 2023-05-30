@@ -140,7 +140,7 @@ export default function Project(props: ProjectProps) {
             <List>
               {services.map((service, i) => (
                 <AnimatedListItem
-                  key={service.type}
+                  key={service.id}
                   className={classes.listItem}
                   style={trail[i]}
                 >
@@ -148,9 +148,9 @@ export default function Project(props: ProjectProps) {
                     src={service.image.src}
                     width={45}
                     height={45}
-                    alt={service.image.alt}
+                    alt={serviceMap[service.type]}
                   />
-                  {service.type === "admin" ? "Admin Panel" : "Website"}
+                  {serviceMap[service.type]}
                 </AnimatedListItem>
               ))}
             </List>
@@ -160,3 +160,10 @@ export default function Project(props: ProjectProps) {
     </Wrapper>
   );
 }
+
+const serviceMap = {
+  admin: "Admin Panel",
+  website: "Website",
+  crm: "CRM System",
+  pos: "POS System",
+};
